@@ -1,5 +1,5 @@
 ---
-import type { ImageMetadata } from 'astro';
+import type { ImageMetadata } from 'astro'
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
@@ -8,20 +8,24 @@ import Body from '../components/Body.astro'
 import Content from '../components/Content.astro'
 import { IoArrowForward } from 'react-icons/io5'
 import Masthead from '../components/Masthead.astro'
-import { Image } from 'astro:assets';
+import { Image } from 'astro:assets'
 import CreatedWithSection from '../components/CreatedWithSection.astro'
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}');
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/*.{jpeg,jpg,png,gif}'
+)
 console.log('images:', images)
 
-const posts = Object.values(import.meta.glob('./posts/*.md', {eager: true})).sort(
+const posts = Object.values(
+  import.meta.glob('./posts/*.md', { eager: true })
+).sort(
   (a: any, b: any) =>
     new Date(b.frontmatter.createdAt).valueOf() -
     new Date(a.frontmatter.createdAt).valueOf()
 )
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -38,8 +42,9 @@ const posts = Object.values(import.meta.glob('./posts/*.md', {eager: true})).sor
             workspace in order to boost my productivity. Whenever I upload new
             content, people ask me what tools I use. So, here is a living
             snapshot and a place to point curious developers to when I get
-            asked. Each item has my review, and most of the links are amazon affiliate links, so I&apos;ll
-            get filthy rich if you click them and buy something.
+            asked. Each item has my review, and most of the links are amazon
+            affiliate links, so I&apos;ll get filthy rich if you click them and
+            buy something.
             <a
               class="inline-flex items-center gap-1 indent-1 text-orange-500"
               href={HOMEPAGE_URL}
@@ -52,28 +57,30 @@ const posts = Object.values(import.meta.glob('./posts/*.md', {eager: true})).sor
             {
               posts.map(post => {
                 const heroImageAsset = images[post.frontmatter.heroImage]
-                const heroImageSrc =  heroImageAsset ? heroImageAsset() : post.frontmatter.heroImage
+                const heroImageSrc = heroImageAsset
+                  ? heroImageAsset()
+                  : post.frontmatter.heroImage
                 return (
-                <li class="text-center mb-4">
-                  <a href={post.url}>
-                    <Image
-                      class="border border-slate-300 dark:border-zinc-700 rounded-xl"
-                      src={heroImageSrc}
-                      width={720}
-                      height={720 / 1.777}
-                      alt="Thumbnail"
-                    />
-                    <div class="mt-3 text-xl font-bold">
-                      {post.frontmatter.title}
-                    </div>
-                    {post.frontmatter.description && (
-                      <div class="opacity-70">
-                        {post.frontmatter.description}
+                  <li class="text-center mb-4">
+                    <a href={post.url}>
+                      <Image
+                        class="border border-slate-300 dark:border-zinc-700 rounded-xl"
+                        src={heroImageSrc}
+                        width={720}
+                        height={720 / 1.777}
+                        alt="Thumbnail"
+                      />
+                      <div class="mt-3 text-xl font-bold">
+                        {post.frontmatter.title}
                       </div>
-                    )}
-                  </a>
-                </li>
-              )
+                      {post.frontmatter.description && (
+                        <div class="opacity-70">
+                          {post.frontmatter.description}
+                        </div>
+                      )}
+                    </a>
+                  </li>
+                )
               })
             }
           </ul>

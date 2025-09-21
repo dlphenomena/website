@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mplus: ["'proxima-soft'", 'Verdana', 'sans-serif']
+        mplus: ["'Inter', 'proxima-soft'", 'Verdana', 'sans-serif']
       }
     }
   },
