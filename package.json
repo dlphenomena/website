@@ -12,6 +12,7 @@
     "live-import": "node --experimental-vm-modules tools/import.mjs"
   },
   "dependencies": {
+    "@astrojs/netlify": "^6.5.10",
     "@astrojs/react": "^4.2.1",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
