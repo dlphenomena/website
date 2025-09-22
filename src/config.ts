@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = 'Deep Learning Phenomena - ZYLab Research Group'
 export const SITE_DESCRIPTION = 'A Website for Deep Learning Phenomena'
-export const HOMEPAGE_URL = 'https://www.craftz.dog/'
+export const HOMEPAGE_URL = 'https://math.sjtu.edu.cn'

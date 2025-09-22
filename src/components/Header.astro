@@ -16,23 +16,23 @@ allPosts.map(post => {
 })
 ---
 
-<header class="fixed w-full p-2 z-20 backdrop-blur-md">
+<header class="fixed z-20 w-full p-2 backdrop-blur-md">
   <div class="mx-auto max-w-5xl">
     <nav class="flex items-center gap-3 text-base">
-      <a href="/" class="group flex-auto flex items-center">
+      <a href="/" class="group flex flex-auto items-center">
         <img
           class="h-8 grayscale dark:invert"
           src="/sjtu-logo.png"
           alt="SJTU Logo"
         />
-        <h2 class="font-semibold tracking-tighter p-2 font-mplus text-lg">
+        <h2 class="p-2 font-mplus text-lg font-semibold tracking-tighter">
           ZYLab
         </h2>
       </a>
-      <div class="items-center gap-6 hidden md:flex">
+      <div class="hidden items-center gap-6 md:flex">
         <HeaderLink href={HOMEPAGE_URL}>About</HeaderLink>
         <HeaderLink
-          href="https://github.com/craftzdog/craftzdog-uses"
+          href="https://github.com/orgs/zyresearch/repositories"
           target="_blank"><IoLogoGithub />Code</HeaderLink
         >
       </div>
