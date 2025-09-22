@@ -42,10 +42,10 @@ const posts = (
             {
               posts.map((post: any) => (
                 <li class="mb-4 text-center">
-                  <a href={post.url}>
+                  <a href={`/blog/${post.id}`} class="block">
                     <Image
                       class="rounded-xl border border-slate-300 dark:border-zinc-700"
-                      src={post.data.heroImage as string}
+                      src={post.data.heroImage}
                       width={720 * 2}
                       height={720}
                       alt="Thumbnail"
