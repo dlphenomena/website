@@ -9,13 +9,16 @@ const allPosts = Object.values(
   import.meta.glob('../pages/posts/*.md', { eager: true })
 )
 const allTags = new Set<string>()
-allPosts.map(post => {
+allPosts.map((post: any) => {
   post.frontmatter.tags &&
     post.frontmatter.tags.map((tag: string) => allTags.add(tag))
 })
 ---
 
-<header class="fixed z-20 w-full p-2 backdrop-blur-md">
+<header
+  id="main-header"
+  class="fixed z-20 w-full p-2 backdrop-blur-md transition-shadow duration-300"
+>
   <div class="mx-auto max-w-5xl">
     <nav class="flex items-center gap-3 text-base">
       <a href="/" class="group flex flex-auto items-center">
@@ -24,7 +27,7 @@ allPosts.map(post => {
           src="/sjtu-logo.png"
           alt="SJTU Logo"
         />
-        <h2 class="p-2 font-mplus text-lg font-semibold tracking-tighter">
+        <h2 class="font-mplus p-2 text-lg font-semibold tracking-tighter">
           ZYLab
         </h2>
       </a>
@@ -41,3 +44,29 @@ allPosts.map(post => {
     </nav>
   </div>
 </header>
+
+<script>
+  function updateHeaderShadow() {
+    const header = document.getElementById('main-header')
+    if (!header) return
+
+    if (window.scrollY > 0) {
+      header.classList.add('shadow-lg')
+    } else {
+      header.classList.remove('shadow-lg')
+    }
+  }
+
+  // Update on scroll
+  window.addEventListener('scroll', updateHeaderShadow)
+
+  // Update on page load
+  document.addEventListener('DOMContentLoaded', updateHeaderShadow)
+
+  // Update immediately if DOM is already loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateHeaderShadow)
+  } else {
+    updateHeaderShadow()
+  }
+</script>

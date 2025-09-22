@@ -6,7 +6,7 @@ export async function getStaticPaths() {
     import.meta.glob('../posts/*.md', { eager: true })
   )
   const allTags = new Set<string>()
-  allPosts.map(post => {
+  allPosts.map((post: any) => {
     post.frontmatter.tags &&
       post.frontmatter.tags.map((tag: string) => allTags.add(tag))
   })

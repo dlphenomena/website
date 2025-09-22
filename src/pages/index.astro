@@ -55,7 +55,7 @@ const posts = Object.values(
         <section>
           <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
             {
-              posts.map(post => {
+              posts.map((post: any) => {
                 const heroImageAsset = images[post.frontmatter.heroImage]
                 const heroImageSrc = heroImageAsset
                   ? heroImageAsset()
