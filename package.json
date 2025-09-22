@@ -1,5 +1,5 @@
 {
-  "name": "deeplearning-phenomena",
+  "name": "zheng-homepage",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -8,19 +8,19 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "live-import": "node --experimental-vm-modules tools/import.mjs"
+    "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.5",
     "@astrojs/netlify": "^6.5.10",
-    "@astrojs/react": "^4.2.1",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.2.1",
-    "@headlessui/react": "^2.2.0",
+    "@astrojs/react": "^4.3.1",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.6.0",
+    "@headlessui/react": "^2.2.8",
     "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.5.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "astro": "^5.13.9",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
     "tailwindcss": "^4.1.13"
   },
@@ -30,9 +30,7 @@
     "@eslint/js": "^9.36.0",
     "@eslint/json": "^0.13.2",
     "@eslint/markdown": "^7.2.0",
-    "@inkdropapp/live-export": "^0.2.1",
-    "@types/react": "^19.0.11",
-    "dotenv": "^16.4.7",
+    "@types/react": "^19.1.13",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
@@ -40,7 +38,7 @@
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.14",
-    "typescript": "^5.8.2",
+    "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.0"
   }
 }

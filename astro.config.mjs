@@ -5,10 +5,12 @@ import tailwindcss from '@tailwindcss/vite'
 
 import netlify from '@astrojs/netlify'
 
+import mdx from '@astrojs/mdx';
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'zheng-homepage.netlify.app',
-  integrations: [sitemap(), react()],
+  site: 'https://zheng-homepage.netlify.app',
+  integrations: [sitemap(), react(), mdx()],
   markdown: {},
 
   vite: {

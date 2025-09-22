@@ -1,4 +1,5 @@
 ---
+import masterHeadImage from '../images/placeholder-hero.jpg'
 const isProd = import.meta.env.PROD
 ---
 
@@ -7,8 +8,8 @@ const isProd = import.meta.env.PROD
     class="absolute flex h-full w-full justify-center overflow-hidden bg-blue-50/50 dark:bg-zinc-900"
   >
     <img
-      src="/placeholder-hero.jpg"
-      class="h-full rounded object-cover opacity-30"
+      src={masterHeadImage.src}
+      class="w-full rounded object-cover opacity-30"
     />
   </div>
   <div class="z-10 px-8 text-center shadow-black drop-shadow-lg">

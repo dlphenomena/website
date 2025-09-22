@@ -4,6 +4,7 @@ import { HOMEPAGE_URL } from '../config'
 import { IoLogoGithub } from 'react-icons/io5'
 import ThemeToggle from './ThemeToggleButton'
 import DropdownMenu from './DropdownMenu'
+import sjtuLogo from '../images/sjtu-logo.png'
 
 const allPosts = Object.values(
   import.meta.glob('../pages/posts/*.md', { eager: true })
@@ -24,7 +25,7 @@ allPosts.map((post: any) => {
       <a href="/" class="group flex flex-auto items-center">
         <img
           class="h-8 grayscale dark:invert"
-          src="/sjtu-logo.png"
+          src={sjtuLogo.src}
           alt="SJTU Logo"
         />
         <h2 class="font-mplus p-2 text-lg font-semibold tracking-tighter">
