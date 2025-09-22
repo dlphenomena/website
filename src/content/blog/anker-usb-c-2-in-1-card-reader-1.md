@@ -1,12 +1,12 @@
 ---
 description: SD card reader
 public: true
-title: Anker USB-C 2-in-1 card reader
-pubDate: 'Aug 22 2025'
+title: Anker USB-C 2-in-1 card reader-1
+pubDate: 'June 22 2025'
 tags:
   - Computing
 heroImage: ../../assets/blog/anker-usb-c-2-in-1-card-reader.jpg
-slug: anker-usb-c-2-in-1-card-reader
+slug: anker-usb-c-2-in-1-card-reader-1
 ---
 
 To import pictures and videos that I shot quickly, I was searching for a mini SD card reader that doesn’t distract the setup. I found [this SD card reader from Anker](https://amzn.to/2Wuc2W7). Thanks to having two USB-C ports on the top of the Mac Pro, I can connect the SD card reader here.

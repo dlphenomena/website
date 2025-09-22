@@ -5,7 +5,7 @@ import Body from '../components/Body.astro'
 import Content from '../components/Content.astro'
 import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
-import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
 import { Image } from 'astro:assets'
 import CreatedWithSection from '../components/CreatedWithSection.astro'
 import Masthead from '../components/Masthead.astro'
@@ -17,11 +17,38 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 )
 
 const findKeysByValue = (imgs: any, id: string) => {
-  return Object.keys(imgs).filter(key => key.includes(id))
+  return Object.keys(imgs).filter(key => key.includes(id + '_thumbnail'))
 }
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
+
+// Resolve all images for posts
+const postsWithImages = await Promise.all(
+  posts.map(async (post: any) => {
+    const matchingKeys = findKeysByValue(images, post.id)
+    const heroImageAsset =
+      matchingKeys.length > 0 ? images[matchingKeys[0]] : null
+    let heroImageSrc
+
+    if (heroImageAsset) {
+      try {
+        const loadedImage = await heroImageAsset()
+        heroImageSrc = loadedImage.default
+      } catch (error) {
+        console.error(`Error loading thumbnail for ${post.id}:`, error)
+        heroImageSrc = post.data.heroImage
+      }
+    } else {
+      heroImageSrc = post.data.heroImage
+    }
+
+    return {
+      ...post,
+      resolvedHeroImage: heroImageSrc,
+    }
+  })
 )
 ---
 
@@ -54,19 +81,13 @@ const posts = (await getCollection('blog')).sort(
         <section>
           <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
             {
-              posts.map((post: any) => {
-                const heroImageAsset =
-                  images[findKeysByValue(images, post.id)[0]]
-                const heroImageSrc = heroImageAsset
-                  ? heroImageAsset()
-                  : post.data.heroImage
-                console.log('image:', heroImageAsset)
+              postsWithImages.map((post: any) => {
                 return (
                   <li class="mb-4 text-center">
                     <a href={`/blog/${post.id}/`}>
-                      <Image
-                        class="rounded-xl border border-slate-300 dark:border-zinc-700"
-                        src={heroImageAsset()}
+                      <img
+                        class="h-48 rounded-xl border border-slate-300 dark:border-zinc-700"
+                        src={post.resolvedHeroImage.src}
                         width={720}
                         height={720 / 1.777}
                         alt="Thumbnail"
@@ -87,7 +108,7 @@ const posts = (await getCollection('blog')).sort(
             }
           </ul>
         </section>
-        <CreatedWithSection />
+        <!-- <CreatedWithSection /> -->
       </Content>
     </main>
     <Footer />
