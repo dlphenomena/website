@@ -1,5 +1,4 @@
 ---
-import '../app.css'
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
@@ -36,7 +35,7 @@ const {
   <Body>
     <Header />
     <style is:global>
-      @reference "../app.css";
+      @reference "../styles/global.css";
       main article.markdown-body {
         ul {
           @apply mb-4 list-inside list-disc pl-4;

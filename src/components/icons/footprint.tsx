@@ -3,7 +3,7 @@ import React from 'react'
 export default function FootprintIcon() {
   return (
     <svg
-      className="inline-block w-5 transition-transform group-hover:rotate-[20deg]"
+      className="inline-block w-5 transition-transform group-hover:rotate-20"
       viewBox="0 0 40 40"
       fill="currentColor"
     >
