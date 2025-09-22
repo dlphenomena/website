@@ -11,7 +11,6 @@ heroImage: /posts/mocreo_thumbnail.jpg
 slug: mocreo
 ---
 
-
 There are two headphones hung under the countertop. One is for monitoring, and another one is for general purposes.
 
 ![mocreo_2.jpeg](/posts/mocreo_mocreo-2-jpeg.jpg)

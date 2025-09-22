@@ -1,18 +1,18 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from 'astro:assets'
 ---
 
 <section>
   <h2
-    class="font-mplus font-bold text-xl my-4 underline underline-offset-4 decoration-zinc-400 dark:decoration-zinc-700 decoration-4"
+    class="my-4 font-mplus text-xl font-bold underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700"
   >
     Created with
   </h2>
-  <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <li class="text-center mb-4">
+  <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
+    <li class="mb-4 text-center">
       <a href="https://www.inkdrop.app/">
         <Image
-          class="border border-slate-300 dark:border-zinc-700 rounded-xl"
+          class="rounded-xl border border-slate-300 dark:border-zinc-700"
           src="/inkdrop-banner.jpg"
           width={720 * 2}
           height={720}
@@ -22,10 +22,10 @@ import { Image } from 'astro:assets';
         <div class="opacity-70">Markdown note-taking app</div>
       </a>
     </li>
-    <li class="text-center mb-4">
+    <li class="mb-4 text-center">
       <a href="https://astro.build/">
         <Image
-          class="border border-slate-300 dark:border-zinc-700 rounded-xl"
+          class="rounded-xl border border-slate-300 dark:border-zinc-700"
           src="/astrojs.jpg"
           width={720 * 2}
           height={720}

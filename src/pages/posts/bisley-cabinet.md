@@ -11,7 +11,6 @@ heroImage: /posts/bisley-cabinet_thumbnail.jpg
 slug: bisley-cabinet
 ---
 
-
 I've got a filing cabinet to organize small stuff like USB cables and adapters.
 I chose Bisley because it offers various tray options.
 

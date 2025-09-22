@@ -11,7 +11,6 @@ heroImage: /posts/oofos-o-oahh_thumbnail.jpg
 slug: oofos-o-oahh
 ---
 
-
 ![ooahh](/posts/oofos-o-oahh_ooahh.jpg)
 
 When working standing up, I wear a pair of recovery sandals called OOahh.

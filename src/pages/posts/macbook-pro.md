@@ -11,7 +11,6 @@ tags:
 heroImage: /posts/macbook-pro_thumbnail.jpg
 ---
 
-
 MacBook Pro (14-inch, 2021) is my main computer for app devs, designing, video editing, and everything else.
 It's so powerful and really a good foundation to create digital stuff. It will stay with you regardless of how far you wanna go, how crazy you want to experiment whatever. And bonus: It's portable!
 

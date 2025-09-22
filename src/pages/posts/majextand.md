@@ -11,7 +11,6 @@ heroImage: /posts/majextand_thumbnail.jpg
 slug: majextand
 ---
 
-
 I had been using [a laptop stand by an unknown manufacturer](/posts/aiyujiwu-laptop-stand) for my M1 MacBook Pro, but it wasn't very comfortable as it didn't elevate the laptop to a sufficient height. When I upgraded to a new M2 MacBook Pro, I decided to try a different laptop stand called [Majextand](https://amzn.to/40d54nI), which has received many positive reviews on YouTube in Japan.
 
 ![majexstand_01](/posts/majextand_majexstand-01.jpg)
@@ -30,7 +29,7 @@ At first, I was concerned that the stand might be too high, but that hasn't been
 
 ![majexstand_05](/posts/majextand_majexstand-05.jpg)
 
-Overall, I'm pretty satisfied with the Majextand. Its ergonomic design, versatility, and slim profile make it an ideal laptop stand for daily use, and I  recommend it to anyone seeking a comfortable, stylish, and practical solution for their laptop.
+Overall, I'm pretty satisfied with the Majextand. Its ergonomic design, versatility, and slim profile make it an ideal laptop stand for daily use, and I recommend it to anyone seeking a comfortable, stylish, and practical solution for their laptop.
 
 - [Amazon US](https://amzn.to/40d54nI)
 - [Amazon JP](https://amzn.to/40xl43G)

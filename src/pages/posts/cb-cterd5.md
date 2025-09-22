@@ -11,7 +11,6 @@ tags:
 heroImage: /posts/cb-cterd5_thumbnail.jpg
 ---
 
-
 The biggest and hardest problem to attain a clean desk is cable management. Hiding the power bar and keeping all my cords neatly tied together in one place was a priority. To accomplish that, I bought this black mesh cable tray from [Sanwa Supply named CB-CTERD5 at AmazonJP](https://amzn.to/3AUu9Z6). It is long enough to hide the power bar and wires very well.
 
 ![sanwa-supply-cb-cterd5_2.jpeg](/posts/cb-cterd5_sanwa-supply-cb-cterd5-2-jpeg.jpg)

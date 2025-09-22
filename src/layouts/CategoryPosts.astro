@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from 'astro:assets'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
 import Breadcrumb from '../components/Breadcrumb.astro'
@@ -15,7 +15,9 @@ export interface Props {
 
 const { category } = Astro.props
 
-const posts = (Object.values(import.meta.glob('../pages/posts/*.md', {eager: true})))
+const posts = Object.values(
+  import.meta.glob('../pages/posts/*.md', { eager: true })
+)
   .sort(
     (a, b) =>
       new Date(b.frontmatter.createdAt).valueOf() -
@@ -24,10 +26,13 @@ const posts = (Object.values(import.meta.glob('../pages/posts/*.md', {eager: tru
   .filter(item => item.frontmatter.tags.includes(category))
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={category + ` / ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+    <BaseHead
+      title={category + ` / ${SITE_TITLE}`}
+      description={SITE_DESCRIPTION}
+    />
   </head>
   <Body>
     <Header title={SITE_TITLE} />
@@ -36,13 +41,13 @@ const posts = (Object.values(import.meta.glob('../pages/posts/*.md', {eager: tru
       <Content>
         <Breadcrumb>{category}</Breadcrumb>
         <section>
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
             {
               posts.map(post => (
-                <li class="text-center mb-4">
+                <li class="mb-4 text-center">
                   <a href={post.url}>
                     <Image
-                      class="border border-slate-300 dark:border-zinc-700 rounded-xl"
+                      class="rounded-xl border border-slate-300 dark:border-zinc-700"
                       src={post.frontmatter.heroImage as string}
                       width={720 * 2}
                       height={720}

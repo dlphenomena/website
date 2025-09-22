@@ -11,7 +11,6 @@ heroImage: /posts/xiser_thumbnail.jpg
 slug: xiser
 ---
 
-
 In addition to the standing desk to care about my health, I work while walking at my desk, using [this portable stepper from Xiser](https://amzn.to/3rf1JDl).
 
 ![xiser_2.jpeg](/posts/xiser_xiser-2-jpeg.jpg)

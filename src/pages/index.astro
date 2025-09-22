@@ -53,7 +53,7 @@ const posts = Object.values(
           </p>
         </section>
         <section>
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
             {
               posts.map(post => {
                 const heroImageAsset = images[post.frontmatter.heroImage]
@@ -61,10 +61,10 @@ const posts = Object.values(
                   ? heroImageAsset()
                   : post.frontmatter.heroImage
                 return (
-                  <li class="text-center mb-4">
+                  <li class="mb-4 text-center">
                     <a href={post.url}>
                       <Image
-                        class="border border-slate-300 dark:border-zinc-700 rounded-xl"
+                        class="rounded-xl border border-slate-300 dark:border-zinc-700"
                         src={heroImageSrc}
                         width={720}
                         height={720 / 1.777}

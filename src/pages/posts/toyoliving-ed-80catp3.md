@@ -11,7 +11,6 @@ tags:
 heroImage: /posts/toyoliving-ed-80catp3_thumbnail.jpg
 ---
 
-
 As you may know, Japan experiences very high humidity in the summer.
 If you are into vlogging, you will need a proper way to store your camera gear to prevent mold.
 I have been using moisture-proofing and fungicide in my storage, but I decided to purchase a camera storage unit.
@@ -21,7 +20,6 @@ I have been using moisture-proofing and fungicide in my storage, but I decided t
 Not only does it prevent mold, but it also features a nice transparent door and shelves, which provide quick access to your gear.
 
 ![toyoliving](/posts/toyoliving-ed-80catp3_toyoliving.jpg)
-
 
 By default, it doesn't have rollers.
 So, I bought custom rollers that are compatible with it.

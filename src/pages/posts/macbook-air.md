@@ -11,7 +11,6 @@ tags:
 heroImage: /posts/macbook-air_thumbnail.jpg
 ---
 
-
 MacBook Air is my sub-machine. As you may know, I'm running a small business called [Inkdrop](https://www.inkdrop.app/). So, having a secondary computer is crucial in case the main machine breaks down. I must be available for providing user support and dealing with incidents.
 
 ![macbook-air-m2_2.jpg](/posts/macbook-air_macbook-air-m2-2-jpg.jpg)

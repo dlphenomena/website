@@ -9,7 +9,7 @@ import { IoArrowForward, IoChevronForward } from 'react-icons/io5'
 import Masthead from '../components/Masthead.astro'
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -20,12 +20,12 @@ import Masthead from '../components/Masthead.astro'
       <Masthead />
       <Content>
         <section>
-          <h1 class="text-3xl text-center font-mplus mt-12 mb-8">
+          <h1 class="mt-12 mb-8 text-center font-mplus text-3xl">
             Oops, not found
           </h1>
-          <div class="text-center py-4">
+          <div class="py-4 text-center">
             <a
-              class="inline-flex items-center gap-1 underline underline-offset-2 decoration-orange-500"
+              class="inline-flex items-center gap-1 underline decoration-orange-500 underline-offset-2"
               href="/"
               >Go to Index <IoChevronForward />
             </a>

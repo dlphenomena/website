@@ -11,7 +11,6 @@ heroImage: /posts/preducts-mount-hangers_thumbnail.jpg
 slug: preducts-mount-hangers
 ---
 
-
 I wanted to mount my PC and subwoofer underneath the tabletop.
 The cable management for them under the standing desk was pretty hard because it required longer cables.
 However, there was room to mount them on the back of the tabletop.

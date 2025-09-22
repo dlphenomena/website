@@ -9,6 +9,6 @@ export default defineConfig({
   integrations: [sitemap(), react()],
   markdown: {},
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwindcss()],
+  },
 })

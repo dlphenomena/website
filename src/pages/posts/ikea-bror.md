@@ -11,7 +11,6 @@ heroImage: /posts/ikea-bror_thumbnail.jpg
 slug: ikea-bror
 ---
 
-
 I've been searching for cabinets but couldn't find good articles or videos that primarily cover the storage in their desk setup.
 Since my work room is tiny, like 8.6m2, I needed a wide yet thin cabinet that wouldn't take up too much space.
 Then, I came across IKEA's BROR, which is a workbench with drawers.

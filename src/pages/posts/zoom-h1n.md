@@ -11,7 +11,6 @@ tags:
 heroImage: /posts/zoom-h1n_thumbnail.jpg
 ---
 
-
 As I wanted to record nature sounds like rain sounds, I bought a portable recorder called [Zoom H1n](https://amzn.to/3eF2NP9). Since I'm really happy with the sound quality, it is used for recording the keyboard sounds as well now. It is pretty great for making ASMR videos.
 
 ![zoom-h1n_2.jpg](/posts/zoom-h1n_zoom-h1-n-2-jpg.jpg)

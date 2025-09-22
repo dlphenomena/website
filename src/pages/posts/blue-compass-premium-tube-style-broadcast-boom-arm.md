@@ -11,5 +11,4 @@ heroImage: /posts/blue-compass-premium-tube-style-broadcast-boom-arm_thumbnail.j
 slug: blue-compass-premium-tube-style-broadcast-boom-arm
 ---
 
-
 My Yeti mic is mounted using a Blue Compass premium broadcast boom arm. By using the boom arm instead of a mic stand, it suppresses picking up the keyboard typing sounds when shooting my workflow videos.

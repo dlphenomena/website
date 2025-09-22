@@ -8,7 +8,7 @@ const { INKDROP_USERNAME, INKDROP_PASSWORD, INKDROP_PORT, INKDROP_BOOKID } =
 const liveExport = new LiveExporter({
   username: INKDROP_USERNAME,
   password: INKDROP_PASSWORD,
-  port: Number(INKDROP_PORT)
+  port: Number(INKDROP_PORT),
 })
 
 const basePath = `./src/pages/posts`
@@ -46,7 +46,7 @@ await liveExport.start({
       const fn = `${frontmatter.slug}_${toKebabCase(mdastNode.alt)}${extension}`
       const res = {
         filePath: `${publicPath}/${fn}`,
-        url: `/posts/${fn}`
+        url: `/posts/${fn}`,
       }
       if (mdastNode.alt === 'thumbnail') {
         frontmatter.heroImage = res.url
@@ -58,5 +58,5 @@ await liveExport.start({
     // Remove the thumbnail from the note body
     const md2 = md.replace(/\!\[thumbnail\]\(.*\)\n/, '')
     return md2
-  }
+  },
 })

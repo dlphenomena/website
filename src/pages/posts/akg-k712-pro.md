@@ -11,5 +11,4 @@ tags:
 heroImage: /posts/akg-k712-pro_thumbnail.jpg
 ---
 
-
 This headphone is called [AKG K712 PRO](https://amzn.to/2LIdaDg), usually used for music and video productions like referencing, precise mixing, and mastering. Since Mac Pro doesn’t have a headphone port, I use Apple’s USB-C to Headphone Jack Adapter. The big over-ear type prevents fatigue even during long hours of use such as in meetings and video editing.

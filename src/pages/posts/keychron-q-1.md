@@ -11,7 +11,6 @@ heroImage: /posts/keychron-q-1_thumbnail.jpg
 slug: keychron-q-1
 ---
 
-
 To be honest, I don't really care about keyboards. So, I've been just using Apple Wireless Keyboard and was happy with it. But I wanted people to enjoy more the typing sounds, I started to search for good mechanical keyboards. Here, [Keychron Q1](https://www.keychron.com/products/keychron-q1) is one of my favorite keyboards at the moment.
 Due to its weight, it stably holds on your desk.
 
