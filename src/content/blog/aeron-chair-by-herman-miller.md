@@ -1,13 +1,11 @@
 ---
 description: Work Chair
 public: true
-layout: ../../layouts/BlogPost.astro
 title: Aeron Chair by Herman Miller
-createdAt: 1663138523826
-updatedAt: 1683767730186
+pubDate: 'Sep 22 2025'
 tags:
   - Desk
-heroImage: /posts/aeron-chair-by-herman-miller_thumbnail.jpg
+heroImage: ../../assets/blog/aeron-chair-by-herman-miller.jpg
 slug: aeron-chair-by-herman-miller
 ---
 

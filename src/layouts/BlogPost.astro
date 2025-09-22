@@ -1,25 +1,15 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
+import type { CollectionEntry } from 'astro:content'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import Body from '../components/Body.astro'
 import Content from '../components/Content.astro'
 import { SITE_TITLE } from '../config'
 
-export interface Props {
-  content: {
-    title: string
-    description: string
-    createdAt?: string
-    updatedAt?: string
-    heroImage?: string
-    tags: string[]
-  }
-}
+type Props = CollectionEntry<'blog'>['data']
 
-const {
-  content: { title, description, heroImage },
-} = Astro.props
+const { title, description, heroImage } = Astro.props
 ---
 
 <!doctype html>
@@ -28,7 +18,7 @@ const {
     <BaseHead
       title={title + ` / ${SITE_TITLE}`}
       description={description}
-      image={heroImage}
+      image={heroImage?.src}
     />
   </head>
 
@@ -86,7 +76,7 @@ const {
                 class="rounded-xl border border-slate-300 dark:border-zinc-700"
                 width={720}
                 height={360}
-                src={heroImage}
+                src={heroImage.src}
                 alt=""
               />
             )

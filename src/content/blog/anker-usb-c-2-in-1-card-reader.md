@@ -1,13 +1,11 @@
 ---
 description: SD card reader
 public: true
-layout: ../../layouts/BlogPost.astro
 title: Anker USB-C 2-in-1 card reader
-createdAt: 1663635822758
-updatedAt: 1663635843390
+pubDate: 'Sep 22 2025'
 tags:
   - Computing
-heroImage: /posts/anker-usb-c-2-in-1-card-reader_thumbnail.jpg
+heroImage: ../../assets/blog/anker-usb-c-2-in-1-card-reader.jpg
 slug: anker-usb-c-2-in-1-card-reader
 ---
 

@@ -5,14 +5,15 @@ import { IoLogoGithub } from 'react-icons/io5'
 import ThemeToggle from './ThemeToggleButton'
 import DropdownMenu from './DropdownMenu'
 import sjtuLogo from '../assets/sjtu-logo.png'
+import { getCollection } from 'astro:content'
 
-const allPosts = Object.values(
-  import.meta.glob('../pages/posts/*.md', { eager: true })
+const allPosts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 )
 const allTags = new Set<string>()
+
 allPosts.map((post: any) => {
-  post.frontmatter.tags &&
-    post.frontmatter.tags.map((tag: string) => allTags.add(tag))
+  post.data.tags && post.data.tags.map((tag: string) => allTags.add(tag))
 })
 ---
 
