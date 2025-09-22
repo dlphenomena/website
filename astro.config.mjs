@@ -7,7 +7,7 @@ import netlify from '@astrojs/netlify'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://uses.craftz.dog/',
+  site: 'zheng-homepage.netlify.app',
   integrations: [sitemap(), react()],
   markdown: {},
 
