@@ -43,11 +43,9 @@ const posts = (
               posts.map((post: any) => (
                 <li class="mb-4 text-center">
                   <a href={`/blog/${post.id}`} class="block">
-                    <Image
-                      class="rounded-xl border border-slate-300 dark:border-zinc-700"
-                      src={post.data.heroImage}
-                      width={720 * 2}
-                      height={720}
+                    <img
+                      class="h-50 rounded-xl border border-slate-300 dark:border-zinc-700"
+                      src={post.data.heroImage.src}
                       alt="Thumbnail"
                     />
                     <div class="mt-3 text-xl font-bold">{post.data.title}</div>
