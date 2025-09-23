@@ -1,0 +1,103 @@
+---
+import type { ImageMetadata } from 'astro'
+import { getCollection } from 'astro:content'
+import BaseHead from '../components/BaseHead.astro'
+import Body from '../components/Body.astro'
+import Content from '../components/Content.astro'
+import Footer from '../components/Footer.astro'
+import FormattedDate from '../components/FormattedDate.astro'
+import Header from '../components/Header.astro'
+import Masthead from '../components/Masthead.astro'
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/thumbnails/*.{jpeg,jpg,png,gif}'
+)
+
+const findKeysByValue = (imgs: any, id: string) => {
+  return Object.keys(imgs).filter(key => key.includes(id + '_thumbnail'))
+}
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
+
+// Resolve all images for posts
+const postsWithImages = await Promise.all(
+  posts.map(async (post: any) => {
+    const matchingKeys = findKeysByValue(images, post.id)
+    const heroImageAsset =
+      matchingKeys.length > 0 ? images[matchingKeys[0]] : null
+    let heroImageSrc
+
+    if (heroImageAsset) {
+      try {
+        const loadedImage = await heroImageAsset()
+        heroImageSrc = loadedImage.default
+      } catch (error) {
+        console.error(`Error loading thumbnail for ${post.id}:`, error)
+        heroImageSrc = post.data.heroImage
+      }
+    } else {
+      heroImageSrc = post.data.heroImage
+    }
+
+    return {
+      ...post,
+      resolvedHeroImage: heroImageSrc,
+    }
+  })
+)
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header title={SITE_TITLE} />
+    <main class="pt-[56px]">
+      <Masthead />
+      <Content>
+        <section>
+          <p class="mb-8 indent-4">
+            My research lies in the intersection of machine learning and
+            healthcare, with a particular focus on developing advanced deep
+            learning models to enhance medical image analysis and diagnostics.
+          </p>
+        </section>
+        <section>
+          <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {
+              postsWithImages.map((post: any) => {
+                return (
+                  <li class="mb-4 text-center">
+                    <a href={`/blog/${post.id}/`}>
+                      <img
+                        class="h-50 rounded-xl border border-slate-300 dark:border-zinc-700"
+                        src={post.resolvedHeroImage.src}
+                        alt="Thumbnail"
+                      />
+                      <div class="mt-3 text-xl font-bold">
+                        {post.data.title}
+                      </div>
+                      {post.data.description && (
+                        <div class="opacity-70">{post.data.description}</div>
+                      )}
+                      <p class="date font-mono text-xs opacity-70">
+                        <FormattedDate date={post.data.pubDate} />
+                      </p>
+                    </a>
+                  </li>
+                )
+              })
+            }
+          </ul>
+        </section>
+        <!-- <CreatedWithSection /> -->
+      </Content>
+    </main>
+    <Footer />
+  </Body>
+</html>

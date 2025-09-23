@@ -6,6 +6,7 @@
 /* @import url('https://use.typekit.net/atg0zvr.css'); */
 
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 @theme {
   --font-sans: InterVariable, sans-serif;

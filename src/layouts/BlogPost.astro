@@ -2,9 +2,9 @@
 import type { CollectionEntry } from 'astro:content'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
-import Content from '../components/Content.astro'
 import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
+import Prose from '../components/Prose.astro'
 import { SITE_TITLE } from '../consts'
 
 type Props = CollectionEntry<'blog'>['data']
@@ -21,54 +21,10 @@ const { title, description, heroImage } = Astro.props
       image={heroImage?.src}
     />
   </head>
-
   <Body>
     <Header />
-    <style is:global>
-      @reference "../styles/global.css";
-      main article.markdown-body {
-        ul {
-          @apply mb-4 list-inside list-disc pl-4;
-        }
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-          @apply font-bold;
-        }
-        h1 {
-          @apply text-4xl;
-        }
-        h2 {
-          @apply text-2xl;
-        }
-        h3 {
-          @apply text-xl;
-        }
-        h4 {
-          @apply text-lg;
-        }
-        img {
-          @apply mb-6 rounded-xl border border-slate-300 dark:border-zinc-700;
-        }
-        p {
-          @apply mb-6;
-        }
-        a {
-          @apply underline decoration-orange-500 underline-offset-2 hover:text-orange-500;
-        }
-        pre {
-          @apply my-6 overflow-x-auto rounded-lg bg-zinc-100 p-4 dark:bg-zinc-800;
-        }
-        code {
-          @apply font-mono text-sm dark:bg-zinc-800;
-        }
-      }
-    </style>
-
     <main class="pt-[56px]">
-      <Content className="markdown-body pt-6">
+      <Prose className="mx-auto max-w-4xl px-8 pt-6">
         <div class="mb-8">
           {
             heroImage && (
@@ -80,11 +36,11 @@ const { title, description, heroImage } = Astro.props
             )
           }
         </div>
-        <h1 class="my-1 text-3xl">{title}</h1>
+        <div class="my-1 text-3xl">{title}</div>
         <div>{description}</div>
-        <hr class="border-top my-4 border-zinc-400" />
+        <!-- <hr class="border-top border-zinc-400" /> -->
         <slot />
-      </Content>
+      </Prose>
     </main>
     <Footer />
   </Body>

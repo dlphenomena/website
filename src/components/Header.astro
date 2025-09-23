@@ -21,16 +21,14 @@ allPosts.map((post: any) => {
   id="main-header"
   class="fixed z-20 w-full p-2 backdrop-blur-md transition-shadow duration-300"
 >
-  <div class="mx-auto max-w-5xl">
+  <div class="mx-auto max-w-4xl">
     <nav class="flex items-center gap-3 text-base">
       <a href="/" class="group flex flex-auto items-center">
         <img class="h-8 rounded-full" src={persona.src} alt="SJTU Logo" />
         <h2 class="p-2 text-lg font-semibold tracking-tighter">Zheng</h2>
       </a>
       <div class="hidden items-center gap-6 md:flex">
-        <HeaderLink href={HOMEPAGE_URL}>Research</HeaderLink>
-        <HeaderLink href={HOMEPAGE_URL}>Publications</HeaderLink>
-        <HeaderLink href={HOMEPAGE_URL}>Teaching</HeaderLink>
+        <HeaderLink href="/research">Research</HeaderLink>
         <HeaderLink href="https://github.com/mazhengcn" target="_blank"
           ><IoLogoGithub />Github</HeaderLink
         >
