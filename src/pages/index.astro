@@ -6,8 +6,6 @@ import Content from '../components/Content.astro'
 import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
-import { Image } from 'astro:assets'
-import CreatedWithSection from '../components/CreatedWithSection.astro'
 import Masthead from '../components/Masthead.astro'
 import { getCollection } from 'astro:content'
 import FormattedDate from '../components/FormattedDate.astro'
@@ -86,7 +84,7 @@ const postsWithImages = await Promise.all(
                   <li class="mb-4 text-center">
                     <a href={`/blog/${post.id}/`}>
                       <img
-                        class="w-180 rounded-xl border border-slate-300 dark:border-zinc-700"
+                        class="h-50 rounded-xl border border-slate-300 dark:border-zinc-700"
                         src={post.resolvedHeroImage.src}
                         width={720}
                         height={720 / 1.777}

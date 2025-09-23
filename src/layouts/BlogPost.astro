@@ -35,7 +35,7 @@ const { title, description, heroImage } = Astro.props
         h3,
         h4,
         h5 {
-          @apply font-mplus font-bold;
+          @apply font-bold;
         }
         h1 {
           @apply text-4xl;
@@ -80,7 +80,7 @@ const { title, description, heroImage } = Astro.props
             )
           }
         </div>
-        <h1 class="font-mplus my-1 text-3xl">{title}</h1>
+        <h1 class="my-1 text-3xl">{title}</h1>
         <div>{description}</div>
         <hr class="border-top my-4 border-zinc-400" />
         <slot />
