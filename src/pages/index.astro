@@ -1,14 +1,14 @@
 ---
 import type { ImageMetadata } from 'astro'
+import { getCollection } from 'astro:content'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
 import Content from '../components/Content.astro'
 import Footer from '../components/Footer.astro'
-import Header from '../components/Header.astro'
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
-import Masthead from '../components/Masthead.astro'
-import { getCollection } from 'astro:content'
 import FormattedDate from '../components/FormattedDate.astro'
+import Header from '../components/Header.astro'
+import Masthead from '../components/Masthead.astro'
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/thumbnails/*.{jpeg,jpg,png,gif}'

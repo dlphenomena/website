@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets'
+import { getCollection } from 'astro:content'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
 import Breadcrumb from '../components/Breadcrumb.astro'
@@ -8,7 +8,6 @@ import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
 import Masthead from '../components/Masthead.astro'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
-import { getCollection } from 'astro:content'
 
 export interface Props {
   category: string
