@@ -1,53 +1,11 @@
 ---
-import type { ImageMetadata } from 'astro'
-import { getCollection } from 'astro:content'
+import Persona from '../assets/persona.jpg'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
-import Content from '../components/Content.astro'
 import Footer from '../components/Footer.astro'
-import FormattedDate from '../components/FormattedDate.astro'
 import Header from '../components/Header.astro'
-import Masthead from '../components/Masthead.astro'
+import Prose from '../components/Prose.astro'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
-
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/thumbnails/*.{jpeg,jpg,png,gif}'
-)
-
-const findKeysByValue = (imgs: any, id: string) => {
-  return Object.keys(imgs).filter(key => key.includes(id + '_thumbnail'))
-}
-
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-)
-
-// Resolve all images for posts
-const postsWithImages = await Promise.all(
-  posts.map(async (post: any) => {
-    const matchingKeys = findKeysByValue(images, post.id)
-    const heroImageAsset =
-      matchingKeys.length > 0 ? images[matchingKeys[0]] : null
-    let heroImageSrc
-
-    if (heroImageAsset) {
-      try {
-        const loadedImage = await heroImageAsset()
-        heroImageSrc = loadedImage.default
-      } catch (error) {
-        console.error(`Error loading thumbnail for ${post.id}:`, error)
-        heroImageSrc = post.data.heroImage
-      }
-    } else {
-      heroImageSrc = post.data.heroImage
-    }
-
-    return {
-      ...post,
-      resolvedHeroImage: heroImageSrc,
-    }
-  })
-)
 ---
 
 <!doctype html>
@@ -58,54 +16,70 @@ const postsWithImages = await Promise.all(
   <Body>
     <Header title={SITE_TITLE} />
     <main class="pt-[56px]">
-      <Masthead />
-      <Content>
-        <section>
-          <p class="mb-8 indent-4">
-            I am a tenure-track associate professor at the School of
-            Mathematical Sciences, Shanghai Jiao Tong University. My research
-            interests include Computational Mathematics and Machine Learning. I
-            am particularly interested in the design and implementation of AI
-            inspired numerical algorithms for scientific problems, such as
-            solving kinetic equations, high-dimensional PDEs, and inverse
-            problems.
-            <!-- <a
-              class="inline-flex items-center gap-1 indent-1 text-orange-500"
-              href={HOMEPAGE_URL}
-              >Learn more about me <IoArrowForward className="inline" />
-            </a> -->
+      <section
+        class="mx-auto my-12 flex max-w-3xl items-center justify-center px-4"
+      >
+        <img
+          src={Persona.src}
+          alt="Portrait of Zheng Ma"
+          class="h-50 m-4 rounded-full object-cover"
+        />
+        <div class="m-auto text-center">
+          <h1 class="mb-4 text-4xl font-medium">Zheng Ma (马征)</h1>
+          <p class="text-lg text-gray-600 dark:text-gray-400">
+            Welcome to my personal website built with Astro!
           </p>
-        </section>
-        <section>
-          <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {
-              postsWithImages.map((post: any) => {
-                return (
-                  <li class="mb-4 text-center">
-                    <a href={`/blog/${post.id}/`}>
-                      <img
-                        class="h-50 rounded-xl border border-slate-300 dark:border-zinc-700"
-                        src={post.resolvedHeroImage.src}
-                        alt="Thumbnail"
-                      />
-                      <div class="mt-3 text-xl font-bold">
-                        {post.data.title}
-                      </div>
-                      {post.data.description && (
-                        <div class="opacity-70">{post.data.description}</div>
-                      )}
-                      <p class="date font-mono text-xs opacity-70">
-                        <FormattedDate date={post.data.pubDate} />
-                      </p>
-                    </a>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </section>
-        <!-- <CreatedWithSection /> -->
-      </Content>
+        </div>
+      </section>
+      <Prose className="mx-auto my-12 max-w-3xl px-4">
+        <h1>🧑‍🚀 Hello, Astronaut!</h1>
+        <p>
+          Welcome to the official <a href="https://astro.build/">Astro</a> blog starter
+          template. This template serves as a lightweight, minimally-styled starting
+          point for anyone looking to build a personal website, blog, or portfolio
+          with Astro.
+        </p>
+        <p>
+          This template comes with a few integrations already configured in your
+          <code>astro.config.mjs</code> file. You can customize your setup with
+          <a href="https://astro.build/integrations">Astro Integrations</a> to add
+          tools like Tailwind, React, or Vue to your project.
+        </p>
+        <p>Here are a few ideas on how to get started with the template:</p>
+        <ul>
+          <li>Edit this page in <code>src/pages/index.astro</code></li>
+          <li>
+            Edit the site header items in <code
+              >src/components/Header.astro</code
+            >
+          </li>
+          <li>
+            Add your name to the footer in <code
+              >src/components/Footer.astro</code
+            >
+          </li>
+          <li>
+            Check out the included blog posts in <code>src/content/blog/</code>
+          </li>
+          <li>
+            Customize the blog post page layout in <code
+              >src/layouts/BlogPost.astro</code
+            >
+          </li>
+        </ul>
+        <p>
+          Have fun! If you get stuck, remember to
+          <a href="https://docs.astro.build/">read the docs</a>
+          or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+        </p>
+        <p>
+          Looking for a blog template with a bit more personality? Check out
+          <a href="https://github.com/Charca/astro-blog-template"
+            >astro-blog-template</a
+          >
+          by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+        </p>
+      </Prose>
     </main>
     <Footer />
   </Body>

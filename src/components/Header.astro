@@ -1,7 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro'
-import { HOMEPAGE_URL } from '../consts'
-import { IoLogoGithub } from 'react-icons/io5'
+import { IoLogoGithub, IoDocumentsOutline } from 'react-icons/io5'
 import ThemeToggle from './ThemeToggleButton'
 import DropdownMenu from './DropdownMenu'
 import persona from '../assets/persona.jpg'
@@ -18,10 +17,9 @@ allPosts.map((post: any) => {
 ---
 
 <header
-  id="main-header"
   class="fixed z-20 w-full p-2 backdrop-blur-md transition-shadow duration-300"
 >
-  <div class="mx-auto max-w-4xl">
+  <div class="mx-auto max-w-3xl">
     <nav class="flex items-center gap-3 text-base">
       <a href="/" class="group flex flex-auto items-center">
         <img class="h-8 rounded-full" src={persona.src} alt="SJTU Logo" />
@@ -29,6 +27,9 @@ allPosts.map((post: any) => {
       </a>
       <div class="hidden items-center gap-6 md:flex">
         <HeaderLink href="/research">Research</HeaderLink>
+        <HeaderLink href="/publications"
+          ><IoDocumentsOutline />Publications</HeaderLink
+        >
         <HeaderLink href="https://github.com/mazhengcn" target="_blank"
           ><IoLogoGithub />Github</HeaderLink
         >
