@@ -12,6 +12,7 @@
   --font-sans: InterVariable, sans-serif;
   --font-sans--font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   --font-mono: 'JetBrains Mono', monospace;
+  --font-sans-cn: 'Noto Sans SC', sans-serif;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

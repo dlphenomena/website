@@ -17,17 +17,19 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
     <Header title={SITE_TITLE} />
     <main class="pt-[56px]">
       <section
-        class="mx-auto my-12 flex max-w-3xl items-center justify-center px-4"
+        class="mx-auto flex h-80 max-w-3xl items-center justify-center px-4"
       >
         <img
           src={Persona.src}
           alt="Portrait of Zheng Ma"
-          class="h-50 m-4 rounded-full object-cover"
+          class="mx-4 h-60 rounded-full object-cover"
         />
-        <div class="m-auto text-center">
-          <h1 class="mb-4 text-4xl font-medium">Zheng Ma (马征)</h1>
+        <div class="prose dark:prose-invert m-auto">
+          <h1 class="mb-4 text-4xl font-semibold">
+            Zheng Ma <span class="font-sans-cn font-semibold">(马 征)</span>
+          </h1>
           <p class="text-lg text-gray-600 dark:text-gray-400">
-            Welcome to my personal website built with Astro!
+            Welcome to my personal website!
           </p>
         </div>
       </section>
