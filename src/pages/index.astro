@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import Persona from '../assets/persona.jpg'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
@@ -19,10 +20,12 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
       <section
         class="mx-auto flex h-80 max-w-3xl items-center justify-center px-4"
       >
-        <img
-          src={Persona.src}
+        <Image
+          class="mx-4 h-60 w-60 rounded-full border-4 border-orange-300 object-cover dark:border-zinc-600"
+          src={Persona}
           alt="Portrait of Zheng Ma"
-          class="mx-4 h-60 rounded-full object-cover"
+          layout="constrained"
+          priority
         />
         <div class="prose dark:prose-invert m-auto">
           <h1 class="mb-4 text-4xl font-semibold">

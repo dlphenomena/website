@@ -2,7 +2,7 @@
 description: Pre-trained Attention-based Neural Network for Radiative Tranfer
 public: true
 title: DeepRTE
-pubDate: 'Dec 22 2025'
+pubDate: 2025-10-22
 tags:
   - Kinetic Equations
 heroImage: ../../assets/blog/deeprte.png
