@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
+import BackToTopButton from '../components/BackToTopButton'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
 import Footer from '../components/Footer.astro'
@@ -44,6 +45,7 @@ const { title, description, heroImage } = Astro.props
         <hr class="border-top border-zinc-400" />
         <slot />
       </Prose>
+      <BackToTopButton client:idle />
     </main>
     <Footer />
   </Body>

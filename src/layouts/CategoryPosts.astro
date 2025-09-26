@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
+import BackToTopButton from '../components/BackToTopButton'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
 import Breadcrumb from '../components/Breadcrumb.astro'
@@ -57,6 +58,7 @@ const posts = (
           </ul>
         </section>
       </Content>
+      <BackToTopButton client:idle />
     </main>
     <Footer />
   </Body>

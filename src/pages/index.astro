@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import Persona from '../assets/persona.jpg'
+import BackToTopButton from '../components/BackToTopButton'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
 import Footer from '../components/Footer.astro'
@@ -46,13 +47,15 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
           solve problems in mathematical physics.
           <h2>Work</h2>
           <p>
-            <span class="font-semibold">2017 - 2020:</span> Golomb Visiring Assistant
-            Professor in Mathematics,
-            <span class="italic">Shanghai Jiao Tong University, </span> China
             <p>
-              <span class="font-semibold">2008 - 2012:</span> B.S. in Mathematics,
+              <span class="font-semibold">2020 - present:</span> Tenured-Track Associate
+              Professor, School of Mathematical Sciences,
               <span class="italic">Shanghai Jiao Tong University,</span>
-              China
+            </p>
+            <p>
+              <span class="font-semibold">2017 - 2020:</span> Golomb Visiting Assistant
+              Professor, Department of Mathematics,
+              <span class="italic">Purdue University, </span> U.S.
             </p>
           </p>
           <h2>Education</h2>
@@ -61,12 +64,14 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
             <span class="italic">Shanghai Jiao Tong University, </span> China
             <p>
               <span class="font-semibold">2008 - 2012:</span> B.S. in Mathematics,
+              Zhiyuan College,
               <span class="italic">Shanghai Jiao Tong University,</span>
               China
             </p>
           </p>
         </p>
       </Prose>
+      <BackToTopButton client:idle />
       <Footer />
     </main>
   </Body>
