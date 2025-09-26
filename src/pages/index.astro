@@ -21,9 +21,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
         class="mx-auto flex h-80 max-w-3xl items-center justify-center px-4"
       >
         <Image
-          class="mx-4 h-60 w-60 rounded-full border-4 border-orange-300 object-cover dark:border-zinc-600"
           src={Persona}
           alt="Portrait of Zheng Ma"
+          class="mx-4 h-60 w-60 rounded-full border-4 border-orange-300 object-cover dark:border-zinc-600"
           layout="constrained"
           priority
         />
@@ -32,60 +32,42 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
             Zheng Ma <span class="font-sans-cn font-semibold">(马 征)</span>
           </h1>
           <p class="text-lg text-gray-600 dark:text-gray-400">
-            Welcome to my personal website!
+            Mathmatician and Tech Enthusiast
           </p>
         </div>
       </section>
       <Prose className="mx-auto my-12 max-w-3xl px-4">
-        <h1>🧑‍🚀 Hello, Astronaut!</h1>
-        <p>
-          Welcome to the official <a href="https://astro.build/">Astro</a> blog starter
-          template. This template serves as a lightweight, minimally-styled starting
-          point for anyone looking to build a personal website, blog, or portfolio
-          with Astro.
-        </p>
-        <p>
-          This template comes with a few integrations already configured in your
-          <code>astro.config.mjs</code> file. You can customize your setup with
-          <a href="https://astro.build/integrations">Astro Integrations</a> to add
-          tools like Tailwind, React, or Vue to your project.
-        </p>
-        <p>Here are a few ideas on how to get started with the template:</p>
-        <ul>
-          <li>Edit this page in <code>src/pages/index.astro</code></li>
-          <li>
-            Edit the site header items in <code
-              >src/components/Header.astro</code
-            >
-          </li>
-          <li>
-            Add your name to the footer in <code
-              >src/components/Footer.astro</code
-            >
-          </li>
-          <li>
-            Check out the included blog posts in <code>src/content/blog/</code>
-          </li>
-          <li>
-            Customize the blog post page layout in <code
-              >src/layouts/BlogPost.astro</code
-            >
-          </li>
-        </ul>
-        <p>
-          Have fun! If you get stuck, remember to
-          <a href="https://docs.astro.build/">read the docs</a>
-          or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-        </p>
-        <p>
-          Looking for a blog template with a bit more personality? Check out
-          <a href="https://github.com/Charca/astro-blog-template"
-            >astro-blog-template</a
-          >
-          by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+        <p class="indent-8">
+          I am an associate professor at the School of Mathematical Sciences,
+          Shanghai Jiao Tong University. My research interests include geometric
+          analysis, partial differential equations, and mathematical general
+          relativity. I am particularly interested in the interplay between
+          geometry and physics, and how geometric methods can be applied to
+          solve problems in mathematical physics.
+          <h2>Work</h2>
+          <p>
+            <span class="font-semibold">2017 - 2020:</span> Golomb Visiring Assistant
+            Professor in Mathematics,
+            <span class="italic">Shanghai Jiao Tong University, </span> China
+            <p>
+              <span class="font-semibold">2008 - 2012:</span> B.S. in Mathematics,
+              <span class="italic">Shanghai Jiao Tong University,</span>
+              China
+            </p>
+          </p>
+          <h2>Education</h2>
+          <p>
+            <span class="font-semibold">2012 - 2017:</span> Ph.D. in Mathematics,
+            <span class="italic">Shanghai Jiao Tong University, </span> China
+            <p>
+              <span class="font-semibold">2008 - 2012:</span> B.S. in Mathematics,
+              <span class="italic">Shanghai Jiao Tong University,</span>
+              China
+            </p>
+          </p>
         </p>
       </Prose>
+      <Footer />
     </main>
-    <Footer />
   </Body>
 </html>
