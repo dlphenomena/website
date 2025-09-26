@@ -1,5 +1,6 @@
 ---
 import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
@@ -74,10 +75,11 @@ const postsWithImages = await Promise.all(
                 return (
                   <li class="mb-4 text-center">
                     <a href={`/blog/${post.id}/`}>
-                      <img
+                      <Image
                         class="h-50 rounded-xl border border-slate-300 dark:border-zinc-700"
-                        src={post.resolvedHeroImage.src}
-                        alt="Thumbnail"
+                        src={post.resolvedHeroImage}
+                        alt="Hero Thumbnail"
+                        priority
                       />
                       <div class="mt-3 text-xl font-bold">
                         {post.data.title}

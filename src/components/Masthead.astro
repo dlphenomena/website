@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import masterHeadImage from '../assets/placeholder-hero.jpg'
 ---
 
@@ -6,9 +7,11 @@ import masterHeadImage from '../assets/placeholder-hero.jpg'
   <div
     class="absolute flex h-full w-full justify-center overflow-hidden bg-blue-50/50 dark:bg-zinc-900"
   >
-    <img
-      src={masterHeadImage.src}
+    <Image
+      src={masterHeadImage}
       class="w-full rounded object-cover opacity-30"
+      alt="Masthead Background"
+      priority
     />
   </div>
   <div class="z-10 px-8 text-center shadow-black drop-shadow-lg">

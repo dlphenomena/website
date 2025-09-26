@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
@@ -28,10 +29,12 @@ const { title, description, heroImage } = Astro.props
         <div class="mb-8">
           {
             heroImage && (
-              <img
-                class="w-full rounded-xl border border-slate-300 dark:border-zinc-700"
-                src={heroImage.src}
-                alt=""
+              <Image
+                class="w-full rounded border border-slate-300 dark:border-zinc-700"
+                src={heroImage}
+                alt="Hero"
+                layout="full-width"
+                priority
               />
             )
           }
