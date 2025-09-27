@@ -1,10 +1,11 @@
 ---
+import Footer from '@/components/Footer.astro'
 import { Image } from 'astro:assets'
 import Persona from '../assets/persona.jpg'
 import BackToTopButton from '../components/BackToTopButton'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
-import Footer from '../components/Footer.astro'
+import EmailButton from '../components/EmailButton.tsx'
 import Header from '../components/Header.astro'
 import Prose from '../components/Prose.astro'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
@@ -39,41 +40,47 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
       </section>
       <Prose className="mx-auto my-12 max-w-3xl px-4">
         <p class="indent-8">
-          I am an associate professor at the School of Mathematical Sciences,
-          Shanghai Jiao Tong University. My research interests include geometric
-          analysis, partial differential equations, and mathematical general
-          relativity. I am particularly interested in the interplay between
-          geometry and physics, and how geometric methods can be applied to
-          solve problems in mathematical physics. <a href="/cv.pdf"
-            >Full CV here</a
-          >
-          <p>
-            <p>
-              <span class="font-semibold">2020 - present:</span> Tenured-Track Associate
-              Professor, School of Mathematical Sciences,
-              <span class="italic">Shanghai Jiao Tong University,</span>
-            </p>
-            <p>
-              <span class="font-semibold">2017 - 2020:</span> Golomb Visiting Assistant
-              Professor, Department of Mathematics,
-              <span class="italic">Purdue University, </span> U.S.
-            </p>
-          </p>
-          <h2>Education</h2>
-          <p>
-            <span class="font-semibold">2012 - 2017:</span> Ph.D. in Mathematics,
-            <span class="italic">Shanghai Jiao Tong University, </span> China
-            <p>
-              <span class="font-semibold">2008 - 2012:</span> B.S. in Mathematics,
-              Zhiyuan College,
-              <span class="italic">Shanghai Jiao Tong University,</span>
-              China
-            </p>
-          </p>
+          Welcome to my homepage, I'm a mathematician and tech enthusiast. My
+          research interests include computational mathematics and deep learning
+          methods. I am particularly interested in the interplay between deep
+          learning and mathematics, and how deep learning methods can be applied
+          to solve problems in mathematical and engineering.
+          <a href="/cv.pdf">Full CV here</a>
+        </p>
+
+        <h2
+          class="underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700"
+        >
+          Work
+        </h2>
+        <p>
+          <span class="font-semibold">2020 - present</span>: <span
+            class="italic">Tenured-track Associate Professor</span
+          >, School of Mathematical Sciences, Shanghai Jiao Tong University,
+          China
+        </p>
+        <p>
+          <span class="font-semibold">2017 - 2020</span>: <span class="italic"
+            >Golomb Visiting Assistant Professor</span
+          >, Department of Mathematics, Purdue University, U.S.
+        </p>
+        <h2
+          class="underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700"
+        >
+          Education
+        </h2>
+        <p>
+          <span class="font-semibold">2012 - 2017</span>: Ph.D. in Mathematics,
+          Shanghai Jiao Tong University, China
+        </p>
+        <p>
+          <span class="font-semibold">2008 - 2012</span>: B.S. in Mathematics,
+          Zhiyuan College, Shanghai Jiao Tong University, China
         </p>
       </Prose>
-      <BackToTopButton client:idle />
-      <Footer />
     </main>
+    <BackToTopButton client:idle />
+    <EmailButton />
+    <Footer />
   </Body>
 </html>
