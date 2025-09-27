@@ -1,6 +1,6 @@
 import React from 'react'
-import { IoMail } from 'react-icons/io5'
 import { Button } from '@/components/ui/button'
+import { IoMail } from 'react-icons/io5'
 
 export default function EmailButton() {
   return (
@@ -10,7 +10,7 @@ export default function EmailButton() {
         asChild
         className="hover:text-orange-500 dark:hover:text-orange-500"
       >
-        <a href="/cv.pdf">
+        <a href="malto:zhengma@sjtu.edu.cn">
           <IoMail /> Contact with me
         </a>
       </Button>

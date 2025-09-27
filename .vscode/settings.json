@@ -1,21 +1,12 @@
 {
   "[javascript]": {
     "editor.defaultFormatter": "astro-build.astro-vscode",
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    }
   },
   "[typescript]": {
     "editor.defaultFormatter": "astro-build.astro-vscode",
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    }
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    }
   },
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode",
