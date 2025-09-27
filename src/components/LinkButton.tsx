@@ -1,18 +1,21 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import { IoMail } from 'react-icons/io5'
+import type { ReactNode } from 'react'
 
-export default function EmailButton() {
+interface Props {
+  href: string
+  children: ReactNode
+}
+
+export default function LinkButton({ href, children }: Props) {
   return (
-    <div className="flex justify-center">
+    <div className="not-prose flex justify-center">
       <Button
         variant="outline"
         asChild
         className="hover:text-orange-500 dark:hover:text-orange-500"
       >
-        <a href="malto:zhengma@sjtu.edu.cn">
-          <IoMail /> Contact with me
-        </a>
+        <a href={href}>{children}</a>
       </Button>
     </div>
   )

@@ -1,12 +1,13 @@
 ---
 import Footer from '@/components/Footer.astro'
 import { Image } from 'astro:assets'
+import { IoDocument, IoMail } from 'react-icons/io5'
 import Persona from '../assets/persona.jpg'
 import BackToTopButton from '../components/BackToTopButton'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
-import EmailButton from '../components/EmailButton.tsx'
 import Header from '../components/Header.astro'
+import LinkButton from '../components/LinkButton.tsx'
 import Prose from '../components/Prose.astro'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
 ---
@@ -45,9 +46,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
           methods. I am particularly interested in the interplay between deep
           learning and mathematics, and how deep learning methods can be applied
           to solve problems in mathematical and engineering.
-          <a href="/cv.pdf">Full CV here</a>
         </p>
-
+        <LinkButton href="/cv.pdf"><IoDocument />Full CV here</LinkButton>
         <h2
           class="underline decoration-zinc-400 decoration-4 underline-offset-4 dark:decoration-zinc-700"
         >
@@ -80,7 +80,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
       </Prose>
     </main>
     <BackToTopButton client:idle />
-    <EmailButton />
+    <LinkButton href="mailto:zhengma@sjtu.edu.cn"
+      ><IoMail />Contact me</LinkButton
+    >
     <Footer />
   </Body>
 </html>
