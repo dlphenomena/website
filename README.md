@@ -1,8 +1,6 @@
-# Demo webpage
+# Website of Deep Leraning Phenomena
 
-Built with Astro and Tailwind CSS
-
-https://zheng-homepage.netlify.app
+Built with Astro, React Shadcn UI and Tailwind CSS
 
 ## Stack
 
@@ -10,6 +8,7 @@ https://zheng-homepage.netlify.app
 - [Tailwind CSS](https://tailwindcss.com/) - CSS Framework
 - [React](https://react.dev/) - Component-based UI framework for JS
 - [Headless UI](https://headlessui.com/) - Unstyled interactive components
+- [Shadcn UI](https://ui.shadcn.com/) - UI components
 - [React Icons](https://react-icons.github.io/react-icons/) - Icon set
 
 ## Project Structure
@@ -22,7 +21,7 @@ PROJECT_ROOT
 │   └── posts           # images of posts
 ├── src
 │   ├── components      # Astro & React components
-│   │   └── icons
+│   │   └── ui
 │   ├── layouts         # page layouts
 │   ├── pages           # page files
 │   │   ├── categories  # category pages
