@@ -47,8 +47,24 @@ const { title, description, image = '/cover.jpg' } = Astro.props
   defer
   src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"
   integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
-  crossorigin="anonymous"
-  onload="renderMathInElement(document.body);"></script>
+  crossorigin="anonymous"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // @ts-ignore - renderMathInElement is provided by KaTeX auto-render
+    renderMathInElement(document.body, {
+      // customised options
+      // • auto-render specific keys, e.g.:
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true },
+      ],
+      // • rendering keys, e.g.:
+      throwOnError: false,
+    })
+  })
+</script>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
