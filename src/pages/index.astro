@@ -5,11 +5,11 @@ import { IoMail } from 'react-icons/io5'
 import BackToTopButton from '../components/BackToTopButton'
 import BaseHead from '../components/BaseHead.astro'
 import Body from '../components/Body.astro'
+import Content from '../components/Content.astro'
 import Footer from '../components/Footer.astro'
 import FormattedDate from '../components/FormattedDate.astro'
 import Header from '../components/Header.astro'
 import LinkButton from '../components/LinkButton'
-import Prose from '../components/Prose.astro'
 import {
   Card,
   CardContent,
@@ -71,7 +71,7 @@ const postsWithImages = await Promise.all(
       <!-- <Content
         className="prose prose-zinc dark:prose-invert mt-15 prose-ul:list-none"
       > -->
-      <Prose className="prose-ul:list-none mt-15 mx-auto max-w-4xl px-8">
+      <Content className="prose-ul:list-none mt-15">
         <section>
           <h1 class="text-center">Deep Learning Phenomena</h1>
           <p class="indent-8">
@@ -121,7 +121,7 @@ const postsWithImages = await Promise.all(
             }
           </ul>
         </section>
-      </Prose>
+      </Content>
     </main>
     <BackToTopButton client:idle />
     <Footer />
