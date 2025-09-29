@@ -72,10 +72,10 @@ Figure 1: The feature maps ${(\theta_k,A_k)}_{k}$ of a two-layer ReLU neural net
 Empirically, we have found that in non-linear training regime, condensation is a very common phenomenon. In [[2]](#ref2), to characterize the non-linear and linear regimes, we consider a two-layer NN with $m$ hidden neurons:
 
 $$
-f^{\alpha}_{\boldsymbol{\theta}}(\boldsymbol{x}) = \frac{1}{\alpha}\sum_{k=1}^{m}a_k\sigma(\boldsymbol{w}_k^{T}\boldsymbol{x}),
+f^\alpha_{\boldsymbol{\theta}}(\boldsymbol{x}) = \frac{1}{\alpha} \sum_{k=1}^{m}a_k\sigma(\boldsymbol{w}_k^{T}\boldsymbol{x}),
 $$
 
-where $\boldsymbol{x}\in\mathbb{R}^{d}$, $\alpha$ is the scaling factor, $\boldsymbol{\theta}=\mathrm{vec}(\boldsymbol{\theta}_a,\boldsymbol{\theta}_{\boldsymbol{w}})$ with $\boldsymbol{\theta}_a=\mathrm{vec}(\{a_k\}_{k=1}^{m})$, $\boldsymbol{\theta}_{\boldsymbol{w}}=\mathrm{vec}(\{\boldsymbol{w}_k\}_{k=1}^{m})$ is the set of parameters initialized by $a_k^0\sim N(0, \beta_1^2)$, $\boldsymbol{w}_k^0\sim N(0, \beta_2^2 I_d)$. The bias term $b_k$ can be incorporated by expanding $\boldsymbol{x}$ and $\boldsymbol{w}_k$ to $(\boldsymbol{x}^T,1)^T$ and $(\boldsymbol{w}_k^T,b_k)^T$. We consider the infinite-width limit $m\to\infty$.
+where $\boldsymbol{x}\in\mathbb{R}^{d}$, $\alpha$ is the scaling factor, $\boldsymbol{\theta}=\mathrm{vec}(\boldsymbol{\theta}_a,\boldsymbol{\theta}_\boldsymbol{w})$ with $\boldsymbol{\theta}_a=\mathrm{vec}(\{a_k\}_{k=1}^{m})$, $\boldsymbol{\theta}_{\boldsymbol{w}}=\mathrm{vec}(\{\boldsymbol{w}_k\}_{k=1}^{m})$ is the set of parameters initialized by $a_k^0\sim N(0, \beta_1^2)$, $\boldsymbol{w}_k^0\sim N(0, \beta_2^2 I_d)$. The bias term $b_k$ can be incorporated by expanding $\boldsymbol{x}$ and $\boldsymbol{w}_k$ to $(\boldsymbol{x}^T,1)^T$ and $(\boldsymbol{w}_k^T,b_k)^T$. We consider the infinite-width limit $m\to\infty$.
 
 The linear regime refers to a dynamic regime that the model can be approximated by the first-order Taylor expansion at the initial parameter point, i.e.,
 
