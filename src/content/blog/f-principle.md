@@ -83,7 +83,7 @@ The gradient derived from low-frequency components dominates that from high-freq
 
 ---
 ## Related subsequent works
-<!-- 1) give a tag, such as theory or algorithm or others. 2) Authors better be completed listed unless there are too many ones. 3) The Journal of Conference name should have a hyperlink to the paper. 4) Provide arxiv page if there is one. -->
+<!-- 1) give a tag, such as theory or algorithm or others. 2) Authors better be completed listed unless there are too many ones. 3) The Journal or Conference name should have a hyperlink to the paper. 4) Provide arxiv page if there is one. -->
 ---
 **Theory:** Luo, Tao; Ma, Zheng; Xu, Zhi-Qin John; Zhang, Yaoyu. *Theory of the Frequency Principle for General Deep Neural Networks*. [CSIAM Trans. Appl. Math.](https://global-sci.org/intro/article_detail/csiam-am/19447.html), 2021.
 
