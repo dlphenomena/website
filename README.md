@@ -1,6 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/68ff35fe-1e37-41ca-8ab6-8e43659cb06a/deploy-status)](https://app.netlify.com/projects/dlphenomena/deploys)
+
 # Website of Deep Leraning Phenomena
 
-Built with Astro, React Shadcn UI and Tailwind CSS
+Currently hosted on netlify https://dlphenomena.netlify.app. Built with Astro, React Shadcn UI and Tailwind CSS
 
 ## Stack
 
@@ -17,14 +19,19 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```
 PROJECT_ROOT
-├── public              # static assets
-│   └── posts           # images of posts
-├── src
-│   ├── components      # Astro & React components
-│   │   └── ui
-│   ├── layouts         # page layouts
-│   ├── pages           # page files
-│   │   ├── categories  # category pages
-│   │   └── posts       # .md files
-└── └── styles          # global stylesheets
+├── public              # website static assets
+└── src
+    ├── assets          # images and files of posts
+    │   ├── blog
+    │   └── thumbnails
+    ├── components      # Astro & React (including Shadcn UI) components
+    │   └── ui
+    ├── content         # Astro content collection (.md, .mdx)
+    │   └── blog
+    ├── layouts         # Page layouts
+    ├── lib             # Utility libs
+    ├── pages
+    │   ├── blog        # Blog page
+    │   └── categories  # Categary page
+    └── styles          # Global stylesheets
 ```
