@@ -73,13 +73,13 @@ The gradient derived from low-frequency components dominates that from high-freq
 ---
 ## Most Key References
 
-<a id="ref1">[1]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Xiao, Yanyang. *Training Behavior of Deep Neural Network in Frequency Domain*, [International Conference on Neural Information Processing, 2019](https://proceedings.mlr.press/v97/rahaman19a.html), [arXiv](https://arxiv.org/abs/1807.01251)
+<a id="ref1">[1]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Xiao, Yanyang. *Training Behavior of Deep Neural Network in Frequency Domain*, [International Conference on Neural Information Processing, 2019](https://link.springer.com/chapter/10.1007/978-3-030-36708-4_22), [arXiv](https://arxiv.org/abs/1807.01251)
 
-<a id="ref2">[2]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Luo, Tao; Xiao, Yanyang; Ma, Zheng. *Frequency Principle: Fourier Analysis Sheds Light on Deep Neural Networks*, [Communications in Computational Physics, 2020](https://proceedings.mlr.press/v97/rahaman19a.html), [arXiv](https://arxiv.org/abs/1901.06523)
+<a id="ref2">[2]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Luo, Tao; Xiao, Yanyang; Ma, Zheng. *Frequency Principle: Fourier Analysis Sheds Light on Deep Neural Networks*, [Communications in Computational Physics, 2020](https://global-sci.com/article/79739/frequency-principle-fourier-analysis-sheds-light-on-deep-neural-networks), [arXiv](https://arxiv.org/abs/1901.06523)
 
 <a id="ref3">[3]</a> Nasim Rahaman\#, Aristide Baratin\#, Devansh Arpit, Felix Draxler, Min Lin, Fred A. Hamprecht, Yoshua Bengio, Aaron Courville. *On the Spectral Bias of Neural Networks*, [International Conference on Machine Learning, 2019](https://proceedings.mlr.press/v97/rahaman19a.html), [arXiv](https://arxiv.org/abs/1806.08734)
 
-<a id="ref4">[4]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Luo, Tao. *Overview frequency principle/spectral bias in deep learning*, [Communications on Applied Mathematics and Computation, 2024](https://proceedings.mlr.press/v97/rahaman19a.html), [arXiv](https://arxiv.org/abs/2201.07395)
+<a id="ref4">[4]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Luo, Tao. *Overview frequency principle/spectral bias in deep learning*, [Communications on Applied Mathematics and Computation, 2024](https://link.springer.com/article/10.1007/s42967-024-00398-7), [arXiv](https://arxiv.org/abs/2201.07395)
 
 ---
 ## Related subsequent works
