@@ -7,28 +7,32 @@ tags:
   - Training
 ---
 
-# Frequency Principle / Spectral Bias
+## Frequency Principle / Spectral Bias
 
-The **frequency principle / spectral bias** is a phenomenon observed in the study of [artificial neural networks (ANNs)](https://en.wikipedia.org/wiki/Artificial_neural_network), specifically [deep neural networks (DNNs)](https://en.wikipedia.org/wiki/Deep_learning#Deep_neural_networks). It describes the tendency of deep neural networks to fit target functions from low to high frequencies during the training process.
+<!--In this section, only the very initial or very important references. A comprehensive overview is recommended if there is one -->
 
-This phenomenon is referred to as the **frequency principle (F-Principle)** by Zhi-Qin John Xu et al. [[1]](#ref1)[[2]](#ref2), or **spectral bias** by Nasim Rahaman et al. [[3]](#ref3).  The F-Principle can be robustly observed in DNNs, regardless of [overparametrization](https://en.wikipedia.org/wiki/Neural_tangent_kernel#Overparametrization,_interpolation,_and_generalization). A key mechanism of the F-Principle is that the regularity of the activation function translates into the decay rate of the loss function in the frequency domain.
+The **frequency principle / spectral bias** is a phenomenon observed in the study of the training process of [deep neural networks (DNNs)](https://en.wikipedia.org/wiki/Deep_learning#Deep_neural_networks). It describes the tendency of deep neural networks to fit target functions from low to high frequencies during the training process. A comprehensive overview can be found in [[4]](#ref4).
 
-The discovery of the frequency principle has inspired the design of DNNs that can quickly learn high-frequency functions. This has applications in [scientific computing](https://en.wikipedia.org/wiki/Computational_science), image classification, and [point cloud](https://en.wikipedia.org/wiki/Point_cloud) fitting problems. Furthermore, it provides a means to comprehend phenomena in practical applications and has inspired numerous studies on deep learning from the frequency perspective [[4]](#ref4).
+This phenomenon is referred to as the **frequency principle (F-Principle)** by Zhi-Qin John Xu et al. [[1]](#ref1)[[2]](#ref2), or **spectral bias** by Nasim Rahaman et al. [[3]](#ref3).  The F-Principle can be robustly observed in DNNs, regardless of [overparametrization](https://en.wikipedia.org/wiki/Neural_tangent_kernel#Overparametrization,_interpolation,_and_generalization). 
+
+A key mechanism of the F-Principle is that the regularity of the activation function (decay in Fourier domain) translates into the decay rate of the loss function in the frequency domain [[2]](#ref2).
+
+The frequency principle has identified the advantage of deep learning in learning low-frequency functions and the disadvantage in learning high-frequency functions. In light of this, the frequency principle has helped explained a series of phenomena in practical training and inspires a series of more efficient deep learning algorithms in learning high-frequency functions.
+
+<!--The discovery of the frequency principle has inspired the design of DNNs that can quickly learn high-frequency functions. This has applications in [scientific computing](https://en.wikipedia.org/wiki/Computational_science), image classification, and [point cloud](https://en.wikipedia.org/wiki/Point_cloud) fitting problems. Furthermore, it provides a means to comprehend phenomena in practical applications and has inspired numerous studies on deep learning from the frequency perspective [[4]](#ref4).-->
 
 ---
 
-## Main Results (Informal)
-
-### Experimental Results
+## Experimental Results
+<!--In this section, explain key experimental results from references in the first section. -->
 
 In one-dimensional problems, the [Discrete Fourier Transform (DFT)](https://en.wikipedia.org/wiki/Discrete_Fourier_transform) of the target function and the output of DNNs can be obtained, and we can observe from Fig.1 that the blue line fits the low-frequency faster than the high-frequency.
 
-![F-Principle_one_dim](https://ins.sjtu.edu.cn/people/xuzhiqin/fp.gif)
-![F-Principle_one_dim](https://ins.sjtu.edu.cn/people/xuzhiqin/F-Principle_one_dim.gif)
+<img src="https://ins.sjtu.edu.cn/people/xuzhiqin/fp.gif" alt="F-Principle_one_dim_a" width="45%" style="display: inline-block; margin-right: 5%;"> <img src="https://ins.sjtu.edu.cn/people/xuzhiqin/F-Principle_one_dim.gif" alt="F-Principle_one_dim_b" width="45%" style="display: inline-block;">
 
-Fig 1: Frequency principle in one-dimension. Upper: Target function (red) and DNN output (blue). Lower: The abscissa represents the frequency and the ordinate represents the amplitude to the corresponding frequency. The red dash line is the DFT of the one-dimension target function. The blue solid line is the DFT of the DNN output.
+Fig 1: Frequency principle in one-dimension. Left: Target function (red) and DNN output (blue). Right: The abscissa represents the frequency and the ordinate represents the amplitude to the corresponding frequency. The red dash line is the DFT of the one-dimension target function. The blue solid line is the DFT of the DNN output.
 
-In two-dimensional problems, Fig.2 utilises DNN to fit an image of the camera man. The DNN starts learning from a coarse image and produces a more detailed image as training progresses. This demonstrates learning from low to high frequencies, which is analogous to how the biological brain remembers an image.
+In two-dimensional problems, Fig.2 utilises DNN to fit an image of the camera man (Input: two-dimensional coordiantes; Output: grey scale). The DNN starts learning from a coarse image and produces a more detailed image as training progresses. This demonstrates learning from low to high frequencies, which is analogous to how the biological brain remembers an image.
 
 ![Frequency_experiment_two_dimension](https://cdn.jsdelivr.net/gh/ZhiweiBai/images_for_typora@main/Frequency_experiment_two_dimension.png)
 
@@ -38,10 +42,12 @@ This example shows the 2D frequency principle, which utilises DNNs for image res
 
 In high-dimensional problems, one can use projection methods to visualize the frequency convergence in one particular direction or use a [Gaussian filter](https://en.wikipedia.org/wiki/Gaussian_filter) to roughly see the convergence of the low-frequency part and the high-frequency part [[4]](#ref4).
 
+**A very important note for high-dimensional problem**. In image classification tasks, the "frequency" referenced in the F-Principle corresponds to that of the classification function, rather than the input image. For instance, consider an input image: if adding minimal noise along a specific direction alters the model’s output category, the classification function is deemed to have high frequency in that particular direction. Additionally, it is important to note that the original image and the noise-modified image exhibit almost no visual distinction—this modified image is referred to as an adversarial example. 
+
 ---
 
-### Theoretical Results
-
+## Theoretical Results
+<!--In this section, explain key theoretical results from references in the first section. -->
 Based on the following assumptions:
 i) certain regularity of target function, sample distribution function and activation function;
 ii) bounded training trajectory with loss convergence,
