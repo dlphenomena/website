@@ -26,7 +26,7 @@ In one-dimensional problems, the [Discrete Fourier Transform (DFT)](https://en.w
 ![F-Principle_one_dim](https://ins.sjtu.edu.cn/people/xuzhiqin/fp.gif)
 ![F-Principle_one_dim](https://ins.sjtu.edu.cn/people/xuzhiqin/F-Principle_one_dim.gif)
 
-Fig 1: Frequency principle in one-dimension. The abscissa represents the frequency and the ordinate represents the amplitude to the corresponding frequency. The red dash line is the DFT of the one-dimension target function. The blue solid line is the DFT of the DNN output.
+Fig 1: Frequency principle in one-dimension. Upper: Target function (red) and DNN output (blue). Lower: The abscissa represents the frequency and the ordinate represents the amplitude to the corresponding frequency. The red dash line is the DFT of the one-dimension target function. The blue solid line is the DFT of the DNN output.
 
 In two-dimensional problems, Fig.2 utilises DNN to fit an image of the camera man. The DNN starts learning from a coarse image and produces a more detailed image as training progresses. This demonstrates learning from low to high frequencies, which is analogous to how the biological brain remembers an image.
 
