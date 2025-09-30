@@ -42,17 +42,57 @@ This example shows the 2D frequency principle, which utilises DNNs for image res
 
 In high-dimensional problems, one can use projection methods to visualize the frequency convergence in one particular direction or use a [Gaussian filter](https://en.wikipedia.org/wiki/Gaussian_filter) to roughly see the convergence of the low-frequency part and the high-frequency part [[4]](#ref4).
 
-**A very important note for high-dimensional problem**. In image classification tasks, the "frequency" referenced in the F-Principle corresponds to that of the classification function, rather than the input image. For instance, consider an input image: if adding minimal noise along a specific direction alters the model’s output category, the classification function is deemed to have high frequency in that particular direction. Additionally, it is important to note that the original image and the noise-modified image exhibit almost no visual distinction—this modified image is referred to as an adversarial example. 
+**A very important note for high-dimensional problems**. In image classification tasks, the "frequency" referenced in the F-Principle corresponds to that of the classification function, rather than the input image. For instance, consider an input image: if adding minimal noise along a specific direction alters the model’s output category, the classification function is deemed to have high frequency in that particular direction. Additionally, it is important to note that the original image and the noise-modified image exhibit almost no visual distinction—this modified image is referred to as an adversarial example. 
 
 ---
 
 ## Theoretical Results
 <!--In this section, explain key theoretical results from references in the first section. -->
-Based on the following assumptions:
-i) certain regularity of target function, sample distribution function and activation function;
-ii) bounded training trajectory with loss convergence,
+Here is a very intuitive explanation for the frequency principle. Consider a two-layer fully connected neural network with 1d input $x$, 1d output $h(x)$ and activation function $tanh(x)$:
+$$
+  h(x)=\sum_{j=1}^{m}a_{j}\sigma(w_{j}x+b_{j}).
+$$
+The Fourier transform is 
+$$
+\hat{h}(k)=\sum_{j=1}^{m}\frac{2\pi a_{j}\text{i}}{|w_{j}|}\exp\Big(\frac{\text{i} b_{j}k}{w_{j}}\Big)\frac{1}{\exp(-\frac{\pi k}{2w_{j}})-\exp(\frac{\pi k}{2w_{j}})}.
+$$
+Note: 1) ignore the singularity at $k=0$; 2) there is an exponential decay w.r.t. $|k|$ due to the exponential decay of smooth function in frequency domain, $tanh(x)$ is smooth.
 
-Luo et al. [[5]](#ref5) prove that the change of high-frequency loss over the total loss decays with the separated frequency with a certain power, which is determined by the regularity assumption.
+Define the loss at frequency $k$ w.r.t. the target function $f$:
+$$
+L(k)=\frac{1}{2}\left|D(k)\right|^{2},\quad   D(k)\triangleq\hat{h}(k)-\hat{f}(k).
+$$
+According to Parseval's theorem, the summation loss of all frequencies equals to the commonly defined mean-squared loss. We can use the loss in frequency domain to perform gradient descent algorithm. The gradient contributed by frquency $k$ for a parameter is
+$$
+\left|\frac{\partial L(k)}{\partial\theta_{lj}}\right|\approx |\hat{h}(k)-\hat{f}(k)|\exp\left(-|\pi k/2w_{j}|\right)F_{lj}(\theta_{j},k).
+$$
+The first term is due to the chain rule. The second term is due to the propertiy of smooth activation function and the derivative of exponent function. The third term contains other not so important terms in this analysis (such as $O(1)$ terms).
+
+The gradient derived from low-frequency components dominates that from high-frequency components in an exponential manner. This is particularly prominent when parameters are small, and thus, low-frequency components are assigned higher priority during the learning process.
+
+---
+## Most Key References
+
+<a id="ref1">[1]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Xiao, Yanyang. *Training Behavior of Deep Neural Network in Frequency Domain*, [International Conference on Neural Information Processing, 2019](https://proceedings.mlr.press/v97/rahaman19a.html), [arXiv](https://arxiv.org/abs/1807.01251)
+
+<a id="ref2">[2]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Luo, Tao; Xiao, Yanyang; Ma, Zheng. *Frequency Principle: Fourier Analysis Sheds Light on Deep Neural Networks*, [Communications in Computational Physics, 2020](https://proceedings.mlr.press/v97/rahaman19a.html), [arXiv](https://arxiv.org/abs/1901.06523)
+
+<a id="ref3">[3]</a> Nasim Rahaman\#, Aristide Baratin\#, Devansh Arpit, Felix Draxler, Min Lin, Fred A. Hamprecht, Yoshua Bengio, Aaron Courville. *On the Spectral Bias of Neural Networks*, [International Conference on Machine Learning, 2019](https://proceedings.mlr.press/v97/rahaman19a.html), [arXiv](https://arxiv.org/abs/1806.08734)
+
+<a id="ref4">[4]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Luo, Tao. *Overview frequency principle/spectral bias in deep learning*, [Communications on Applied Mathematics and Computation, 2024](https://proceedings.mlr.press/v97/rahaman19a.html), [arXiv](https://arxiv.org/abs/2201.07395)
+
+---
+## Related subsequent works
+---
+Luo, Tao; Ma, Zheng; Xu, Zhi-Qin John; Zhang, Yaoyu. *Theory of the Frequency Principle for General Deep Neural Networks*. [CSIAM Trans. Appl. Math.](https://global-sci.org/intro/article_detail/csiam-am/19447.html), 2021.
+
+TL,DR: Prove that for general deep neural networks, the change of high-frequency loss over the total loss decays with the separated frequency with a certain power, which is determined by the regularity assumption.
+
+---
+
+**Phase shift DNN (PhaseDNN):** converts high-frequency component of the data downward to a low-frequency spectrum for learning, and then converts the learned one back to the original high frequency [[7]](#ref7).
+
+---
 
 A key aspect of the proof is that composite functions maintain a certain regularity, causing decay in the frequency domain. Thus this result can be applied to general network structures with multiple layers.
 
@@ -113,17 +153,9 @@ This idea is extended for PDE problems [[11]](#ref11), and successfully applied 
 
 ---
 
-## References
 
-<a id="ref1">[1]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Xiao, Yanyang. *Training Behavior of Deep Neural Network in Frequency Domain*. Neural Information Processing. Springer, 2019.
 
-<a id="ref2">[2]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Luo, Tao; Xiao, Yanyang; Ma, Zheng. *Frequency Principle: Fourier Analysis Sheds Light on Deep Neural Networks*. Communications in Computational Physics, 2020.
 
-<a id="ref3">[3]</a> Rahaman, Nasim; Baratin, Aristide; Arpit, Devansh; et al. *On the Spectral Bias of Neural Networks*. ICML, 2019. [Link](https://proceedings.mlr.press/v97/rahaman19a.html)
-
-<a id="ref4">[4]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Luo, Tao. *Overview frequency principle/spectral bias in deep learning*. arXiv:2201.07395, 2022.
-
-<a id="ref5">[5]</a> Luo, Tao; Ma, Zheng; Xu, Zhi-Qin John; Zhang, Yaoyu. *Theory of the Frequency Principle for General Deep Neural Networks*. CSIAM Trans. Appl. Math., 2021.
 
 <a id="ref6">[6]</a> E, Weinan; Ma, Chao; Wu, Lei. *Machine learning from a continuous viewpoint, I*. Science China Mathematics, 2020.
 
