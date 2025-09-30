@@ -1,5 +1,5 @@
 ---
-description: A phenomenon during training in frequency domain
+description: Deep neural networks tend to learn from low to high frequency
 public: true
 title: Frequency Principle
 pubDate: 2025-10-22
