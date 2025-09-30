@@ -6,7 +6,7 @@ pubDate: 2025-10-22
 tags:
   - Training
 ---
-
+Contributor: Zhiwei Bai, Zhi-Qin John Xu, Zhangchen Zhou
 ## Frequency Principle / Spectral Bias
 
 <!--In this section, only the very initial or very important references. A comprehensive overview is recommended if there is one -->
@@ -84,9 +84,24 @@ The gradient derived from low-frequency components dominates that from high-freq
 ---
 ## Related subsequent works
 ---
-Luo, Tao; Ma, Zheng; Xu, Zhi-Qin John; Zhang, Yaoyu. *Theory of the Frequency Principle for General Deep Neural Networks*. [CSIAM Trans. Appl. Math.](https://global-sci.org/intro/article_detail/csiam-am/19447.html), 2021.
+**Theory:** Luo, Tao; Ma, Zheng; Xu, Zhi-Qin John; Zhang, Yaoyu. *Theory of the Frequency Principle for General Deep Neural Networks*. [CSIAM Trans. Appl. Math.](https://global-sci.org/intro/article_detail/csiam-am/19447.html), 2021.
 
-TL,DR: Prove that for general deep neural networks, the change of high-frequency loss over the total loss decays with the separated frequency with a certain power, which is determined by the regularity assumption.
+**TL,DR**: Prove that for general deep neural networks, the change of high-frequency loss over the total loss decays with the separated frequency with a certain power, which is determined by the regularity assumption.
+
+---
+**Algorithm:**  Liu, Ziqi; Cai, Wei; Xu, Zhi-Qin John*. *Multi-Scale Deep Neural Network (MscaleDNN) for Solving Poisson-Boltzmann Equation in Complex Domains*. [Communications in Computational Physics, 2020](https://www.global-sci.org/intro/article_detail/cicp/18402.html).
+
+**TL,DR**: **Multi-scale DNN (MscaleDNN):** alleviates the high-frequency difficulty for high-dimensional problems by scaling high frequencies to lower ones. **MscaleDNN-1** takes the following form:
+
+$$
+f(\mathbf{x};\theta) = W^{[L-1]} \, \sigma \circ (\cdots (W^{[1]} \, \sigma \circ (K \odot (W^{[0]} \mathbf{x}) + b^{[0]}) + b^{[1]}) \cdots ) + b^{[L-1]},
+$$
+
+where $\mathbf{x}\in \mathbb{R}^d$,  $W^{[l]} \in \mathbb{R}^{m_{l+1} \times m_l}$,  $\odot$ is the Hadamard product,  and $K=(a_1,a_1,\dots,a_1,a_2,\dots,a_{N})^T \in \mathbb{R}^{m_1}$, where $a_i=i$ or $a_i=2^{i-1}$.
+
+<img src="https://ins.sjtu.edu.cn/people/xuzhiqin/pub/mscalednn.png" alt="mscalednn" style="width: 50%;">
+
+Fig 3: Illustration of two MscaleDNN structures.
 
 ---
 
@@ -110,24 +125,7 @@ There is a continuous framework [[6]](#ref6) to study machine learning and sugge
 
 **Adaptive activation functions:** replace the activation function $\sigma(x)$ by $\sigma(\mu a x)$, where $\mu \geq 1$ is a fixed scale factor and $a$ is a trainable variable shared for all neurons [[8]](#ref8).
 
-![undefined](https://cdn.jsdelivr.net/gh/ZhiweiBai/images_for_typora@main/MscaleDNN.png)
 
-Fig 3: Illustration of two MscaleDNN structures.
-
-**Multi-scale DNN (MscaleDNN):** alleviates the high-frequency difficulty for high-dimensional problems.
-The conversion in the frequency space can be done by scaling, which is equivalent to an inverse scaling in the spatial space [[9]](#ref9).
-
-Formally, a MscaleDNN takes the following form:
-
-$$
-f(\mathbf{x};\theta) = W^{[L-1]} \, \sigma \circ (\cdots (W^{[1]} \, \sigma \circ (K \odot (W^{[0]} \mathbf{x}) + b^{[0]}) + b^{[1]}) \cdots ) + b^{[L-1]},
-$$
-
-where $\mathbf{x}\in \mathbb{R}^d$,  $W^{[l]} \in \mathbb{R}^{m_{l+1} \times m_l}$,  $m_l$ is the neuron number of the $l$-th hidden layer with $m_0=d$,  $b^{[l]} \in \mathbb{R}^{m_{l+1}}$,  $\sigma$ is a scalar function,  $\odot$ is the Hadamard product,  and $K=(a_1,a_1,\dots,a_1,a_2,\dots,a_{N})^T \in \mathbb{R}^{m_1}$, where $a_i=i$ or $a_i=2^{i-1}$.
-
-This structure is called **MscaleDNN-1**.
-
-The second kind of MscaleDNN (MscaleDNN-2) is a sum of $N$ subnetworks, where each scale input goes through a subnetwork. Weight matrices from $W^{[1]}$ to $W^{[L-1]}$ are block diagonal.
 
 ---
 
