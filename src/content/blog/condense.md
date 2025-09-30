@@ -5,7 +5,6 @@ title: Condensation
 pubDate: 2025-09-28
 tags:
   - Training
-slug: condense
 ---
 
 # Condensation

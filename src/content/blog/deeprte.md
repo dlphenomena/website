@@ -6,7 +6,6 @@ pubDate: 2025-10-22
 tags:
   - Kinetic Equations
 heroImage: ../../assets/blog/deeprte.png
-slug: deeprte
 ---
 
 [**Installation**](#setup) | [**Datasets and Pretrained Models**](#datasets-and-pretrained-models) | [**Run DeepRTE**](#run-deeprte) | [**Train DeepRTE**](#pretrain-deeprte) | [**Cite**](#citing-this-work) | [**Acknowledgements**](#acknowledgements) | [**Contact**](#get-in-touch)

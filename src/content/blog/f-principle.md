@@ -5,7 +5,6 @@ title: Frequency Principle
 pubDate: 2025-10-22
 tags:
   - Training
-slug: f-principle
 ---
 
 # Frequency Principle / Spectral Bias
