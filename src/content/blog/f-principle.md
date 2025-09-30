@@ -83,6 +83,7 @@ The gradient derived from low-frequency components dominates that from high-freq
 
 ---
 ## Related subsequent works
+<!-- 1) give a tag, such as theory or algorithm or others. 2) Authors better be completed listed unless there are too many ones. 3) The Journal of Conference name should have a hyperlink to the paper. 4) Provide arxiv page if there is one. -->
 ---
 **Theory:** Luo, Tao; Ma, Zheng; Xu, Zhi-Qin John; Zhang, Yaoyu. *Theory of the Frequency Principle for General Deep Neural Networks*. [CSIAM Trans. Appl. Math.](https://global-sci.org/intro/article_detail/csiam-am/19447.html), 2021.
 
@@ -104,71 +105,40 @@ where $\mathbf{x}\in \mathbb{R}^d$,  $W^{[l]} \in \mathbb{R}^{m_{l+1} \times m_l
 Fig 3: Illustration of two MscaleDNN structures.
 
 ---
+**Algorithm:** Cai, Wei; Li, Xiaoguang; Liu, Lizuo. *A Phase Shift Deep Neural Network for High Frequency Approximation and Wave Problems*. SIAM J. Sci. Comput., 2020.
 
-**Phase shift DNN (PhaseDNN):** converts high-frequency component of the data downward to a low-frequency spectrum for learning, and then converts the learned one back to the original high frequency [[7]](#ref7).
+**TL,DR:** Phase shift DNN (PhaseDNN) converts high-frequency component of the data downward to a low-frequency spectrum for learning, and then converts the learned one back to the original high frequency.
+
+---
+**Theory:** E, Weinan; Ma, Chao; Wu, Lei. *Machine learning from a continuous viewpoint, I*. Science China Mathematics, 2020.
+
+**TL,DR:** This work provides a continuous framework to study machine learning and suggest gradient flows of neural networks are nice flows and obey the F-Principle. This is because they are [integral equations](https://en.wikipedia.org/wiki/Integral_equation) which have higher regularity. 
 
 ---
 
-A key aspect of the proof is that composite functions maintain a certain regularity, causing decay in the frequency domain. Thus this result can be applied to general network structures with multiple layers.
+**Algorithm:** Jagtap, Ameya D.; Kawaguchi, Kenji; Karniadakis, George Em. *Adaptive activation functions accelerate convergence in deep and physics-informed neural networks*. J. Comput. Phys., 2020.
 
-While this characterization of the F-Principle is very general, it is too coarse-grained to differentiate the effects of network structure or special properties of DNNs. It provides only a qualitative understanding rather than quantitatively characterizing differences.
-
-There is a continuous framework [[6]](#ref6) to study machine learning and suggest gradient flows of neural networks are nice flows and obey the F-Principle. This is because they are [integral equations](https://en.wikipedia.org/wiki/Integral_equation) which have higher regularity. The increased regularity of integral equations leads to faster decay in the Fourier domain.
+**TL,DR:** This work replaces the activation function $\sigma(x)$ by $\sigma(\mu a x)$, where $\mu \geq 1$ is a fixed scale factor and $a$ is a trainable variable shared for all neurons.
 
 ---
+**Algorithm:** Tancik, Matthew; Srinivasan, Pratul P.; et al. *Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains*. arXiv:2006.10739, 2020.
 
-## Applications
-
-### Algorithms Designed to Overcome the Challenge of High-Frequency
-
-**Phase shift DNN (PhaseDNN):** converts high-frequency component of the data downward to a low-frequency spectrum for learning, and then converts the learned one back to the original high frequency [[7]](#ref7).
-
-**Adaptive activation functions:** replace the activation function $\sigma(x)$ by $\sigma(\mu a x)$, where $\mu \geq 1$ is a fixed scale factor and $a$ is a trainable variable shared for all neurons [[8]](#ref8).
-
-
-
----
-
-**Fourier feature network:** maps input $\mathbf{x}$ to
+**TL,DR:**  Fourier feature network maps input $\mathbf{x}$ to
 
 $$
 \gamma(\mathbf{x}) = [a_1 \cos(2\pi b_1^T x), \dots, a_m \cos(2\pi b_m^T x)],
 $$
 
-for imaging reconstruction tasks [[10]](#ref10).
-This idea is extended for PDE problems [[11]](#ref11), and successfully applied to neural radiance fields (NeRF) for view synthesis [[12]](#ref12).
-
-**Multi-stage neural networks (MSNN):** use a superposition of DNNs, where sequential neural networks are optimized to fit the residuals from previous neural networks, boosting approximation accuracy. MSNNs address spectral bias and achieve accuracy close to machine precision [[13]](#ref13).
+for imaging reconstruction tasks.
 
 ---
+**Algorithm:** Wang, Sifan; Wang, Hanwen; Perdikaris, Paris. *On the eigenvector bias of Fourier feature networks*. Comput. Methods Appl. Mech. Eng., 2021.
 
-### Frequency Perspective for Understanding Experimental Phenomena
-
-- **Compression phase:** The F-Principle explains the compression phase in the information plane [[14]](#ref14).
-- **Increasing complexity:** Explains the increasing complexity oDNN output during training.
-- **Strength and limitation:** DNNs are good at learning low-frequency functions but struggle with high-frequency ones.
-- **Early stopping trick:** Since noise is often dominated by high-frequency components, early stopping helps avoid learning noise.
+**TL,DR:**  This work extends the Fourier feature method to PDE problems.
 
 ---
+**Algorithm:** Mildenhall, Ben; Srinivasan, Pratul P.; et al. *NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis*. arXiv:2003.08934, 2020.
 
+**TL,DR:**   This work applies the Fourier feature method to neural radiance fields (NeRF) for view synthesis.
 
-
-
-
-<a id="ref6">[6]</a> E, Weinan; Ma, Chao; Wu, Lei. *Machine learning from a continuous viewpoint, I*. Science China Mathematics, 2020.
-
-<a id="ref7">[7]</a> Cai, Wei; Li, Xiaoguang; Liu, Lizuo. *A Phase Shift Deep Neural Network for High Frequency Approximation and Wave Problems*. SIAM J. Sci. Comput., 2020.
-
-<a id="ref8">[8]</a> Jagtap, Ameya D.; Kawaguchi, Kenji; Karniadakis, George Em. *Adaptive activation functions accelerate convergence in deep and physics-informed neural networks*. J. Comput. Phys., 2020.
-
-<a id="ref9">[9]</a> Liu, Ziqi; Cai, Wei; Xu, Zhi-Qin John. *Multi-Scale Deep Neural Network (MscaleDNN) for Solving Poisson-Boltzmann Equation in Complex Domains*. Communications in Computational Physics, 2020.
-
-<a id="ref10">[10]</a> Tancik, Matthew; Srinivasan, Pratul P.; et al. *Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains*. arXiv:2006.10739, 2020.
-
-<a id="ref11">[11]</a> Wang, Sifan; Wang, Hanwen; Perdikaris, Paris. *On the eigenvector bias of Fourier feature networks*. Comput. Methods Appl. Mech. Eng., 2021.
-
-<a id="ref12">[12]</a> Mildenhall, Ben; Srinivasan, Pratul P.; et al. *NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis*. arXiv:2003.08934, 2020.
-
-<a id="ref13">[13]</a> Wang, Yongji; Lai, Ching-Yao. *Multi-stage neural networks: Function approximator of machine precision*. J. Comput. Phys., 2024.
-
-<a id="ref14">[14]</a> Shwartz-Ziv, Ravid; Tishby, Naftali. *Opening the Black Box of Deep Neural Networks via Information*. arXiv:1703.00810, 2017.
+---
