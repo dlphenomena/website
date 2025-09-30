@@ -23,7 +23,7 @@ The discovery of the frequency principle has inspired the design of DNNs that ca
 
 In one-dimensional problems, the [Discrete Fourier Transform (DFT)](https://en.wikipedia.org/wiki/Discrete_Fourier_transform) of the target function and the output of DNNs can be obtained, and we can observe from Fig.1 that the blue line fits the low-frequency faster than the high-frequency.
 
-![F-Principle_one_dim](https://ins.sjtu.edu.cn/people/xuzhiqin/F-Principle_one_dim.gif)(https://ins.sjtu.edu.cn/people/xuzhiqin/fp.gif)
+![F-Principle_one_dim](https://ins.sjtu.edu.cn/people/xuzhiqin/fp.gif)(https://ins.sjtu.edu.cn/people/xuzhiqin/F-Principle_one_dim.gif)
 
 Fig 1: Frequency principle in one-dimension. The abscissa represents the frequency and the ordinate represents the amplitude to the corresponding frequency. The red dash line is the DFT of the one-dimension target function. The blue solid line is the DFT of the DNN output.
 
