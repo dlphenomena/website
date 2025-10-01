@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets'
+import SJTULogo from '../assets/sjtu-logo.png'
+import Layout from '../layouts/BlogPost.astro'
+---
+
+<Layout title="Submission Guide">
+  <div class="mx-auto max-w-4xl px-4 py-8">
+    <div class="mb-8 text-center">
+      <Image
+        class="mx-auto mb-4 h-16 w-16 rounded-full"
+        src={SJTULogo}
+        alt="SJTU Logo"
+        layout="constrained"
+      />
+      <h1 class="mb-4 text-4xl font-bold">Submission Guide</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300">
+        Guidelines for submitting your research
+      </p>
+    </div>
+    
+    <div class="prose prose-lg mx-auto dark:prose-invert">
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-8">
+        <h2 class="text-2xl font-semibold mb-4">Submission Requirements</h2>
+        <p class="text-gray-700 dark:text-gray-300">
+          This section is currently under development. Detailed submission guidelines and requirements will be added here soon.
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>
