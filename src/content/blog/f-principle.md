@@ -92,13 +92,13 @@ The gradient derived from low-frequency components dominates that from high-freq
 ---
 **Algorithm:**  Liu, Ziqi; Cai, Wei; Xu, Zhi-Qin John*. *Multi-Scale Deep Neural Network (MscaleDNN) for Solving Poisson-Boltzmann Equation in Complex Domains*. [Communications in Computational Physics, 2020](https://www.global-sci.org/intro/article_detail/cicp/18402.html).
 
-**TL,DR**: **Multi-scale DNN (MscaleDNN):** alleviates the high-frequency difficulty for high-dimensional problems by scaling high frequencies to lower ones. **MscaleDNN-1** takes the following form:
+**TL,DR**: **Multi-scale DNN (MscaleDNN):**  scales high frequencies to lower ones. **MscaleDNN-1** takes:
 
 $$
 f(\mathbf{x};\theta) = W^{[L-1]} \, \sigma \circ (\cdots (W^{[1]} \, \sigma \circ (K \odot (W^{[0]} \mathbf{x}) + b^{[0]}) + b^{[1]}) \cdots ) + b^{[L-1]},
 $$
 
-where $\mathbf{x}\in \mathbb{R}^d$,  $W^{[l]} \in \mathbb{R}^{m_{l+1} \times m_l}$,  $\odot$ is the Hadamard product,  and $K=(a_1,a_1,\dots,a_1,a_2,\dots,a_{N})^T \in \mathbb{R}^{m_1}$, where $a_i=i$ or $a_i=2^{i-1}$.
+where $W^{[l]} \in \mathbb{R}^{m_{l+1} \times m_l}$,  $\odot$ is elementwise product, $K=(a_1,a_1,\dots,a_1,a_2,\dots,a_{N})^T \in \mathbb{R}^{m_1}$, $a_i=i$ or $2^{i-1}$.
 
 <img src="https://ins.sjtu.edu.cn/people/xuzhiqin/pub/mscalednn.png" alt="mscalednn" style="width: 50%;">
 
@@ -121,7 +121,7 @@ Fig 3: Illustration of two MscaleDNN structures.
 **TL,DR:** This work replaces the activation function $\sigma(x)$ by $\sigma(\mu a x)$, where $\mu \geq 1$ is a fixed scale factor and $a$ is a trainable variable shared for all neurons.
 
 ---
-**Algorithm:** Tancik, Matthew; Srinivasan, Pratul P.; et al. *Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains*. arXiv:2006.10739, 2020.
+**Algorithm:** Tancik, Matthew, Pratul Srinivasan, Ben Mildenhall, Sara Fridovich-Keil, Nithin Raghavan, Utkarsh Singhal, Ravi Ramamoorthi, Jonathan Barron, and Ren Ng. "Fourier features let networks learn high frequency functions in low dimensional domains." Advances in neural information processing systems 33 (2020): 7537-7547.
 
 **TL,DR:**  Fourier feature network maps input $\mathbf{x}$ to
 
@@ -137,7 +137,7 @@ for imaging reconstruction tasks.
 **TL,DR:**  This work extends the Fourier feature method to PDE problems.
 
 ---
-**Algorithm:** Mildenhall, Ben; Srinivasan, Pratul P.; et al. *NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis*. arXiv:2003.08934, 2020.
+**Algorithm:** Mildenhall, Ben, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, and Ren Ng. "Nerf: Representing scenes as neural radiance fields for view synthesis." Communications of the ACM 65, no. 1 (2021): 99-106.
 
 **TL,DR:**   This work applies the Fourier feature method to neural radiance fields (NeRF) for view synthesis.
 
