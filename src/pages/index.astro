@@ -9,11 +9,11 @@ import Footer from '../components/Footer.astro'
 import FormattedDate from '../components/FormattedDate.astro'
 import Header from '../components/Header.astro'
 import {
-Card,
-CardContent,
-CardFooter,
-CardHeader,
-CardTitle,
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
 } from '../components/ui/card'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
 
@@ -65,40 +65,34 @@ const postsWithImages = await Promise.all(
   <Body>
     <Header title={SITE_TITLE} />
     <main class="pt-[56px]">
-      <!-- <Masthead /> -->
-      <!-- <Content
-        className="prose prose-zinc dark:prose-invert mt-15 prose-ul:list-none"
-      > -->
-      <Content className="prose-ul:list-none mt-15">
+      <Content className="mt-15">
         <section>
           <h1 class="text-center">Deep Learning Phenomena</h1>
-          <p class="indent-8">Deep learning has achieved great success, 
-            but understanding how it works is essential for building better 
-            and safer AI systems. Deep learning is a highly complex system. 
-            Studying phenomena—observable patterns in 
-            experiments—is a key way to understand such complexity. 
-            This approach mirrors how scientists study nature: through 
-            controlled experiments, they discover empirical laws that guide theory, 
-            which in turn leads to deeper understanding and useful technology.
-            This project collects important phenomena in deep learning and 
-            provides a platform for researchers to share and discuss their 
-            findings. By gathering well-documented phenomena with reproducible 
-            experiments, we aim to help researchers identify open questions, 
-            connect theory with practice, and advance the field together.
+          <p class="indent-8">
+            Deep learning has achieved great success, but understanding how it
+            works is essential for building better and safer AI systems. Deep
+            learning is a highly complex system. Studying phenomena—observable
+            patterns in experiments—is a key way to understand such complexity.
+            This approach mirrors how scientists study nature: through
+            controlled experiments, they discover empirical laws that guide
+            theory, which in turn leads to deeper understanding and useful
+            technology. This project collects important phenomena in deep
+            learning and provides a platform for researchers to share and
+            discuss their findings. By gathering well-documented phenomena with
+            reproducible experiments, we aim to help researchers identify open
+            questions, connect theory with practice, and advance the field
+            together.
           </p>
-        <!--</section>
-        <LinkButton href="mailto:xuzhiqin@sjtu.edu.cn"
-          ><IoMail />Contact us</LinkButton
-        >-->
+        </section>
         <hr />
-        <section>
-          <ul class="mb-4 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <section class="prose-ul:list-none prose-ul:-ml-4">
+          <ul class="grid grid-cols-1 gap-6 md:grid-cols-2 md:items-stretch">
             {
               postsWithImages.map((post: any) => {
                 return (
                   <li>
                     <a href={`/blog/${post.id}/`}>
-                      <Card>
+                      <Card className="h-full">
                         <CardHeader>
                           <CardTitle className="text-xl font-bold">
                             {post.data.title}
