@@ -4,13 +4,10 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout>
-  <div class="mb-8 text-center">
-    <h1 class="mb-4 pt-6 text-4xl font-bold">Submission Guide</h1>
-    <p class="text-lg text-gray-600 dark:text-gray-300">
-      Guidelines for submitting Phenomena and Related References to
-      <a href="mailto:xuzhiqin@sjtu.edu.cn" class="opacity-70"
-        >xuzhiqin@sjtu.edu.cn</a
-      >.
+  <div class="mb-8">
+    <h1 class="mb-4 pt-6 text-center text-4xl font-bold">Submission Guide</h1>
+    <p class="text-center">
+      Submissions can be made through GitHub issue (with template) by clicking
     </p>
     <div class="not-prose flex justify-center">
       <Button variant="github" className="not-prose flex justify-center"
@@ -19,9 +16,15 @@ import Layout from '../layouts/Layout.astro'
         >
       </Button>
     </div>
+    <p class="text-center text-lg text-gray-600 dark:text-gray-300">
+      You can also submit via email to
+      <a href="mailto:xuzhiqin@sjtu.edu.cn" class="opacity-70"
+        >xuzhiqin@sjtu.edu.cn.</a
+      >
+    </p>
     <hr class="border-top mb-8 border-zinc-400" />
     <!-- Submit a Phenomenon Section -->
-    <section class="mb-12">
+    <section class="mb-12 text-center">
       <h2 class="mb-6 text-center text-3xl font-bold">Submit a Phenomenon</h2>
       <div class="mb-8 rounded-lg bg-blue-50 p-8 dark:bg-blue-900/20">
         <h3 class="mb-4 text-xl font-semibold text-blue-800 dark:text-blue-200">
@@ -54,8 +57,8 @@ import Layout from '../layouts/Layout.astro'
       </div>
     </section>
     <!-- Submit Related Reference Section -->
-    <section class="mb-12">
-      <h2 class="mb-6 text-center text-3xl font-bold">
+    <section class="mb-12 text-center">
+      <h2 class="mb-6 text-3xl font-bold">
         Submit a Related Reference to an Existing Phenomenon
       </h2>
 
@@ -114,25 +117,25 @@ import Layout from '../layouts/Layout.astro'
         </div>
       </div>
     </section>
-
     <!-- Additional Information Section -->
     <section class="mb-12">
       <h2 class="mb-6 text-center text-3xl font-bold">
         Additional Information
       </h2>
-
-      <div class="grid gap-6 md:grid-cols-2">
-        <div class="rounded-lg bg-purple-50 p-6 dark:bg-purple-900/20">
+      <div class="flex flex-col gap-6">
+        <div
+          class="flex flex-col rounded-lg bg-purple-50 p-2 pl-8 dark:bg-purple-900/20"
+        >
           <h3
-            class="mb-3 text-lg font-semibold text-purple-800 dark:text-purple-200"
+            class="pl-4 text-lg font-semibold text-purple-800 dark:text-purple-200"
           >
             🔗 Useful Links
           </h3>
-          <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+          <ul class="text-gray-700 dark:text-gray-300">
             <li>
               <a
                 href="https://github.com/dlphenomena/website"
-                class="text-blue-600 hover:underline dark:text-blue-400"
+                class="text-blue-600 dark:text-blue-400"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -142,7 +145,7 @@ import Layout from '../layouts/Layout.astro'
             <li>
               <a
                 href="https://github.com/dlphenomena"
-                class="text-blue-600 hover:underline dark:text-blue-400"
+                class="text-blue-600 dark:text-blue-400"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -152,26 +155,42 @@ import Layout from '../layouts/Layout.astro'
             <li>
               <a
                 href="/blog/f-principle/"
-                class="text-blue-600 hover:underline dark:text-blue-400"
+                class="text-blue-600 dark:text-blue-400"
               >
                 Frequency-Principle Example
               </a>
             </li>
           </ul>
         </div>
-
-        <div class="rounded-lg bg-orange-50 p-6 dark:bg-orange-900/20">
+        <div
+          class="prose-ul:list-none flex flex-col rounded-lg bg-orange-300/20 p-2 pl-8 dark:bg-orange-600/20"
+        >
           <h3
-            class="mb-3 text-lg font-semibold text-orange-800 dark:text-orange-200"
+            class="pl-4 text-lg font-semibold text-orange-800 dark:text-orange-200"
           >
             📋 Submission Checklist
           </h3>
-          <ul class="space-y-2 text-gray-700 dark:text-gray-300">
-            <li>✓ Markdown file following template format</li>
-            <li>✓ Reproducible code implementation</li>
-            <li>✓ Proper citation format (Chicago style)</li>
-            <li>✓ Clear TL;DR explanation</li>
-            <li>✓ Relevant formulas or figures</li>
+          <ul class="text-gray-700 dark:text-gray-300">
+            <li class="flex items-center gap-2">
+              <span class="text-xl font-bold text-green-600">✓</span> Markdown file
+              following template format
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-xl font-bold text-green-600">✓</span> Reproducible
+              code implementation
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-xl font-bold text-green-600">✓</span> Proper citation
+              format (Chicago style)
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-xl font-bold text-green-600">✓</span> Clear TL;DR
+              explanation
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-xl font-bold text-green-600">✓</span> Relevant formulas
+              or figures
+            </li>
           </ul>
         </div>
       </div>
