@@ -23,4 +23,4 @@ The TAG can be "theory", "algorithm", "application" etc.
 
 ## Examples
 
-Examples can be found in [Frequency-Principle](./src/content/blog/f-principle.md) .
+Examples can be found in [Frequency-Principle](../../src/content/blog/f-principle.md) .
