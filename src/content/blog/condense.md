@@ -94,7 +94,6 @@ $$
 \gamma=\lim\limits_{m\to\infty}-\frac{\log\beta_1\beta_2/\alpha}{\log m}, \quad \gamma'=\lim\limits_{m\to\infty}-\frac{\log\beta_1/\beta_2}{\log m}.
 $$
 
-
 The resulting phase diagram is shown in Fig. 2, which can be rigorously characterized by the following two theorems.
 
 <figure>
@@ -105,23 +104,21 @@ The resulting phase diagram is shown in Fig. 2, which can be rigorously characte
 
 Figure 2: Phase diagram of two-layer ReLU NNs at infinite-width limit. The marked examples are studied in existing literature. [[2]](#ref2)
 
-
-
-
 **Theorem 1** (Informal statement [[2]](#ref2))
+
 > If $\gamma<1$ or $\gamma'>\gamma-1$, then with a high probability over the choice of $\boldsymbol{\theta}^0$, we have
+>
 > $$
-\lim_{m\to+\infty}\sup\limits_{t\in[0,+\infty)}\mathrm{RD}(\boldsymbol{\theta}_{\boldsymbol{w}}(t))=0.
+> \lim_{m\to+\infty}\sup\limits_{t\in[0,+\infty)}\mathrm{RD}(\boldsymbol{\theta}_{\boldsymbol{w}}(t))=0.
 > $$
 
 **Theorem 2** (Informal statement [[2]](#ref2))
+
 > If $\gamma>1$ and $\gamma'<\gamma-1$, then with a high probability over the choice of $\boldsymbol{\theta}^0$, we have
+>
 > $$
-\lim_{m\to+\infty} \sup\limits_{t\in[0,+\infty)}\mathrm{RD}(\boldsymbol{\theta}_{\boldsymbol{w}}(t))=+\infty.
+> \lim_{m\to+\infty} \sup\limits_{t\in[0,+\infty)}\mathrm{RD}(\boldsymbol{\theta}_{\boldsymbol{w}}(t))=+\infty.
 > $$
-
-
-
 
 ## References
 

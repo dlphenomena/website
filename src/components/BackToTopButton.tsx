@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { IoArrowUp } from "react-icons/io5";
+import { IoArrowUp } from 'react-icons/io5'
 import { Button } from '@headlessui/react'
 
 export default function BackToTopButton() {
@@ -39,7 +39,7 @@ export default function BackToTopButton() {
     isVisible && (
       <Button
         onClick={scrollToTop}
-        className="prose dark:prose-invert fixed bottom-4 right-4 rounded-lg border-2 opacity-80 backdrop-blur-md border-orange-300 dark:border-zinc-600 p-3 shadow-lg data-[hover]:bg-orange-300 dark:data-[hover]:bg-zinc-600"
+        className="prose dark:prose-invert fixed bottom-4 right-4 rounded-lg border-2 border-orange-300 p-3 opacity-80 shadow-lg backdrop-blur-md data-[hover]:bg-orange-300 dark:border-zinc-600 dark:data-[hover]:bg-zinc-600"
       >
         <IoArrowUp />
       </Button>
