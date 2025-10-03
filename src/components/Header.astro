@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import { IoLogoGithub } from 'react-icons/io5'
-import SJTULogo from '../assets/cat2.png'
+import Logo from '../assets/cat.png'
 import DropdownMenu from './DropdownMenu'
 import HeaderLink from './HeaderLink.astro'
 import ThemeToggle from './ThemeToggleButton'
@@ -25,7 +25,7 @@ allPosts.map((post: any) => {
       <a href="/" class="group flex flex-auto items-center">
         <Image
           class="h-8 w-8 rounded-full dark:invert"
-          src={SJTULogo}
+          src={Logo}
           alt="Persona"
           layout="constrained"
           priority
