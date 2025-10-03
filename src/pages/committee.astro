@@ -1,5 +1,5 @@
 ---
-import Layout from '@/layouts/Layout.astro'
+import PageLayout from '../layouts/PageLayout.astro'
 
 const members = [
   {
@@ -25,33 +25,35 @@ const members = [
 ]
 ---
 
-<Layout title="Committee Members">
-  <h1 class="mb-6 pt-5 text-center text-2xl font-semibold">
-    Committee Members (Alphabetical Order)
-  </h1>
-  <div class="mt-15 px-4">
-    {
-      members.map(member => {
-        const isFirst = members.indexOf(member) === 0
-        return (
-          <div
-            class:list={[
-              'flex flex-col items-center gap-1 border-b-2 border-gray-300 py-4 md:flex-row md:justify-between dark:border-gray-600',
-              { 'border-t-2': isFirst },
-            ]}
-          >
-            <div>
-              <a href={member.url} class="text-lg font-semibold">
-                {member.name}
-              </a>
+<PageLayout>
+  <section class="pt-12">
+    <h1 class="mb-6 text-center text-2xl font-semibold">
+      Committee Members (Alphabetical Order)
+    </h1>
+    <div class="mt-15 px-4">
+      {
+        members.map(member => {
+          const isFirst = members.indexOf(member) === 0
+          return (
+            <div
+              class:list={[
+                'flex flex-col items-center gap-1 border-b-2 border-gray-300 py-4 md:flex-row md:justify-between dark:border-gray-600',
+                { 'border-t-2': isFirst },
+              ]}
+            >
+              <div>
+                <a href={member.url} class="text-lg font-semibold">
+                  {member.name}
+                </a>
+              </div>
+              <div class="text-gray-600 dark:text-gray-400">
+                {member.affiliation}
+              </div>
             </div>
-            <div class="text-gray-600 dark:text-gray-400">
-              {member.affiliation}
-            </div>
-          </div>
-        )
-      })
-    }
-    <div class="mt-10"></div>
-  </div>
-</Layout>
+          )
+        })
+      }
+      <div class="mt-10"></div>
+    </div>
+  </section>
+</PageLayout>

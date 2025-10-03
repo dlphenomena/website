@@ -1,52 +1,29 @@
 ---
 import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
-import BackToTopButton from '../components/BackToTopButton'
-import BaseHead from '../components/BaseHead.astro'
-import Body from '../components/Body.astro'
-import Footer from '../components/Footer.astro'
-import Header from '../components/Header.astro'
-import Prose from '../components/Prose.astro'
-import { SITE_TITLE } from '../consts'
+import PageLayout from './PageLayout.astro'
 
 type Props = CollectionEntry<'blog'>['data']
 
 const { title, description, heroImage } = Astro.props
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead
-      title={title + ` / ${SITE_TITLE}`}
-      description={description}
-      image={heroImage?.src}
-    />
-  </head>
-  <Body>
-    <Header />
-    <main class="pt-[56px]">
-      <Prose className="mx-auto max-w-4xl px-8 pt-6">
-        <div class="mb-8">
-          {
-            heroImage && (
-              <Image
-                class="w-full rounded border border-slate-300 dark:border-zinc-700"
-                src={heroImage}
-                alt="Hero"
-                layout="full-width"
-                priority
-              />
-            )
-          }
-        </div>
-        <div class="my-1 text-3xl">{title}</div>
-        <div>{description}</div>
-        <hr class="border-top border-zinc-400" />
-        <slot />
-      </Prose>
-      <BackToTopButton client:idle />
-    </main>
-    <Footer />
-  </Body>
-</html>
+<PageLayout>
+  <div class="mb-8">
+    {
+      heroImage && (
+        <Image
+          class="w-full rounded border border-slate-300 dark:border-zinc-700"
+          src={heroImage}
+          alt="Hero"
+          layout="full-width"
+          priority
+        />
+      )
+    }
+  </div>
+  <div class="my-1 text-3xl">{title}</div>
+  <div>{description}</div>
+  <hr class="border-top border-zinc-400" />
+  <slot />
+</PageLayout>

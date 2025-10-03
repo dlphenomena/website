@@ -1,36 +1,17 @@
 ---
 import { IoChevronForward } from 'react-icons/io5'
-import BaseHead from '../components/BaseHead.astro'
-import Body from '../components/Body.astro'
-import Content from '../components/Content.astro'
-import Footer from '../components/Footer.astro'
-import Header from '../components/Header.astro'
-import Masthead from '../components/Masthead.astro'
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
+import PageLayout from '../layouts/PageLayout.astro'
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <Body>
-    <Header title={SITE_TITLE} />
-    <main class="pt-[56px]">
-      <Masthead />
-      <Content>
-        <section>
-          <h1 class="mb-8 mt-12 text-center text-3xl">Oops, not found</h1>
-          <div class="py-4 text-center">
-            <a
-              class="inline-flex items-center gap-1 underline decoration-orange-500 underline-offset-2"
-              href="/"
-              >Go to Index <IoChevronForward />
-            </a>
-          </div>
-        </section>
-      </Content>
-    </main>
-    <Footer />
-  </Body>
-</html>
+<PageLayout>
+  <section>
+    <h1 class="mb-8 mt-12 text-center text-3xl">Oops, not found</h1>
+    <div class="py-4 text-center">
+      <a
+        class="inline-flex items-center gap-1 underline decoration-orange-500 underline-offset-2"
+        href="/"
+        >Go to Index <IoChevronForward />
+      </a>
+    </div>
+  </section>
+</PageLayout>

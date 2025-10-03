@@ -1,21 +1,8 @@
 ---
 import { getCollection } from 'astro:content'
-import BackToTopButton from '../components/BackToTopButton'
-import BaseHead from '../components/BaseHead.astro'
-import Body from '../components/Body.astro'
 import Breadcrumb from '../components/Breadcrumb.astro'
-import Content from '../components/Content.astro'
-import Footer from '../components/Footer.astro'
-import FormattedDate from '../components/FormattedDate.astro'
-import Header from '../components/Header.astro'
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '../components/ui/card'
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
+import PostCards from '../components/PostCards.astro'
+import PageLayout from './PageLayout.astro'
 
 export interface Props {
   category: string
@@ -30,55 +17,7 @@ const posts = (
 ).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead
-      title={category + ` / ${SITE_TITLE}`}
-      description={SITE_DESCRIPTION}
-    />
-  </head>
-  <Body>
-    <Header title={SITE_TITLE} />
-    <main class="pt-[56px]">
-      <Content className="prose-ul:list-none mt-15">
-        <Breadcrumb>{category}</Breadcrumb>
-        <section>
-          <ul class="mb-4 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {
-              posts.map((post: any) => {
-                return (
-                  <li>
-                    <a href={`/blog/${post.id}/`}>
-                      <Card>
-                        <CardHeader>
-                          <CardTitle className="text-xl font-bold">
-                            {post.data.title}
-                          </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                          {post.data.description && (
-                            <div class="opacity-70">
-                              {post.data.description}
-                            </div>
-                          )}
-                        </CardContent>
-                        <CardFooter>
-                          <p class="date font-mono text-xs opacity-70">
-                            <FormattedDate date={post.data.pubDate} />
-                          </p>
-                        </CardFooter>
-                      </Card>
-                    </a>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </section>
-      </Content>
-      <BackToTopButton client:idle />
-    </main>
-    <Footer />
-  </Body>
-</html>
+<PageLayout>
+  <div class="pt-5"><Breadcrumb>{category}</Breadcrumb></div>
+  <PostCards posts={posts} />
+</PageLayout>
