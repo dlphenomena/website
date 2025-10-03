@@ -5,7 +5,7 @@ import PageLayout from './PageLayout.astro'
 
 type Props = CollectionEntry<'blog'>['data']
 
-const { title, description, heroImage } = Astro.props
+const { title, description, heroImage, author } = Astro.props
 ---
 
 <PageLayout>
@@ -22,8 +22,9 @@ const { title, description, heroImage } = Astro.props
       )
     }
   </div>
-  <div class="my-1 text-3xl">{title}</div>
-  <div>{description}</div>
-  <hr class="border-top border-zinc-400" />
+  <h1>{title}</h1>
+  <p>{description}</p>
+  <p class="opacity-75">Contributor: {author}</p>
+  <hr />
   <slot />
 </PageLayout>

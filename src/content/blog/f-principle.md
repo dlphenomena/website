@@ -2,14 +2,13 @@
 description: Deep neural networks tend to learn from low to high frequency
 public: true
 title: Frequency Principle/Spectral Bias
-pubDate: 2025-10-22
+pubDate: 2025-10-03
 tags:
   - Training
+author: Zhiwei Bai, Zhi-Qin John Xu, Zhangchen Zhou
 ---
 
-Contributor: Zhiwei Bai, Zhi-Qin John Xu, Zhangchen Zhou
-
-## Frequency Principle / Spectral Bias
+## Introduction
 
 <!--In this section, only the very initial or very important references. A comprehensive overview is recommended if there is one -->
 

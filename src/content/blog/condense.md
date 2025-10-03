@@ -7,8 +7,6 @@ tags:
   - Training
 ---
 
-# Condensation
-
 ## 1. Introduction
 
 The **condensation phenomenon/alignment** in deep neural networks (DNNs) describes that: **During the nonlinear training of neural networks, neurons in the same layer tend to condense into groups with similar outputs.** [[1]](#ref1) This phenomenon is referred to as **condensation** [[2]](#ref2) or **align** [[3]](#ref3). This behavior is supported by both empirical observations and theoretical analysis. The number of these condensed neuron clusters often increases as training progresses, offering a mechanism for the network's output complexity to grow.
