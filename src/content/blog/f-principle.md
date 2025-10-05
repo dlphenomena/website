@@ -106,7 +106,7 @@ The gradient derived from low-frequency components dominates that from high-freq
 
 ---
 
-**Algorithm:** Liu, Ziqi; Cai, Wei; Xu, Zhi-Qin John*. *Multi-Scale Deep Neural Network (MscaleDNN) for Solving Poisson-Boltzmann Equation in Complex Domains\*. [Communications in Computational Physics, 2020](https://www.global-sci.org/intro/article_detail/cicp/18402.html).
+**Algorithm:** Liu, Ziqi; Cai, Wei; Xu, Zhi-Qin John*. _Multi-Scale Deep Neural Network (MscaleDNN) for Solving Poisson-Boltzmann Equation in Complex Domains_. [Communications in Computational Physics, 2020](https://www.global-sci.org/intro/article_detail/cicp/18402.html).
 
 **TL,DR**: **Multi-scale DNN (MscaleDNN):** scales high frequencies to lower ones. **MscaleDNN-1** takes:
 
@@ -140,7 +140,7 @@ Fig 3: Illustration of two MscaleDNN structures.
 
 ---
 
-**Algorithm:** Tancik, Matthew, Pratul Srinivasan, Ben Mildenhall, Sara Fridovich-Keil, Nithin Raghavan, Utkarsh Singhal, Ravi Ramamoorthi, Jonathan Barron, and Ren Ng. "Fourier features let networks learn high frequency functions in low dimensional domains." Advances in neural information processing systems 33 (2020): 7537-7547.
+**Algorithm:** Tancik, Matthew, Pratul Srinivasan, Ben Mildenhall, Sara Fridovich-Keil, Nithin Raghavan, Utkarsh Singhal, Ravi Ramamoorthi, Jonathan Barron, and Ren Ng. _Fourier features let networks learn high frequency functions in low dimensional domains_. Advances in neural information processing systems 33 (2020): 7537-7547.
 
 **TL,DR:** Fourier feature network maps input $\mathbf{x}$ to
 
@@ -158,8 +158,33 @@ for imaging reconstruction tasks.
 
 ---
 
-**Algorithm:** Mildenhall, Ben, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, and Ren Ng. "Nerf: Representing scenes as neural radiance fields for view synthesis." Communications of the ACM 65, no. 1 (2021): 99-106.
+**Algorithm:** Mildenhall, Ben, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, and Ren Ng. _Nerf: Representing scenes as neural radiance fields for view synthesis_. Communications of the ACM 65, no. 1 (2021): 99-106.
 
 **TL,DR:** This work applies the Fourier feature method to neural radiance fields (NeRF) for view synthesis.
 
 ---
+
+**Theory:** Markidis S. _The old and the new: Can physics-informed deep-learning replace traditional linear solvers?_ [J]. Frontiers in big Data, 2021, 4: 669097.
+
+**TL,DR:** This work highlights the frequency principle as a key mechanism governing the convergence of deep neural networks and physics-informed neural networks (PINNs), suggesting its importance in replacing traditional linear solvers.
+
+---
+
+**Theory:** Agarwal R, Melnick L, Frosst N, et al. _Neural additive models: Interpretable machine learning with neural nets_ [J]. Advances in neural information processing systems, 2021, 34: 4699-4711.
+
+**TL,DR:** This work introduces Neural Additive Models for interpretable machine learning, noting that their difficulty in fitting jagged functions with ReLU networks may stem from a bias towards smoothness, which limits their ability to capture high-frequency patterns.
+
+---
+
+**Algorithm:** Huang X, Liu H, Shi B, et al. _A Universal PINNs Method for Solving Partial Differential Equations with a Point Source_ [C]. IJCAI. 2022: 3839-3846.
+
+**TL,DR:** This work proposes an improved MscaleDNN-based algorithm for solving PDEs with point sources, borrowing ideas from MscaleDNNs and SIREN, and reports its implementation in Huawei’s MindSpore scientific computing package.
+
+---
+
+**Algorithm:** Chen Y, Wang D, Feng D, et al. _Three-dimensional spatiotemporal wind field reconstruction based on LiDAR and multi-scale PINN_ [J]. Applied Energy, 2025, 377: 124577.
+
+**TL,DR:** This work develops a multi-scale PINN for reconstructing 3D wind fields from LiDAR measurements. Inspired by Xu et al.’s multi-scale networks and grounded in the F-Principle, it provides valuable insights into capturing multi-frequency components in complex physical systems.
+
+---
+
