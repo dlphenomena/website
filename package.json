@@ -36,6 +36,7 @@
     "@eslint/json": "^0.13.2",
     "@eslint/markdown": "^7.4.0",
     "@tailwindcss/typography": "^0.5.19",
+    "@types/bun": "^1.2.23",
     "@types/react": "^19.2.1",
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
