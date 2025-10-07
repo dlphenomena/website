@@ -10,20 +10,25 @@ export const COMMITTEE_MEMBERS = [
     name: 'Tao Luo',
     affiliation: 'Shanghai Jiao Tong University',
     url: 'https://www.math.sjtu.edu.cn/Default/teachershow/tags/MDAwMDAwMDAwMLKIet0',
+    avatar: 'https://www.math.sjtu.edu.cn/upload/photo/Luo%20Tao.jpg',
   },
   {
     name: 'Zheng Ma',
     affiliation: 'Shanghai Jiao Tong University',
     url: 'https://zheng-homepage.netlify.app/',
+    avatar:
+      'https://zheng-homepage.netlify.app/_astro/portrait.Cm5v14eI_caDoE.webp',
   },
   {
     name: 'Zhi-Qin John Xu',
     affiliation: 'Shanghai Jiao Tong University',
     url: 'https://ins.sjtu.edu.cn/people/xuzhiqin/',
+    avatar: 'https://ins.sjtu.edu.cn/people/xuzhiqin/xu3.jpg',
   },
   {
     name: 'Yaoyu Zhang',
     affiliation: 'Shanghai Jiao Tong University',
     url: 'https://yaoyuzhang1.github.io/',
+    avatar: 'https://yaoyuzhang1.github.io/images/life.jpg',
   },
 ]
