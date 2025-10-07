@@ -1,20 +1,18 @@
 ---
 import { Image } from 'astro:assets'
-import { getCollection } from 'astro:content'
 import { IoLogoGithub } from 'react-icons/io5'
 import Logo from '../assets/cat.png'
 import DropdownMenu from './DropdownMenu'
 import HeaderLink from './HeaderLink.astro'
 import ThemeToggle from './ThemeToggleButton'
 
-const allPosts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-)
-const allTags = new Set<string>()
-
-allPosts.map((post: any) => {
-  post.data.tags && post.data.tags.map((tag: string) => allTags.add(tag))
-})
+const headerLinks = [
+  { href: '/about', text: 'About' },
+  { href: '/committee', text: 'Committee' },
+  { href: '/submission', text: 'Submission' },
+  { href: 'mailto:xuzhiqin@sjtu.edu.cn', text: 'Contact' },
+  { href: 'https://github.com/dlphenomena', text: 'Repos' },
+]
 ---
 
 <header
@@ -43,7 +41,7 @@ allPosts.map((post: any) => {
       </div>
       <div class="flex-1"></div>
       <ThemeToggle client:visible />
-      <DropdownMenu client:visible tags={Array.from(allTags)} />
+      <DropdownMenu tags={headerLinks} className="md:hidden" client:visible />
     </nav>
   </div>
 </header>
