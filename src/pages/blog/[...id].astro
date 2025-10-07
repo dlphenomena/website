@@ -1,6 +1,10 @@
 ---
-import { type CollectionEntry, getCollection, render } from 'astro:content'
+import { getCollection, render } from 'astro:content'
+import dayjs from 'dayjs'
+import utc from 'dayjs/plugin/utc'
 import BlogPost from '../../layouts/BlogPost.astro'
+
+dayjs.extend(utc)
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog')
@@ -9,12 +13,18 @@ export async function getStaticPaths() {
     props: post,
   }))
 }
-type Props = CollectionEntry<'blog'>
 
 const post = Astro.props
-const { Content } = await render(post)
+
+const { Content, remarkPluginFrontmatter } = await render(post)
+const minutesRead = remarkPluginFrontmatter.minutesRead
+const lastModifiedTime = dayjs(remarkPluginFrontmatter.lastModified)
+  .utc()
+  .format('YYYY-MM-DD')
+
+const props = { ...post.data, minutesRead, lastModifiedTime }
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...props}>
   <Content />
 </BlogPost>
