@@ -13,25 +13,10 @@ Currently hosted on netlify https://dlphenomena.netlify.app. Built with Astro, R
 - [Shadcn UI](https://ui.shadcn.com/) - UI components
 - [React Icons](https://react-icons.github.io/react-icons/) - Icon set
 
-## Project Structure
+## Development
 
-Inside of your Astro project, you'll see the following folders and files:
+We recommend to use `pnpm` or `bun` to for development.
 
-```
-PROJECT_ROOT
-├── public              # website static assets
-└── src
-    ├── assets          # images and files of posts
-    │   ├── blog
-    │   └── thumbnails
-    ├── components      # Astro & React (including Shadcn UI) components
-    │   └── ui
-    ├── content         # Astro content collection (.md, .mdx)
-    │   └── blog
-    ├── layouts         # Page layouts
-    ├── lib             # Utility libs
-    ├── pages
-    │   ├── blog        # Blog page
-    │   └── categories  # Categary page
-    └── styles          # Global stylesheets
-```
+### With `pnpm`
+
+First install it from ()
