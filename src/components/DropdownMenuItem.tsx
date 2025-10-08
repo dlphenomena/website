@@ -1,6 +1,6 @@
 import { MenuItem } from '@headlessui/react'
-import React from 'react'
 import type { ReactNode } from 'react'
+import React from 'react'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
