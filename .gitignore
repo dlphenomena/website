@@ -1,3 +1,6 @@
+# ignore pnpm-lock.yaml to avoid confliction with bun
+pnpm-lock.yaml
+
 # build output
 dist/
 
