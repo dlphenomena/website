@@ -2,7 +2,7 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "[javascript][javascriptreact][typescriptreact][typescript][json][tailwindcss][css]": {
+  "[javascript][javascriptreact][typescriptreact][typescript][json][jsonc][tailwindcss][css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
@@ -14,4 +14,5 @@
       "source.organizeImports": "explicit"
     }
   },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

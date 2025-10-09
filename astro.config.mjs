@@ -11,7 +11,6 @@ export default defineConfig({
   site: 'https://dlphenomena.netlify.app',
   integrations: [sitemap(), react(), mdx()],
   markdown: { remarkPlugins: [remarkReadingTime, remarkModifiedTime] },
-
   vite: {
     plugins: [tailwindcss()],
   },
