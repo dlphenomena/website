@@ -10,7 +10,7 @@ const isActive = href === Astro.url.pathname.replace(/\/$/, '')
   class:list={[
     'inline-flex items-center gap-1 no-underline',
     {
-      'underline-offset-23 font-bold underline decoration-orange-500 decoration-2':
+      'font-bold underline decoration-orange-500 decoration-2 underline-offset-23':
         isActive,
     },
     className,

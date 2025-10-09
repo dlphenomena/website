@@ -9,7 +9,6 @@ import {
   ItemTitle,
 } from '@/components/ui/item'
 import { ExternalLinkIcon } from 'lucide-react'
-import React from 'react'
 
 function getInitials(fullName: string) {
   // Trim leading/trailing spaces and split the name by spaces
@@ -35,10 +34,10 @@ export interface Member {
 
 export function CommitteeList({ committees }: { committees: Member[] }) {
   return (
-    <ItemGroup className="gap-6 not-prose">
-      {committees.map((member, index) => (
+    <ItemGroup className="not-prose gap-6">
+      {committees.map(member => (
         <Item
-          key={index}
+          key={member.url}
           variant="outline"
           asChild
           className="[a]:hover:bg-orange-100 dark:[a]:hover:bg-zinc-800"
@@ -51,7 +50,7 @@ export function CommitteeList({ committees }: { committees: Member[] }) {
               </Avatar>
             </ItemMedia>
             <ItemContent>
-              <ItemTitle className="font-bold text-xl">{member.name}</ItemTitle>
+              <ItemTitle className="text-xl font-bold">{member.name}</ItemTitle>
               <ItemDescription className="mt-4 text-lg">
                 {member.affiliation}
               </ItemDescription>

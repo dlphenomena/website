@@ -20,7 +20,7 @@ const { Content, remarkPluginFrontmatter } = await render(post)
 const minutesRead = remarkPluginFrontmatter.minutesRead
 const lastModifiedTime = dayjs(remarkPluginFrontmatter.lastModified)
   .utc()
-  .format('YYYY-MM-DD')
+  .format('MMM D, YYYY')
 
 const props = { ...post.data, minutesRead, lastModifiedTime }
 ---

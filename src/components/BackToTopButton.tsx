@@ -1,18 +1,10 @@
 import { Button } from '@headlessui/react'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { IoArrowUp } from 'react-icons/io5'
 
 export default function BackToTopButton() {
   const [isVisible, setIsVisible] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
-
-  const handleScroll = () => {
-    if (typeof window !== 'undefined' && window.scrollY > 10) {
-      setIsVisible(true)
-    } else {
-      setIsVisible(false)
-    }
-  }
 
   useEffect(() => {
     setIsMounted(true)
@@ -20,6 +12,14 @@ export default function BackToTopButton() {
 
   useEffect(() => {
     if (!isMounted || typeof window === 'undefined') return
+
+    const handleScroll = () => {
+      if (typeof window !== 'undefined' && window.scrollY > 10) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
