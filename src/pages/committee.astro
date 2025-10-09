@@ -11,7 +11,7 @@ import PageLayout from '../layouts/PageLayout.astro'
       (Alphabetical Order)
     </div>
     <div class="mt-15 px-4">
-      <CommitteeList committees={COMMITTEE_MEMBERS} client:visible />
+      <CommitteeList committees={COMMITTEE_MEMBERS} client:load />
       <div class="mt-10"></div>
     </div>
   </section>
