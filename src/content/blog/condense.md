@@ -34,28 +34,28 @@ The features $\{(\theta_k,A_k)\}_{k}$ during the training process are shown in F
     <div style="display: grid; grid-template-columns: repeat(3, 27.5%); gap: 10px; justify-content: center;">
       <!-- Row 1 -->
       <figure style="margin: 0;">
-        <img src="pic/trajectory100.png" width="100%">
+        <img src="https://github.com/Anson-Se/upload_pic_phenomenon/blob/main/condense/trajectory100.png?raw=true" width="100%">
         <figcaption>epoch = 100</figcaption>
       </figure>
       <figure style="margin: 0;">
-        <img src="pic/trajectory1000.png" width="100%">
+        <img src="https://github.com/Anson-Se/upload_pic_phenomenon/blob/main/condense/trajectory1000.png?raw=true" width="100%">
         <figcaption>epoch = 1000</figcaption>
       </figure>
       <figure style="margin: 0;">
-        <img src="pic/trajectory5000.png" width="100%">
+        <img src="https://github.com/Anson-Se/upload_pic_phenomenon/blob/main/condense/trajectory5000.png?raw=true" width="100%">
         <figcaption>epoch = 5000</figcaption>
       </figure>
       <!-- Row 2 -->
       <figure style="margin: 0;">
-        <img src="pic/trajectory10000.png" width="100%">
+        <img src="https://github.com/Anson-Se/upload_pic_phenomenon/blob/main/condense/trajectory10000.png?raw=true" width="100%">
         <figcaption>epoch = 10000</figcaption>
       </figure>
       <figure style="margin: 0;">
-        <img src="pic/trajectory12000.png" width="100%">
+        <img src="https://github.com/Anson-Se/upload_pic_phenomenon/blob/main/condense/trajectory12000.png?raw=true" width="100%">
         <figcaption>epoch = 12000</figcaption>
       </figure>
       <figure style="margin: 0;">
-        <img src="pic/trajectory100000.png" width="100%">
+        <img src="https://github.com/Anson-Se/upload_pic_phenomenon/blob/main/condense/trajectory100000.png?raw=true" width="100%">
         <figcaption>epoch = 100000</figcaption>
       </figure>
     </div>
@@ -72,7 +72,7 @@ $$
 f^\alpha_{\boldsymbol{\theta}}(\boldsymbol{x}) = \frac{1}{\alpha} \sum_{k=1}^{m}a_k\sigma(\boldsymbol{w}_k^{T}\boldsymbol{x}),
 $$
 
-where $\boldsymbol{x}\in\mathbb{R}^{d}$, $\alpha$ is the scaling factor, $\boldsymbol{\theta}=\mathrm{vec}(\boldsymbol{\theta}_a,\boldsymbol{\theta}_\boldsymbol{w})$ with $\boldsymbol{\theta}_a=\mathrm{vec}(\{a_k\}_{k=1}^{m})$, $\boldsymbol{\theta}_{\boldsymbol{w}}=\mathrm{vec}(\{\boldsymbol{w}_k\}_{k=1}^{m})$ is the set of parameters initialized by $a_k^0\sim N(0, \beta_1^2)$, $\boldsymbol{w}_k^0\sim N(0, \beta_2^2 I_d)$. The bias term $b_k$ can be incorporated by expanding $\boldsymbol{x}$ and $\boldsymbol{w}_k$ to $(\boldsymbol{x}^T,1)^T$ and $(\boldsymbol{w}_k^T,b_k)^T$. We consider the infinite-width limit $m\to\infty$.
+where $\boldsymbol{x}\in\mathbb{R}^{d}$, $\alpha$ is the scaling factor, $\boldsymbol{\theta}=\mathrm{vec}(\boldsymbol{\theta}_a,\boldsymbol{\theta}_{\boldsymbol{w}})$ with $\boldsymbol{\theta}_a=\mathrm{vec}(\{a_k\}_{k=1}^{m})$, $\boldsymbol{\theta}_{\boldsymbol{w}}=\mathrm{vec}(\{\boldsymbol{w}_k\}_{k=1}^{m})$ is the set of parameters initialized by $a_k^0\sim N(0, \beta_1^2)$, $\boldsymbol{w}_k^0\sim N(0, \beta_2^2 I_d)$. The bias term $b_k$ can be incorporated by expanding $\boldsymbol{x}$ and $\boldsymbol{w}_k$ to $(\boldsymbol{x}^T,1)^T$ and $(\boldsymbol{w}_k^T,b_k)^T$. We consider the infinite-width limit $m\to\infty$.
 
 The linear regime refers to a dynamic regime that the model can be approximated by the first-order Taylor expansion at the initial parameter point, i.e.,
 
@@ -96,7 +96,7 @@ The resulting phase diagram is shown in Fig. 2, which can be rigorously characte
 
 <figure>
     <center>
-    <img src="pic/fig-phase-diagram_output.png" width="100%">
+    <img src="https://github.com/Anson-Se/upload_pic_phenomenon/blob/main/condense/fig-phase-diagram_output.png?raw=true" width="100%">
     </center>
 </figure>
 
