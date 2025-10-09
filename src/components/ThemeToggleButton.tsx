@@ -43,6 +43,7 @@ export default function ThemeToggle() {
         return (
           <button
             key={t}
+            type="button"
             className={`${
               checked ? 'bg-white text-black' : ''
             } cursor-pointer rounded-3xl p-2`}
