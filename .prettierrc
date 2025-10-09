@@ -8,8 +8,8 @@
   "endOfLine": "lf",
   "plugins": [
     "prettier-plugin-astro",
-    "prettier-plugin-tailwindcss",
-    "prettier-plugin-organize-imports"
+    "prettier-plugin-organize-imports",
+    "prettier-plugin-tailwindcss"
   ],
   "tailwindStylesheet": "./src/styles/global.css",
   "tailwindFunctions": ["clsx", "cn", "cva"]
