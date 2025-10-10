@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card.tsx'
 import type { CollectionEntry } from 'astro:content'
-import FormattedDate from '../components/FormattedDate.astro'
+import { ArrowRight } from 'lucide-react'
 
 interface Props {
   posts: CollectionEntry<'blog'>[]
@@ -37,8 +37,10 @@ const { posts } = Astro.props
                   )}
                 </CardContent>
                 <CardFooter className="mb-2">
-                  <p class="date font-mono text-xs opacity-70">
-                    <FormattedDate date={post.data.pubDate} />
+                  <p class="date flex items-center gap-2 font-mono text-sm opacity-70">
+                    {/* <FormattedDate date={post.data.pubDate} /> */}
+                    Learn more
+                    <ArrowRight className="inline-block size-4" />
                   </p>
                 </CardFooter>
               </Card>
