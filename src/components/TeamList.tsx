@@ -45,7 +45,7 @@ export function CommitteeList({ committees }: { committees: Member[] }) {
           <a href={member.url}>
             <ItemMedia>
               <Avatar className="size-18">
-                <AvatarImage src={member.avatar} alt="test" />
+                <AvatarImage src={member.avatar} alt="avatar" />
                 <AvatarFallback>{getInitials(member.name)}</AvatarFallback>
               </Avatar>
             </ItemMedia>
