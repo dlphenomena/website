@@ -6,6 +6,7 @@ pubDate: 2025-09-28
 tags:
   - Training
 author: Zhiwei Bai, Zhi-Qin John Xu, Zhangchen Zhou
+relatedWorks: condense/related-works
 ---
 
 ## 1. Introduction
@@ -129,59 +130,3 @@ Figure 2: Phase diagram of two-layer ReLU NNs at infinite-width limit. The marke
 <a id="ref3">[3]</a> Maennel, Hartmut; Bousquet, Olivier; Gelly, Sylvain . _Gradient descent quantizes relu network features_. [arXiv](https://arxiv.org/abs/1803.08367)
 
 ---
-
-## Related Works
-
-**Theory:** Phuong, Mary; Lampert, Christoph H.. _[The inductive bias of relu networks on orthogonally separable data](https://iclr.cc/virtual/2021/poster/2889)_, International Conference on Learning Representations, 2021
-
----
-
-**Theory:** Boursier, Etienne; Pillaud-Vivien, Loucas; Nicolas Flammarion. _[Gradient flow dynamics of shallow relu networks for square loss and orthogonal inputs](https://proceedings.neurips.cc/paper_files/paper/2022/file/7eeb9af3eb1f48e29c05e8dd3342b286-Paper-Conference.pdf)_, Advances in Neural Information Processing Systems, 2022, [arXiv](https://arxiv.org/abs/2206.00939)
-
----
-
-**Theory:** Chistikov, Dmitry; Englert, Matthias; Lazic, Ranko. _[Learning a neuron by a shallow relu network: Dynamics and implicit bias for correlated inputs](https://proceedings.neurips.cc/paper_files/paper/2023/file/4af24e6ce753c181e703f3f0be3b5e20-Paper-Conference.pdf)_, Advances in Neural Information Processing Systems, 2023, [arXiv](https://arxiv.org/abs/2306.06479)
-
----
-
-**Theory:** Wang, Mingze; Ma, Chao. _[Understanding multi-phase optimization dynamics and rich nonlinear behaviors of relu networks](https://proceedings.neurips.cc/paper_files/paper/2023/file/7016d7b7b6e3c05b2128ac5b3aae492d-Paper-Conference.pdf)_, Advances in Neural Information Processing Systems, 2023, [arXiv](https://arxiv.org/abs/2305.12467)
-
----
-
-**Theory:** Min, Hancheng; Mallada, Enrique; Vidal, Rene. _[Early neuron alignment in two-layer relu networks with small initialization](https://openreview.net/forum?id=QibPzdVrRu)_, International Conference on Learning Representations, 2024, [arXiv](https://arxiv.org/abs/2307.12851)
-
----
-
-**Theory:** Boursier, Etienne; and Flammarion, Nicolas. _[Early alignment in two-layer networks training is a two-edged sword](https://www.jmlr.org/papers/volume26/24-1523/24-1523.pdf)_, Journal of Machine Learning Research, 2025, [arXiv](https://arxiv.org/abs/2401.10791)
-
----
-
-**Theory:** Kumar, Akshay; Haupt Jarvis. _[Directional convergence near small initializations and saddles in two-homogeneous neural networks](https://openreview.net/forum?id=hfrPag75Y0)_, Transactions on Machine Learning Research, 2024, [arXiv](https://arxiv.org/abs/2402.09226)
-
----
-
-**Theory:** Kumar, Akshay; Haupt, Jarvis. _[Early directional convergence in deep homogeneous neural networks for small initializations](https://openreview.net/forum?id=VNM6V1gi3k)_, Transactions on Machine Learning Research, 2025, [arXiv](https://arxiv.org/abs/2403.08121)
-
----
-
-**Theory:** Zhou, Hanxu, Zhou, Qixuan, Luo, Tao, Zhang, Yaoyu, Xu, Zhi-Qin John, _[Towards Understanding the Condensation of Neural Networks at Initial Training](https://proceedings.neurips.cc/paper_files/paper/2022/file/0f4d1fc085b7504c140e66bb26ed8842-Paper-Conference.pdf)_, Advances in Neural Information Processing Systems, 2022, [arXiv](https://arxiv.org/abs/2105.11686)
-
----
-
-**Theory:** Zhou, Hanxu; Zhou, Qixuan; Jin, Zhenyuan; Luo, Tao; Zhang, Yaoyu; Xu, Zhi-Qin John. _[Empirical Phase Diagram for Three-layer Neural Networks with Infinite Width](https://proceedings.neurips.cc/paper_files/paper/2022/file/a71c1931d3fb8ba564f7458d0657d0b1-Paper-Conference.pdf)_, Advances in Neural Information Processing Systems, 2022, [arXiv](https://arxiv.org/abs/2205.12101)
-
----
-
-**Theory:** Chen, Zhengan; Li, Yuqing; Luo, Tao; Zhou, Zhangchen; Xu, Zhi-Qin John.  _[Phase diagram of initial condensation for two-layer neural networks](https://global-sci.com/article/91025/phase-diagram-of-initial-condensation-for-two-layer-neural-networks)_, CSIAM Trans. Appl. Math, 2024, [arXiv](https://arxiv.org/abs/2303.06561)
-
----
-
-**Theory:** Zhou, Zhangchen; Zhou, Hanxu; Li, Yuqing; Xu Zhi-Qin John. _[Understanding the initial condensation of convolutional neural networks](https://global-sci.com/article/91885/understanding-the-initial-condensation-of-convolutional-neural-networks)_, CSIAM Trans. Appl. Math, 2025, [arXiv](https://arxiv.org/abs/2305.09947)
-
----
-
-**Theory:** Zhang, Zhongwang; Xu, Zhi-Qin John. _[Implicit regularization of dropout](https://ieeexplore.ieee.org/document/10412142/)_, IEEE Transactions on Pattern Analysis and Machine Intelligence, 2024, [arXiv](https://arxiv.org/abs/2207.05952)
-
----
-
-**Algorithm:** Chen, Tianyi; Xu, Zhi-Qin John. _[Efficient and flexible method for reducing moderate-size deep neural networks with condensation](https://www.mdpi.com/1099-4300/26/7/567)_, Entropy, 2024, [arXiv](https://arxiv.org/abs/2405.01041)
