@@ -62,9 +62,6 @@ export function RelatedWork({ work, worksId, index }: Props) {
       ?.map((a: { family: string; given: string }) => `${a.given} ${a.family}`)
       .join(', ') || 'Unknown Author'
 
-  // Get journal name from container-title
-  const journal = work.journal
-
   const type =
     work.type === 'journal'
       ? 'journal'
@@ -72,16 +69,19 @@ export function RelatedWork({ work, worksId, index }: Props) {
         ? 'conference'
         : 'other'
 
-  // Extract year from issued.date-parts
-  const year = work.year
+  const workURL = work.url
+    ? work.url
+    : work.doi
+      ? `https://doi.org/${work.doi}`
+      : work.arxiv
+        ? `https://arxiv.org/abs/${work.arxiv}`
+        : ''
 
-  const workURL = work.doi
-    ? `https://doi.org/${work.doi}`
+  const pdfLink = work.pdfLink
+    ? work.pdfLink
     : work.arxiv
-      ? `https://arxiv.org/abs/${work.arxiv}`
+      ? `https://arxiv.org/pdf/${work.arxiv}.pdf`
       : ''
-
-  const pdfLink = work.arxiv ? `https://arxiv.org/pdf/${work.arxiv}.pdf` : ''
 
   return (
     <AccordionItem value={`item-${index}`}>
@@ -97,9 +97,9 @@ export function RelatedWork({ work, worksId, index }: Props) {
             <ItemDescription className="text-foreground/80">
               {authorString}
             </ItemDescription>
-            <ItemDescription className="italic">{journal}</ItemDescription>
+            <ItemDescription className="italic">{work.journal}</ItemDescription>
             <ItemDescription className="mt-1 flex w-full flex-wrap items-center gap-2 text-sm">
-              <Badge className="px-1 font-mono tabular-nums">{year}</Badge>
+              <Badge className="px-1 font-mono tabular-nums">{work.year}</Badge>
               {work.tags?.map((tag: string) => (
                 <Badge
                   key={tag}
@@ -108,14 +108,14 @@ export function RelatedWork({ work, worksId, index }: Props) {
                     tag === 'theory'
                       ? 'bg-lime-600 text-white dark:bg-lime-700'
                       : tag === 'algorithm'
-                        ? 'bg-orange-300 text-black'
+                        ? 'bg-orange-300 text-black dark:bg-orange-300 dark:text-black'
                         : ''
                   } px-1 font-mono`}
                 >
                   {tag}
                 </Badge>
               ))}
-              <Badge variant="secondary" className="px-1 font-mono">
+              <Badge variant="secondary" className="bg-gray-400 px-1 font-mono">
                 {type}
               </Badge>
               <Badge

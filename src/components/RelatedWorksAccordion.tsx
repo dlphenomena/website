@@ -11,6 +11,7 @@ export function RelatedWorksAccordion({ works }: Props) {
     return
   } else {
     const { data, id } = works
+    data.sort((a, b) => b.year - a.year) // Sort by year descending
     return (
       <>
         <h2 className="mt-20 mb-6 text-2xl">Related Works</h2>

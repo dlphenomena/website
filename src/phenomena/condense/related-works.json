@@ -15,8 +15,8 @@
     ],
     "journal": "International Conference on Learning Representations",
     "year": 2021,
-    "arxiv": "",
-    "doi": "",
+    "url": "https://openreview.net/forum?id=krz7T0xU9Z_",
+    "pdfLink": "https://openreview.net/pdf?id=krz7T0xU9Z_",
     "description": "Prove that the neurons of two-layer ReLU neural networks will asymptotically converge to two directions (align in two directions): the positive max-margin vector and the negative max-margin vector on orthogonally separable data.",
     "supplementary": ""
   },
@@ -45,7 +45,7 @@
     "description": "Prove that, for orthogonal input vectors, the gradient flow dynamics of training two-layer ReLU neural networks on the mean squared error loss exhibit an initial alignment phase, and estimate the timescale on which this phase occurs.",
     "supplementary": ""
   },
-    {
+  {
     "type": "conference",
     "tags": ["theory"],
     "title": "Towards Understanding the Condensation of Neural Networks at Initial Training",

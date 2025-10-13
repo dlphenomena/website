@@ -33,6 +33,8 @@ const references = defineCollection({
       arxiv: z.string().optional(),
       doi: z.string().optional(),
       supplementary: z.string().optional(),
+      url: z.string().optional(),
+      pdfLink: z.string().optional(),
     })
   ),
 })
