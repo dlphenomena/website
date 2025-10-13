@@ -23,7 +23,7 @@ export const COMMITTEE_MEMBERS = [
     name: 'Zhi-Qin John Xu',
     affiliation: 'Shanghai Jiao Tong University',
     url: 'https://ins.sjtu.edu.cn/people/xuzhiqin/',
-    avatar: 'https://ins.sjtu.edu.cn/people/xuzhiqin/xu3.jpg',
+    avatar: '/avatars/xu-zhiqin.jpg',
   },
   {
     name: 'Yaoyu Zhang',
