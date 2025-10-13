@@ -1,4 +1,5 @@
 ---
+import { PublicationAccordion } from '@/components/PublicationList'
 import PageLayout from './PageLayout.astro'
 
 const { title, description, author, minutesRead, lastModifiedTime } =
@@ -14,4 +15,6 @@ const { title, description, author, minutesRead, lastModifiedTime } =
   </p>
   <hr />
   <slot />
+  <h2 class="mt-20 mb-6 text-2xl">References</h2>
+  <PublicationAccordion client:load />
 </PageLayout>
