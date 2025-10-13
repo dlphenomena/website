@@ -126,7 +126,7 @@ Figure 2: Phase diagram of two-layer ReLU NNs at infinite-width limit. The marke
 
 <a id="ref2">[2]</a> Luo, Tao; Xu, Zhi-Qin John; Ma, Zheng; Zhang, Yaoyu. _Phase diagram for two-layer relu neural networks at infinite-width limit_. [Journal of Machine Learning Research, 2022](https://www.jmlr.org/papers/v22/20-1123.html), [arXiv](https://arxiv.org/abs/2007.07497)
 
-<a id="ref3">[3]</a> Maennel, Hartmut; Bousquet, Olivier; Gelly, Sylvain . _Gradient descent quantizes relu network features_. [arXiv](https://arxiv.org/abs/1803.08367) 
+<a id="ref3">[3]</a> Maennel, Hartmut; Bousquet, Olivier; Gelly, Sylvain . _Gradient descent quantizes relu network features_. [arXiv](https://arxiv.org/abs/1803.08367)
 
 ## Related Works
 

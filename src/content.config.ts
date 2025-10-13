@@ -15,7 +15,7 @@ const phenomena = defineCollection({
       heroImage: image().optional(),
       tags: z.array(z.string()).optional(),
       author: z.string().default('Anonymous'),
-      relatedWorks: reference('references').optional(),
+      relatedWorks: reference('references').default('').optional(),
     }),
 })
 

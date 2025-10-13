@@ -26,35 +26,63 @@
     "arxiv": "1906.09235",
     "doi": "10.4208/csiam-am.SO-2020-0005",
     "description": "Prove that for general deep neural networks, the change of high-frequency loss over the total loss decays with the separated frequency with a certain power, which is determined by the regularity assumption.",
-    "supplementary": "test.md"
+    "supplementary": "general-theory.md"
   },
   {
-    "type": "journal",
-    "tags": ["theory"],
-    "title": "Theory of the Frequency Principle for General Deep Neural Networks",
+    "type": "conference",
+    "tags": ["algorithm"],
+    "title": "A Universal PINNs Method for Solving Partial Differential Equations with a Point Source",
     "authors": [
       {
-        "family": "Luo",
-        "given": "Tao"
+        "family": "Huang",
+        "given": "Xiang"
       },
       {
-        "family": "Ma",
-        "given": "Zheng"
+        "family": "Liu",
+        "given": "Hongsheng"
       },
       {
-        "family": "Xu",
-        "given": "Zhi-Qin John"
+        "family": "Shi",
+        "given": "Beiji"
       },
       {
-        "family": "Zhang",
-        "given": "Yaoyu"
+        "family": "Wang",
+        "given": "Zidong"
+      },
+      {
+        "family": "Wang",
+        "given": "Min"
+      },
+      {
+        "family": "Chu",
+        "given": "Haotian"
+      },
+      {
+        "family": "Zhou",
+        "given": "Jing"
+      },
+      {
+        "family": "Yu",
+        "given": "Fan"
+      },
+      {
+        "family": "Hua",
+        "given": "Bei"
+      },
+      {
+        "family": "Dong",
+        "given": "Bin"
+      },
+      {
+        "family": "Chen",
+        "given": "Lei"
       }
     ],
-    "journal": "CSIAM Trans. Appl. Math.",
-    "year": 2021,
+    "journal": "IJCAI",
+    "year": 2022,
     "arxiv": "1906.09235",
-    "doi": "10.4208/csiam-am.202020-0052",
-    "description": "Prove that for general deep neural networks, the change of high-frequency loss over the total loss decays with the separated frequency with a certain power, which is determined by the regularity assumption.",
-    "supplementary": "test.md"
+    "doi": "10.4208/csiam-am.SO-2020-0005",
+    "description": "This work proposes an improved MscaleDNN-based algorithm for solving PDEs with point sources, borrowing ideas from MscaleDNNs and SIREN, and reports its implementation in Huawei's MindSpore scientific computing package.",
+    "supplementary": ""
   }
 ]

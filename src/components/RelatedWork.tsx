@@ -11,13 +11,14 @@ import {
   ItemMedia,
   ItemTitle,
 } from '@/components/ui/item'
+import type { CollectionEntry } from 'astro:content'
 import { useEffect, useState } from 'react'
 import Markdown from 'react-markdown'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 
 interface Props {
-  work: any
+  work: CollectionEntry<'references'>['data'][number]
   worksId: string
   index: number
 }
@@ -27,6 +28,9 @@ export function RelatedWork({ work, worksId, index }: Props) {
 
   useEffect(() => {
     async function fetchMarkdown() {
+      if (!work.supplementary) {
+        return
+      }
       try {
         const phenomenaDir = worksId.split('/')[0]
         const markdownURL = new URL(
@@ -96,7 +100,7 @@ export function RelatedWork({ work, worksId, index }: Props) {
             <ItemDescription className="italic">{journal}</ItemDescription>
             <ItemDescription className="mt-1 flex w-full flex-wrap items-center gap-2 text-sm">
               <Badge className="px-1 font-mono tabular-nums">{year}</Badge>
-              {work.tags.map((tag: string) => (
+              {work.tags?.map((tag: string) => (
                 <Badge
                   key={tag}
                   variant="secondary"
@@ -136,7 +140,7 @@ export function RelatedWork({ work, worksId, index }: Props) {
           </ItemContent>
         </Item>
       </AccordionTrigger>
-      <AccordionContent className="pl-10 text-base">
+      <AccordionContent className="pl-12 text-base">
         {work.description}
         <Markdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
           {rawMarkdown}
