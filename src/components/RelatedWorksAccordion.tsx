@@ -13,7 +13,7 @@ export function RelatedWorksAccordion({ works }: Props) {
     const { data, id } = works
     return (
       <>
-        <h2 className="mt-20 mb-6 text-2xl">References</h2>
+        <h2 className="mt-20 mb-6 text-2xl">Related Works</h2>
         <Accordion
           type="single"
           collapsible
