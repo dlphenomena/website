@@ -10,7 +10,7 @@ export const COMMITTEE_MEMBERS = [
     name: 'Tao Luo',
     affiliation: 'Shanghai Jiao Tong University',
     url: 'https://www.math.sjtu.edu.cn/Default/teachershow/tags/MDAwMDAwMDAwMLKIet0',
-    avatar: 'src/assets/avatars/luo-tao.jpg',
+    avatar: '/avatars/luo-tao.jpg',
   },
   {
     name: 'Zheng Ma',
