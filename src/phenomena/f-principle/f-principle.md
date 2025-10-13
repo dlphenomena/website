@@ -6,6 +6,7 @@ pubDate: 2025-10-03
 tags:
   - Training
 author: Zhiwei Bai, Zhi-Qin John Xu, Zhangchen Zhou
+relatedWorks: f-principle/related-works
 ---
 
 ## Introduction

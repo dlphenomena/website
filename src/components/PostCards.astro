@@ -10,7 +10,7 @@ import type { CollectionEntry } from 'astro:content'
 import { ArrowRight } from 'lucide-react'
 
 interface Props {
-  posts: CollectionEntry<'blog'>[]
+  posts: CollectionEntry<'phenomena'>[]
 }
 
 const { posts } = Astro.props
@@ -24,7 +24,7 @@ const { posts } = Astro.props
       posts.map((post: any) => {
         return (
           <li>
-            <a href={`/blog/${post.id}/`}>
+            <a href={`/phenomena/${post.id}/`}>
               <Card className="h-full flex flex-col ">
                 <CardHeader>
                   <CardTitle className="text-xl font-bold">

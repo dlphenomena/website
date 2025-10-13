@@ -1,9 +1,20 @@
 ---
-import { PublicationAccordion } from '@/components/PublicationList'
-import PageLayout from './PageLayout.astro'
+import { RelatedWorksAccordion } from '@/components/RelatedWorksAccordion'
+import PageLayout from '@/layouts/PageLayout.astro'
+import { getEntry } from 'astro:content'
 
-const { title, description, author, minutesRead, lastModifiedTime } =
-  Astro.props
+const {
+  title,
+  description,
+  author,
+  minutesRead,
+  lastModifiedTime,
+  relatedWorks,
+} = Astro.props
+
+const works = await getEntry(relatedWorks)
+
+const data = await works.data
 ---
 
 <PageLayout>
@@ -16,5 +27,5 @@ const { title, description, author, minutesRead, lastModifiedTime } =
   <hr />
   <slot />
   <h2 class="mt-20 mb-6 text-2xl">References</h2>
-  <PublicationAccordion client:load />
+  <RelatedWorksAccordion works={data} worksId={works.id} client:load />
 </PageLayout>

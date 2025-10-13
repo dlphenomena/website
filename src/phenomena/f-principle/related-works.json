@@ -1,0 +1,60 @@
+[
+  {
+    "type": "journal",
+    "tags": ["theory"],
+    "title": "Theory of the Frequency Principle for General Deep Neural Networks",
+    "authors": [
+      {
+        "family": "Luo",
+        "given": "Tao"
+      },
+      {
+        "family": "Ma",
+        "given": "Zheng"
+      },
+      {
+        "family": "Xu",
+        "given": "Zhi-Qin John"
+      },
+      {
+        "family": "Zhang",
+        "given": "Yaoyu"
+      }
+    ],
+    "journal": "CSIAM Trans. Appl. Math.",
+    "year": 2021,
+    "arxiv": "1906.09235",
+    "doi": "10.4208/csiam-am.SO-2020-0005",
+    "description": "Prove that for general deep neural networks, the change of high-frequency loss over the total loss decays with the separated frequency with a certain power, which is determined by the regularity assumption.",
+    "supplementary": "test.md"
+  },
+  {
+    "type": "journal",
+    "tags": ["theory"],
+    "title": "Theory of the Frequency Principle for General Deep Neural Networks",
+    "authors": [
+      {
+        "family": "Luo",
+        "given": "Tao"
+      },
+      {
+        "family": "Ma",
+        "given": "Zheng"
+      },
+      {
+        "family": "Xu",
+        "given": "Zhi-Qin John"
+      },
+      {
+        "family": "Zhang",
+        "given": "Yaoyu"
+      }
+    ],
+    "journal": "CSIAM Trans. Appl. Math.",
+    "year": 2021,
+    "arxiv": "1906.09235",
+    "doi": "10.4208/csiam-am.202020-0052",
+    "description": "Prove that for general deep neural networks, the change of high-frequency loss over the total loss decays with the separated frequency with a certain power, which is determined by the regularity assumption.",
+    "supplementary": "test.md"
+  }
+]
