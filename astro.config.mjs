@@ -1,5 +1,5 @@
-import { remarkReadingTime } from '@/lib/remark-reading-time.mjs'
-import { remarkModifiedTime } from '@/lib/remarkModifiedTime.mjs'
+import { remarkReadingTime } from '@/lib/remark-reading-time'
+import { remarkModifiedTime } from '@/lib/remarkModifiedTime'
 import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
