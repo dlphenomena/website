@@ -115,7 +115,7 @@ export function RelatedWork({ work, worksId, index }: Props) {
                   {tag}
                 </Badge>
               ))}
-              <Badge variant="secondary" className="bg-gray-400 px-1 font-mono">
+              <Badge variant="secondary" className="bg-gray-200 px-1 font-mono">
                 {type}
               </Badge>
               <Badge
