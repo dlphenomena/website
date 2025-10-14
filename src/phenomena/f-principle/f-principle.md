@@ -35,13 +35,13 @@ In one-dimensional problems, the [Discrete Fourier Transform (DFT)](https://en.w
 
 Fig 1: Frequency principle in one-dimension. Left: Target function (red) and DNN output (blue). Right: The abscissa represents the frequency and the ordinate represents the amplitude to the corresponding frequency. The red dash line is the DFT of the one-dimension target function. The blue solid line is the DFT of the DNN output.
 
-In two-dimensional problems, Fig.2 utilises DNN to fit an image of the camera man (Input: two-dimensional coordiantes; Output: grey scale). The DNN starts learning from a coarse image and produces a more detailed image as training progresses. This demonstrates learning from low to high frequencies, which is analogous to how the biological brain remembers an image.
+In two-dimensional problems, Fig.2 utilizes DNN to fit an image of the camera man (Input: two-dimensional coordinates; Output: grey scale). The DNN starts learning from a coarse image and produces a more detailed image as training progresses. This demonstrates learning from low to high frequencies, which is analogous to how the biological brain remembers an image.
 
 ![Frequency_experiment_two_dimension](https://cdn.jsdelivr.net/gh/ZhiweiBai/images_for_typora@main/Frequency_experiment_two_dimension.png)
 
 Fig 2: Two-dimensional frequency learning. The first subfigure is the real data of the camera man. The following three subfigures are the outputs of DNNs at step 80, 2000, 58000.
 
-This example shows the 2D frequency principle, which utilises DNNs for image restoration by leveraging preferences for low frequencies, such as in [inpainting](https://en.wikipedia.org/wiki/Inpainting) tasks. However, it is important to account for insufficient learning of high-frequency structures. To address this limitation, certain algorithms have been developed, which are introduced in the Applications section.
+This example shows the 2D frequency principle, which utilizes DNNs for image restoration by leveraging preferences for low frequencies, such as in [inpainting](https://en.wikipedia.org/wiki/Inpainting) tasks. However, it is important to account for insufficient learning of high-frequency structures. To address this limitation, certain algorithms have been developed, which are introduced in the Applications section.
 
 In high-dimensional problems, one can use projection methods to visualize the frequency convergence in one particular direction or use a [Gaussian filter](https://en.wikipedia.org/wiki/Gaussian_filter) to roughly see the convergence of the low-frequency part and the high-frequency part [[4]](#ref4).
 
@@ -87,102 +87,11 @@ The gradient derived from low-frequency components dominates that from high-freq
 
 ## Key References
 
-<a id="ref1">[1]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Xiao, Yanyang. _Training Behavior of Deep Neural Network in Frequency Domain_, [International Conference on Neural Information Processing, 2019](https://link.springer.com/chapter/10.1007/978-3-030-36708-4_22), [arXiv](https://arxiv.org/abs/1807.01251)
+<a id="ref1">[1]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Xiao, Yanyang. _[Training Behavior of Deep Neural Network in Frequency Domain](https://link.springer.com/chapter/10.1007/978-3-030-36708-4_22)_, International Conference on Neural Information Processing, 2019, [arXiv](https://arxiv.org/abs/1807.01251)
 
-<a id="ref2">[2]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Luo, Tao; Xiao, Yanyang; Ma, Zheng. _Frequency Principle: Fourier Analysis Sheds Light on Deep Neural Networks_, [Communications in Computational Physics, 2020](https://global-sci.com/article/79739/frequency-principle-fourier-analysis-sheds-light-on-deep-neural-networks), [arXiv](https://arxiv.org/abs/1901.06523)
+<a id="ref2">[2]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Luo, Tao; Xiao, Yanyang; Ma, Zheng. _[Frequency Principle: Fourier Analysis Sheds Light on Deep Neural Networks](https://global-sci.com/article/79739/frequency-principle-fourier-analysis-sheds-light-on-deep-neural-networks)_, Communications in Computational Physics, 2020, [arXiv](https://arxiv.org/abs/1901.06523)
 
-<a id="ref3">[3]</a> Nasim Rahaman\#, Aristide Baratin\#, Devansh Arpit, Felix Draxler, Min Lin, Fred A. Hamprecht, Yoshua Bengio, Aaron Courville. _On the Spectral Bias of Neural Networks_, [International Conference on Machine Learning, 2019](https://proceedings.mlr.press/v97/rahaman19a.html), [arXiv](https://arxiv.org/abs/1806.08734)
+<a id="ref3">[3]</a> Nasim Rahaman\#, Aristide Baratin\#, Devansh Arpit, Felix Draxler, Min Lin, Fred A. Hamprecht, Yoshua Bengio, Aaron Courville. _[On the Spectral Bias of Neural Networks](https://proceedings.mlr.press/v97/rahaman19a.html)_, International Conference on Machine Learning, 2019, [arXiv](https://arxiv.org/abs/1806.08734)
 
-<a id="ref4">[4]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Luo, Tao. _Overview frequency principle/spectral bias in deep learning_, [Communications on Applied Mathematics and Computation, 2024](https://link.springer.com/article/10.1007/s42967-024-00398-7), [arXiv](https://arxiv.org/abs/2201.07395)
+<a id="ref4">[4]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Luo, Tao. _[Overview frequency principle/spectral bias in deep learning](https://link.springer.com/article/10.1007/s42967-024-00398-7)_, Communications on Applied Mathematics and Computation, 2024, [arXiv](https://arxiv.org/abs/2201.07395)
 
----
-
-## Related Works
-
-<!-- 1) give a tag, such as theory or algorithm or others. 2) Authors better be completed listed unless there are too many ones. 3) The Journal or Conference name should have a hyperlink to the paper. 4) Provide arxiv page if there is one. -->
-
-**Theory:** Luo, Tao; Ma, Zheng; Xu, Zhi-Qin John; Zhang, Yaoyu. _Theory of the Frequency Principle for General Deep Neural Networks_. [CSIAM Trans. Appl. Math., 2021](https://global-sci.org/intro/article_detail/csiam-am/19447.html), [arXiv](https://arxiv.org/abs/1906.09235)
-
-**TL,DR**: Prove that for general deep neural networks, the change of high-frequency loss over the total loss decays with the separated frequency with a certain power, which is determined by the regularity assumption.
-
----
-
-**Algorithm:** Liu, Ziqi; Cai, Wei; Xu, Zhi-Qin John*. _Multi-Scale Deep Neural Network (MscaleDNN) for Solving Poisson-Boltzmann Equation in Complex Domains_. [Communications in Computational Physics, 2020](https://www.global-sci.org/intro/article_detail/cicp/18402.html), [arXiv](https://arxiv.org/abs/2007.11207)
-
-**TL,DR**: **Multi-scale DNN (MscaleDNN):** scales high frequencies to lower ones. **MscaleDNN-1** takes:
-
-$$
-f(\mathbf{x};\theta) = W^{[L-1]} \, \sigma \circ (\cdots (W^{[1]} \, \sigma \circ (K \odot (W^{[0]} \mathbf{x}) + b^{[0]}) + b^{[1]}) \cdots ) + b^{[L-1]},
-$$
-
-where $W^{[l]} \in \mathbb{R}^{m_{l+1} \times m_l}$, $\odot$ is elementwise product, $K=(a_1,a_1,\dots,a_1,a_2,\dots,a_{N})^T \in \mathbb{R}^{m_1}$, $a_i=i$ or $2^{i-1}$.
-
-<img src="https://ins.sjtu.edu.cn/people/xuzhiqin/pub/mscalednn.png" alt="mscalednn" style="width: 50%;">
-
-Fig 3: Illustration of two MscaleDNN structures.
-
----
-
-**Algorithm:** Cai, Wei; Li, Xiaoguang; Liu, Lizuo. _A Phase Shift Deep Neural Network for High Frequency Approximation and Wave Problems_. [SIAM J. Sci. Comput., 2020](https://epubs.siam.org/doi/abs/10.1137/19M1310050), [arXiv](https://arxiv.org/abs/1909.11759)
-
-**TL,DR:** Phase shift DNN (PhaseDNN) converts high-frequency component of the data downward to a low-frequency spectrum for learning, and then converts the learned one back to the original high frequency.
-
----
-
-**Theory:** E, Weinan; Ma, Chao; Wu, Lei. _Machine learning from a continuous viewpoint, I_. [Science China Mathematics, 2020](https://link.springer.com/article/10.1007/s11425-020-1773-8), [arXiv](https://arxiv.org/abs/1912.12777)
-
-**TL,DR:** This work provides a continuous framework to study machine learning and suggest gradient flows of neural networks are nice flows and obey the F-Principle. This is because they are [integral equations](https://en.wikipedia.org/wiki/Integral_equation) which have higher regularity.
-
----
-
-**Algorithm:** Jagtap, Ameya D.; Kawaguchi, Kenji; Karniadakis, George Em. _Adaptive activation functions accelerate convergence in deep and physics-informed neural networks_. [J. Comput. Phys., 2020](https://www.osti.gov/pages/biblio/2282002), [arXiv](https://arxiv.org/abs/1906.01170)
-
-**TL,DR:** This work replaces the activation function $\sigma(x)$ by $\sigma(\mu a x)$, where $\mu \geq 1$ is a fixed scale factor and $a$ is a trainable variable shared for all neurons.
-
----
-
-**Algorithm:** Tancik, Matthew, Pratul Srinivasan, Ben Mildenhall, Sara Fridovich-Keil, Nithin Raghavan, Utkarsh Singhal, Ravi Ramamoorthi, Jonathan Barron, and Ren Ng. _Fourier features let networks learn high frequency functions in low dimensional domains_. [Advances in neural information processing systems 33 (2020): 7537-7547](https://papers.neurips.cc/paper_files/paper/2020/file/55053683268957697aa39fba6f231c68-Paper.pdf), [arXiv](https://arxiv.org/abs/2006.10739)
-
-**TL,DR:** Fourier feature network maps input $\mathbf{x}$ to
-
-$$
-\gamma(\mathbf{x}) = [a_1 \cos(2\pi b_1^T x), \dots, a_m \cos(2\pi b_m^T x)],
-$$
-
-for imaging reconstruction tasks.
-
----
-
-**Algorithm:** Wang, Sifan; Wang, Hanwen; Perdikaris, Paris. _On the eigenvector bias of Fourier feature networks_. [Comput. Methods Appl. Mech. Eng., 2021](https://www.sciencedirect.com/science/article/abs/pii/S0045782521002759), [arXiv](https://arxiv.org/abs/2012.10047)
-
-**TL,DR:** This work extends the Fourier feature method to PDE problems.
-
----
-
-**Algorithm:** Mildenhall, Ben, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, and Ren Ng. _Nerf: Representing scenes as neural radiance fields for view synthesis_. [Communications of the ACM 65, no. 1 (2021): 99-106](https://dl.acm.org/doi/10.1145/3503250), [arXiv](https://arxiv.org/abs/2003.08934)
-
-**TL,DR:** This work applies the Fourier feature method to neural radiance fields (NeRF) for view synthesis.
-
----
-
-**Theory:** Markidis Stefano. _The old and the new: Can physics-informed deep-learning replace traditional linear solvers?_ [J]. [Frontiers in big Data, 2021, 4: 669097](https://www.frontiersin.org/journals/big-data/articles/10.3389/fdata.2021.669097/full), [arXiv](https://arxiv.org/abs/2103.09655)
-
-**TL,DR:** This work highlights the frequency principle as a key mechanism governing the convergence of deep neural networks and physics-informed neural networks (PINNs), suggesting its importance in replacing traditional linear solvers.
-
----
-
-**Theory:** Rishabh, Agarwal, Levi, Melnick; Nicholas, Frosst; Xuezhou, Zhang; Ben, Lengerich; Rich, Caruana; Geoffrey, E. Hinton. _Neural additive models: Interpretable machine learning with neural nets_ [J]. [Advances in neural information processing systems, 2021, 34: 4699-4711](https://dl.acm.org/doi/10.5555/3540261.3540620), [arXiv](https://arxiv.org/abs/2004.13912)
-
-**TL,DR:** This work introduces Neural Additive Models for interpretable machine learning, noting that their difficulty in fitting jagged functions with ReLU networks may stem from a bias towards smoothness, which limits their ability to capture high-frequency patterns.
-
----
-
-**Algorithm:** Huang, Xiang; Liu, Hongsheng; Shi, Beiji; Wang, Zidong; Yang, Kang; Li, Yang; Wang, Min; Chu, Haotian; Zhou, Jing; Yu, Fan; Hua Bei; Dong Bin; Chen Lei. _A Universal PINNs Method for Solving Partial Differential Equations with a Point Source_ [C]. [IJCAI. 2022: 3839-3846](https://www.ijcai.org/proceedings/2022/0533.pdf).
-
-**TL,DR:** This work proposes an improved MscaleDNN-based algorithm for solving PDEs with point sources, borrowing ideas from MscaleDNNs and SIREN, and reports its implementation in Huawei’s MindSpore scientific computing package.
-
----
-
-**Algorithm:** Chen, Yuanqing; Wang, Ding; Feng, Dachuan; Tian, Geng; Gupta, Vikrant; Cao, Renjing; Wan, Minping; Chen, Shiyi. _Three-dimensional spatiotemporal wind field reconstruction based on LiDAR and multi-scale PINN_ [J]. [Applied Energy, 2025, 377: 124577](https://www.sciencedirect.com/science/article/abs/pii/S0306261924019603).
-
-**TL,DR:** This work develops a multi-scale PINN for reconstructing 3D wind fields from LiDAR measurements. Inspired by multi-scale networks and grounded in the F-Principle, it captures multi-frequency components in complex physical systems.
