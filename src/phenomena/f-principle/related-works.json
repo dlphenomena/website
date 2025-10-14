@@ -78,7 +78,7 @@
     "arxiv": "1906.01170",
     "doi": "10.1016/j.jcp.2019.109136 ",
     "description": "",
-    "supplementary": "Adaptive_activation.md"
+    "supplementary": "adaptive-activation.md"
   },
   {
     "type": "conference",
@@ -102,7 +102,7 @@
     "pdfLink": "https://papers.neurips.cc/paper_files/paper/2020/file/55053683268957697aa39fba6f231c68-Paper.pdf",
     "doi": "",
     "description": "",
-    "supplementary": "Fourier_feature_network.md"
+    "supplementary": "fourier-feature-network.md"
   },
   {
     "type": "journal",

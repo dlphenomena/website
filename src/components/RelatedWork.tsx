@@ -35,6 +35,7 @@ export function RelatedWork({ work, worksId, index }: Props) {
         const phenomenaDir = worksId.split('/')[0]
         const markdownURL = new URL(
           `../phenomena/${phenomenaDir}/data/${work.supplementary}`,
+          // @ts-ignore
           import.meta.url
         )
         const response = await fetch(markdownURL)
@@ -141,10 +142,12 @@ export function RelatedWork({ work, worksId, index }: Props) {
         </Item>
       </AccordionTrigger>
       <AccordionContent className="pl-12 text-base">
-        {work.description}
-        <Markdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-          {rawMarkdown}
-        </Markdown>
+        {work.description && <p>{work.description}</p>}
+        {rawMarkdown && (
+          <Markdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+            {rawMarkdown}
+          </Markdown>
+        )}
       </AccordionContent>
     </AccordionItem>
   )
