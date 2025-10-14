@@ -51,7 +51,7 @@
   {
     "type": "journal",
     "tags": ["theory"],
-    "title": "Machine learning from a continuous viewpoint, I",
+    "title": "Machine Learning from a Continuous Viewpoint, I",
     "authors": [
       { "family": "E", "given": "Weinan" },
       { "family": "Ma", "given": "Chao" },
@@ -67,7 +67,7 @@
   {
     "type": "journal",
     "tags": ["algorithm"],
-    "title": "Adaptive activation functions accelerate convergence in deep and physics-informed neural networks",
+    "title": "Adaptive Activation Functions Accelerate Convergence in Deep and Physics-Informed Neural Networks",
     "authors": [
       { "family": "Jagtap", "given": "Ameya D." },
       { "family": "Kawaguchi", "given": "Kenji" },
@@ -83,7 +83,7 @@
   {
     "type": "conference",
     "tags": ["algorithm"],
-    "title": "Fourier features let networks learn high frequency functions in low dimensional domains",
+    "title": "Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains",
     "authors": [
       { "family": "Tancik", "given": "Matthew" },
       { "family": "Srinivasan", "given": "Pratul P." },
@@ -99,7 +99,7 @@
     "year": 2020,
     "arxiv": "2006.10739",
     "url": "https://proceedings.neurips.cc/paper/2020/hash/55053683268957697aa39fba6f231c68-Abstract.html",
-    "pdfLink":"https://papers.neurips.cc/paper_files/paper/2020/file/55053683268957697aa39fba6f231c68-Paper.pdf",
+    "pdfLink": "https://papers.neurips.cc/paper_files/paper/2020/file/55053683268957697aa39fba6f231c68-Paper.pdf",
     "doi": "",
     "description": "",
     "supplementary": "Fourier_feature_network.md"
@@ -107,7 +107,7 @@
   {
     "type": "journal",
     "tags": ["algorithm"],
-    "title": "On the eigenvector bias of Fourier feature networks",
+    "title": "On the Eigenvector Bias of Fourier Feature Networks",
     "authors": [
       { "family": "Wang", "given": "Sifan" },
       { "family": "Wang", "given": "Hanwen" },
@@ -123,7 +123,7 @@
   {
     "type": "journal",
     "tags": ["algorithm"],
-    "title": "Nerf: Representing scenes as neural radiance fields for view synthesis",
+    "title": "Nerf: Representing Scenes as Neural Radiance Fields for View Synthesis",
     "authors": [
       { "family": "Mildenhall", "given": "Ben" },
       { "family": "Srinivasan", "given": "Pratul P." },
@@ -142,10 +142,8 @@
   {
     "type": "journal",
     "tags": ["theory"],
-    "title": "The old and the new: Can physics-informed deep-learning replace traditional linear solvers?",
-    "authors": [
-      { "family": "Markidis", "given": "Stefano" }
-    ],
+    "title": "The Old and the New: Can Physics-Informed Deep-Learning Replace Traditional Linear Solvers?",
+    "authors": [{ "family": "Markidis", "given": "Stefano" }],
     "journal": "Frontiers in Big Data",
     "year": 2021,
     "arxiv": "2103.09655",
@@ -156,7 +154,7 @@
   {
     "type": "conference",
     "tags": ["theory"],
-    "title": "Neural additive models: Interpretable machine learning with neural nets",
+    "title": "Neural Additive Models: Interpretable Machine Learning with Neural Nets",
     "authors": [
       { "family": "Agarwal", "given": "Rishabh" },
       { "family": "Frosst", "given": "Nicholas" },
@@ -170,7 +168,7 @@
     "year": 2021,
     "arxiv": "2004.13912",
     "url": "https://proceedings.neurips.cc/paper/2021/hash/251bd0442dfcc53b5a761e050f8022b8-Abstract.html",
-    "pdfLink":"https://proceedings.neurips.cc/paper_files/paper/2021/file/251bd0442dfcc53b5a761e050f8022b8-Paper.pdf",
+    "pdfLink": "https://proceedings.neurips.cc/paper_files/paper/2021/file/251bd0442dfcc53b5a761e050f8022b8-Paper.pdf",
     "doi": "",
     "description": "This work introduces Neural Additive Models for interpretable machine learning, noting that their difficulty in fitting jagged functions with ReLU networks may stem from a bias towards smoothness, which limits their ability to capture high-frequency patterns.",
     "supplementary": ""
@@ -206,7 +204,7 @@
   {
     "type": "journal",
     "tags": ["algorithm"],
-    "title": "Three-dimensional spatiotemporal wind field reconstruction based on LiDAR and multi-scale PINN",
+    "title": "Three-Dimensional Spatiotemporal Wind Field Reconstruction Based on LiDAR and Multi-Scale PINN",
     "authors": [
       { "family": "Chen", "given": "Yuanqing" },
       { "family": "Wang", "given": "Ding" },
