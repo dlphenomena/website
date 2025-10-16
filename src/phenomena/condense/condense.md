@@ -11,7 +11,7 @@ relatedWorks: condense/related-works
 
 ## 1. Introduction
 
-The **condensation/alignment phenomenon** in deep neural networks (DNNs) describes that: **During the nonlinear training of neural networks, neurons in the same layer tend to condense into groups with similar outputs** [[1]](#ref1). This phenomenon is referred to as **condensation** [[2]](#ref2) or **alignment** [[3]](#ref3). This behavior is supported by both empirical observations and theoretical analysis. The number of these condensed neuron clusters often increases as training progresses, offering a mechanism for the network's output complexity to grow.
+The **condensation/alignment phenomenon** in deep neural networks (DNNs) describes that: **During the nonlinear training of neural networks, neurons in the same layer tend to condense into groups with similar outputs** [[1]](#ref1). This phenomenon is referred to as **condensation** [[2]](#ref2) or **alignment** [[3]](#ref3). The condition of nonlinear training can be training with small initial weights or Dropout etc. This behavior is supported by both empirical observations and theoretical analysis. The number of these condensed neuron clusters often increases as training progresses, offering a mechanism for the network's output complexity to grow.
 
 To illustrate this, consider the target function:
 
@@ -69,7 +69,7 @@ Figure 1: The feature maps $\{(\theta_k,A_k)\}_{k}$ of a two-layer ReLU neural n
 
 ## 2. Phase diagram: when condensation happens
 
-Empirically, we have found that in non-linear training regime, condensation is a very common phenomenon. In [[2]](#ref2), to characterize the non-linear and linear regimes, we consider a two-layer NN with $m$ hidden neurons:
+Empirically, we have found that in non-linear training regime (in this regime the initialization of parameters is small), condensation is a very common phenomenon. In [[2]](#ref2), to characterize the non-linear and linear regimes, we consider a two-layer NN with $m$ hidden neurons:
 
 $$
 f^\alpha_{\boldsymbol{\theta}}(\boldsymbol{x}) = \frac{1}{\alpha} \sum_{k=1}^{m}a_k\sigma(\boldsymbol{w}_k^{T}\boldsymbol{x}),
