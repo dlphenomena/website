@@ -15,9 +15,9 @@ export const COMMITTEE_MEMBERS = [
   {
     name: 'Zheng Ma',
     affiliation: 'Shanghai Jiao Tong University',
-    url: 'https://zheng-home.vercel.app/',
+    url: 'https://zheng-home.netlify.app/',
     avatar:
-      'https://zheng-home.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.141921c1.jpg&w=2048&q=75',
+      'https://zheng-home.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.141921c1.jpg&w=2048&q=75',
   },
   {
     name: 'Zhi-Qin John Xu',
