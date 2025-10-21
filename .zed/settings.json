@@ -1,0 +1,13 @@
+{
+  "languages": {
+    "Astro": {
+      "language_servers": [
+        "astro",
+        "biome",
+        "tailwindcss-language-server",
+        "vscode-css-language-server",
+        "..."
+      ]
+    }
+  }
+}
