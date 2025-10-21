@@ -221,5 +221,21 @@
     "doi": "10.2139/ssrn.4819818 ",
     "description": "This work develops a multi-scale PINN for reconstructing 3D wind fields from LiDAR measurements. Inspired by multi-scale networks and grounded in the F-Principle, it captures multi-frequency components in complex physical systems.",
     "supplementary": ""
-  }
+  },
+  {
+    "type": "journal",
+    "tags": ["algorithm"],
+    "title": "On understanding and overcoming spectral biases of deep neural network learning methods for solving PDEs",
+    "authors": [
+      { "family": "Xu", "given": "Zhi-Qin John" },
+      { "family": "Zhang", "given": "Lulu" },
+      { "family": "Cai", "given": "wei" }
+    ],
+    "journal": "Journal of Computational Physics",
+    "year": 2025,
+    "arxiv": "2501.09987",
+    "doi": "10.2139/ssrn.4957855",
+    "description": "This work investigates latest approaches and techniques developed to overcome the spectral bias towards low frequency of deep neural network learning methods in learning multiple-frequency solutions of partial differential equations.",
+    "supplementary": ""
+}
 ]

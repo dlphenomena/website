@@ -123,10 +123,10 @@ Figure 2: Phase diagram of two-layer ReLU NNs at infinite-width limit. The marke
 
 ## Key References
 
-<a id="ref1">[1]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Zhou, Zhangchen. _An overview of condensation phenomenon in deep learning_. [arXiv](https://arxiv.org/abs/2504.09484)
+<a id="ref1">[1]</a> Xu, Zhi-Qin John; Zhang, Yaoyu; Zhou, Zhangchen. _An overview of condensation phenomenon in deep learning_, 2025. [arXiv](https://arxiv.org/abs/2504.09484)
 
-<a id="ref2">[2]</a> Luo, Tao; Xu, Zhi-Qin John; Ma, Zheng; Zhang, Yaoyu. _[Phase diagram for two-layer relu neural networks at infinite-width limit](https://www.jmlr.org/papers/v22/20-1123.html)_. Journal of Machine Learning Research, 2022, [arXiv](https://arxiv.org/abs/2007.07497)
+<a id="ref2">[2]</a> Luo, Tao; Xu, Zhi-Qin John; Ma, Zheng; Zhang, Yaoyu. _[Phase diagram for two-layer relu neural networks at infinite-width limit](https://www.jmlr.org/papers/v22/20-1123.html)_. Journal of Machine Learning Research, 2021, [arXiv](https://arxiv.org/abs/2007.07497)
 
-<a id="ref3">[3]</a> Maennel, Hartmut; Bousquet, Olivier; Gelly, Sylvain . _Gradient descent quantizes relu network features_. [arXiv](https://arxiv.org/abs/1803.08367)
+<a id="ref3">[3]</a> Maennel, Hartmut; Bousquet, Olivier; Gelly, Sylvain . _Gradient descent quantizes relu network features_, 2018. [arXiv](https://arxiv.org/abs/1803.08367)
 
 ---
