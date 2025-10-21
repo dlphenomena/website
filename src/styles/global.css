@@ -37,10 +37,3 @@
 :root {
   --radius: 0.5rem;
 }
-
-/*
-  ---break---
- */
-.text-justify {
-  text-align: justify;
-}
