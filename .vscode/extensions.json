@@ -2,13 +2,11 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "astro-build.astro-vscode",
     "unifiedjs.vscode-mdx",
     "bradlc.vscode-tailwindcss",
     "redhat.vscode-yaml",
     "tamasfe.even-better-toml",
     "biomejs.biome",
     "oven.bun-vscode"
-  ],
-  "unwantedRecommendations": []
+  ]
 }

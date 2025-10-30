@@ -10,7 +10,6 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "ms-vscode.vscode-typescript-next",
-        "astro-build.astro-vscode",
         "unifiedjs.vscode-mdx",
         "bradlc.vscode-tailwindcss",
         "redhat.vscode-yaml",
