@@ -1,4 +1,5 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/68ff35fe-1e37-41ca-8ab6-8e43659cb06a/deploy-status)](https://app.netlify.com/projects/dlphenomena/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b35e67c-95f3-4161-8b18-c102f3ebd483/deploy-status)](https://app.netlify.com/projects/dlphenomena/deploys)
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/dlphenomena)
 
 # Deep Learning Phenomena
 
