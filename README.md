@@ -1,0 +1,207 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/68ff35fe-1e37-41ca-8ab6-8e43659cb06a/deploy-status)](https://app.netlify.com/projects/dlphenomena/deploys)
+
+# Deep Learning Phenomena
+
+A modern blog and documentation website exploring interesting phenomena in deep learning, built with Next.js and powered by Fumadocs.
+
+## 🚀 Features
+
+- **MDX-powered content** - Write content with Markdown and React components
+- **Mathematical equations** - Full support for LaTeX equations using KaTeX
+- **Reading time estimation** - Automatic calculation of reading time for articles
+- **Dark mode** - Beautiful dark/light theme with system preference detection
+- **Responsive design** - Optimized for all screen sizes
+- **Type-safe** - Built with TypeScript for better developer experience
+- **Fast builds** - Optimized with Bun runtime support
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) with App Router
+- **Content**: [Fumadocs](https://fumadocs.vercel.app/) for MDX content management
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **UI Components**:
+  - Radix UI primitives
+  - Headless UI
+  - Lucide React icons
+- **Math Rendering**: KaTeX with remark-math and rehype-katex
+- **Theme**: next-themes for dark mode support
+- **Type Safety**: TypeScript
+- **Linting**: ESLint with Prettier
+
+## 📋 Prerequisites
+
+- Node.js 20+ or Bun 1.3+
+- npm, yarn, pnpm, or bun
+
+## 🏃 Getting Started
+
+1. **Clone the repository**
+
+```bash
+git clone <repository-url>
+cd next-website
+```
+
+2. **Install dependencies**
+
+```bash
+# Using npm
+npm install
+
+# Using yarn
+yarn install
+
+# Using pnpm
+pnpm install
+
+# Using bun
+bun install
+```
+
+3. **Run the development server**
+
+```bash
+# Using npm
+npm run dev
+
+# Using yarn
+yarn dev
+
+# Using pnpm
+pnpm dev
+
+# Using bun
+bun dev
+```
+
+4. **Open your browser**
+
+Navigate to [http://localhost:3000](http://localhost:3000) to see the website.
+
+## 📁 Project Structure
+
+```
+next-website/
+├── app/                    # Next.js App Router pages
+│   ├── (home)/            # Home page group
+│   ├── phenomena/         # Phenomena articles routes
+│   ├── layout.tsx         # Root layout with theme provider
+│   └── globals.css        # Global styles
+├── components/            # React components
+│   ├── header.tsx         # Site header
+│   ├── footer.tsx         # Site footer
+│   └── theme-provider.tsx # Theme context provider
+├── content/               # MDX content
+│   └── phenomena/         # Deep learning phenomena articles
+├── lib/                   # Utility functions and plugins
+│   └── remark-plugins/    # Custom remark plugins
+├── public/                # Static assets
+├── source.config.ts       # Fumadocs configuration
+└── package.json           # Dependencies and scripts
+```
+
+## ✍️ Creating Content
+
+Content is managed using Fumadocs and stored in the `content/phenomena` directory.
+
+### Adding a new phenomenon article
+
+1. Create a new `.mdx` file in `content/phenomena/`
+2. Add frontmatter with required fields:
+
+```mdx
+---
+title: "Your Phenomenon Title"
+description: "A brief description"
+author: "Your Name"
+pubDate: "2024-01-01"
+tags: ["deep-learning", "neural-networks"]
+relatedWorks: "Optional related works section"
+---
+
+# Your Content Here
+
+Write your article using MDX syntax...
+```
+
+### Using Math Equations
+
+The site supports LaTeX math equations:
+
+- Inline math: `$E = mc^2$`
+- Block math:
+
+```
+$$
+\frac{d}{dx}\left( \int_{0}^{x} f(u)\,du\right)=f(x)
+$$
+```
+
+## 🎨 Styling
+
+The project uses Tailwind CSS 4 with custom configuration. Key features:
+
+- Custom color scheme with orange accent
+- Dark mode support via CSS variables
+- Typography plugin for article content
+- Custom animations with tw-animate-css
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🚢 Deployment
+
+The easiest way to deploy this Next.js app is to use the [Vercel Platform](https://vercel.com/new):
+
+1. Push your code to GitHub
+2. Import your repository to Vercel
+3. Vercel will detect Next.js and configure the build automatically
+4. Your site will be deployed!
+
+For other deployment options, check the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+## 🔌 Configuration
+
+### Theme Configuration
+
+Modify `app/layout.tsx` to adjust:
+
+- Default theme (light/dark/system)
+- Font families
+- Meta tags
+
+### Content Configuration
+
+Edit `source.config.ts` to configure:
+
+- Content directories
+- Frontmatter schema
+- MDX plugins
+- Remark/Rehype options
+
+### Styling Configuration
+
+Update `tailwindcss` configuration in your CSS or use the PostCSS config.
+
+## 📝 License
+
+This project is private and not licensed for public use.
+
+## 🤝 Contributing
+
+This is a personal project. If you have suggestions or find issues, feel free to reach out.
+
+## 📚 Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Fumadocs Documentation](https://fumadocs.vercel.app/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [MDX Documentation](https://mdxjs.com/)
+
+---
+
+Built with ❤️ using Next.js and Fumadocs

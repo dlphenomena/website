@@ -1,0 +1,241 @@
+[
+  {
+    "type": "journal",
+    "tags": ["theory"],
+    "title": "Theory of the Frequency Principle for General Deep Neural Networks",
+    "authors": [
+      { "family": "Luo", "given": "Tao" },
+      { "family": "Ma", "given": "Zheng" },
+      { "family": "Xu", "given": "Zhi-Qin John" },
+      { "family": "Zhang", "given": "Yaoyu" }
+    ],
+    "journal": "CSIAM Trans. Appl. Math.",
+    "year": 2021,
+    "arxiv": "1906.09235",
+    "doi": "10.4208/csiam-am.SO-2020-0005",
+    "description": "This work proves that for general deep neural networks, the change of high-frequency loss over the total loss decays with the separated frequency with a certain power, which is determined by the regularity assumption.",
+    "supplementary": ""
+  },
+  {
+    "type": "journal",
+    "tags": ["algorithm"],
+    "title": "Multi-Scale Deep Neural Network (MscaleDNN) for Solving Poisson-Boltzmann Equation in Complex Domains",
+    "authors": [
+      { "family": "Liu", "given": "Ziqi" },
+      { "family": "Cai", "given": "Wei" },
+      { "family": "Xu", "given": "Zhi-Qin John" }
+    ],
+    "journal": "Commun. Comput. Phys.",
+    "year": 2020,
+    "arxiv": "2007.11207",
+    "doi": "10.4208/cicp.OA-2020-0179",
+    "description": "",
+    "supplementary": "general-theory.md"
+  },
+  {
+    "type": "journal",
+    "tags": ["algorithm"],
+    "title": "A Phase Shift Deep Neural Network for High Frequency Approximation and Wave Problems",
+    "authors": [
+      { "family": "Cai", "given": "Wei" },
+      { "family": "Li", "given": "Xiaoguang" },
+      { "family": "Liu", "given": "Lizuo" }
+    ],
+    "journal": "SIAM J. Sci. Comput.",
+    "year": 2020,
+    "arxiv": "1909.11759",
+    "doi": "10.1137/19m1310050 ",
+    "description": "Phase shift DNN (PhaseDNN) converts high-frequency component of the data downward to a low-frequency spectrum for learning, and then converts the learned one back to the original high frequency.",
+    "supplementary": ""
+  },
+  {
+    "type": "journal",
+    "tags": ["theory"],
+    "title": "Machine Learning from a Continuous Viewpoint, I",
+    "authors": [
+      { "family": "E", "given": "Weinan" },
+      { "family": "Ma", "given": "Chao" },
+      { "family": "Wu", "given": "Lei" }
+    ],
+    "journal": "Sci. China Math.",
+    "year": 2020,
+    "arxiv": "1912.12777",
+    "doi": "10.1007/s11425-020-1773-8",
+    "description": "This work provides a continuous framework to study machine learning and suggest gradient flows of neural networks are nice flows and obey the F-Principle. This is because they are integral equations which have higher regularity.",
+    "supplementary": ""
+  },
+  {
+    "type": "journal",
+    "tags": ["algorithm"],
+    "title": "Adaptive Activation Functions Accelerate Convergence in Deep and Physics-Informed Neural Networks",
+    "authors": [
+      { "family": "Jagtap", "given": "Ameya D." },
+      { "family": "Kawaguchi", "given": "Kenji" },
+      { "family": "Karniadakis", "given": "George Em." }
+    ],
+    "journal": "J. Comput. Phys.",
+    "year": 2020,
+    "arxiv": "1906.01170",
+    "doi": "10.1016/j.jcp.2019.109136 ",
+    "description": "",
+    "supplementary": "adaptive-activation.md"
+  },
+  {
+    "type": "conference",
+    "tags": ["algorithm"],
+    "title": "Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains",
+    "authors": [
+      { "family": "Tancik", "given": "Matthew" },
+      { "family": "Srinivasan", "given": "Pratul P." },
+      { "family": "Mildenhall", "given": "Ben" },
+      { "family": "Fridovich-Keil", "given": "Sara" },
+      { "family": "Raghavan", "given": "Nithin" },
+      { "family": "Singhal", "given": "Utkarsh" },
+      { "family": "Ramamoorthi", "given": "Ravi" },
+      { "family": "Barron", "given": "Jonathan T." },
+      { "family": "Ng", "given": "Ren" }
+    ],
+    "journal": "NeurIPS",
+    "year": 2020,
+    "arxiv": "2006.10739",
+    "url": "https://proceedings.neurips.cc/paper/2020/hash/55053683268957697aa39fba6f231c68-Abstract.html",
+    "pdfLink": "https://papers.neurips.cc/paper_files/paper/2020/file/55053683268957697aa39fba6f231c68-Paper.pdf",
+    "doi": "",
+    "description": "",
+    "supplementary": "fourier-feature-network.md"
+  },
+  {
+    "type": "journal",
+    "tags": ["algorithm"],
+    "title": "On the Eigenvector Bias of Fourier Feature Networks",
+    "authors": [
+      { "family": "Wang", "given": "Sifan" },
+      { "family": "Wang", "given": "Hanwen" },
+      { "family": "Perdikaris", "given": "Paris" }
+    ],
+    "journal": "Comput. Methods Appl. Mech. Eng.",
+    "year": 2021,
+    "arxiv": "2012.10047",
+    "doi": "10.1016/j.cma.2021.113938 ",
+    "description": "This work extends Fourier features to PDE problems and analyzes eigenvector bias.",
+    "supplementary": ""
+  },
+  {
+    "type": "journal",
+    "tags": ["algorithm"],
+    "title": "Nerf: Representing Scenes as Neural Radiance Fields for View Synthesis",
+    "authors": [
+      { "family": "Mildenhall", "given": "Ben" },
+      { "family": "Srinivasan", "given": "Pratul P." },
+      { "family": "Tancik", "given": "Matthew" },
+      { "family": "Barron", "given": "Jonathan T." },
+      { "family": "Ramamoorthi", "given": "Ravi" },
+      { "family": "Ng", "given": "Ren" }
+    ],
+    "journal": "Commun. ACM",
+    "year": 2021,
+    "arxiv": "2003.08934",
+    "doi": "10.1145/3503250",
+    "description": "This work applies the Fourier feature method to neural radiance fields (NeRF) for view synthesis.",
+    "supplementary": ""
+  },
+  {
+    "type": "journal",
+    "tags": ["theory"],
+    "title": "The Old and the New: Can Physics-Informed Deep-Learning Replace Traditional Linear Solvers?",
+    "authors": [{ "family": "Markidis", "given": "Stefano" }],
+    "journal": "Frontiers in Big Data",
+    "year": 2021,
+    "arxiv": "2103.09655",
+    "doi": "10.3389/fdata.2021.669097 ",
+    "description": "This work highlights the frequency principle as a key mechanism governing the convergence of deep neural networks and physics-informed neural networks (PINNs).",
+    "supplementary": ""
+  },
+  {
+    "type": "conference",
+    "tags": ["theory"],
+    "title": "Neural Additive Models: Interpretable Machine Learning with Neural Nets",
+    "authors": [
+      { "family": "Agarwal", "given": "Rishabh" },
+      { "family": "Frosst", "given": "Nicholas" },
+      { "family": "Zhang", "given": "Xuezhou" },
+      { "family": "Lengerich", "given": "Ben" },
+      { "family": "Melnick", "given": "Levi" },
+      { "family": "Caruana", "given": "Rich" },
+      { "family": "Hinton", "given": "Geoffrey E." }
+    ],
+    "journal": "NeurIPS",
+    "year": 2021,
+    "arxiv": "2004.13912",
+    "url": "https://proceedings.neurips.cc/paper/2021/hash/251bd0442dfcc53b5a761e050f8022b8-Abstract.html",
+    "pdfLink": "https://proceedings.neurips.cc/paper_files/paper/2021/file/251bd0442dfcc53b5a761e050f8022b8-Paper.pdf",
+    "doi": "",
+    "description": "This work introduces Neural Additive Models for interpretable machine learning, noting that their difficulty in fitting jagged functions with ReLU networks may stem from a bias towards smoothness, which limits their ability to capture high-frequency patterns.",
+    "supplementary": ""
+  },
+  {
+    "type": "conference",
+    "tags": ["algorithm"],
+    "title": "A Universal PINNs Method for Solving Partial Differential Equations with a Point Source",
+    "authors": [
+      { "family": "Huang", "given": "Xiang" },
+      { "family": "Liu", "given": "Hongsheng" },
+      { "family": "Shi", "given": "Beiji" },
+      { "family": "Wang", "given": "Zidong" },
+      { "family": "Yang", "given": "Kang" },
+      { "family": "Li", "given": "Yang" },
+      { "family": "Wang", "given": "Min" },
+      { "family": "Chu", "given": "Haotian" },
+      { "family": "Zhou", "given": "Jing" },
+      { "family": "Yu", "given": "Fan" },
+      { "family": "Hua", "given": "Bei" },
+      { "family": "Dong", "given": "Bin" },
+      { "family": "Chen", "given": "Lei" }
+    ],
+    "journal": "IJCAI",
+    "year": 2022,
+    "arxiv": "",
+    "url": "https://www.ijcai.org/proceedings/2022/533",
+    "pdfLink": "https://www.ijcai.org/proceedings/2022/0533.pdf",
+    "doi": "",
+    "description": "This work proposes an improved MscaleDNN-based algorithm for solving PDEs with point sources, borrowing ideas from MscaleDNNs and SIREN, and reports its implementation in Huawei’s MindSpore scientific computing package.",
+    "supplementary": ""
+  },
+  {
+    "type": "journal",
+    "tags": ["algorithm"],
+    "title": "Three-Dimensional Spatiotemporal Wind Field Reconstruction Based on LiDAR and Multi-Scale PINN",
+    "authors": [
+      { "family": "Chen", "given": "Yuanqing" },
+      { "family": "Wang", "given": "Ding" },
+      { "family": "Feng", "given": "Dachuan" },
+      { "family": "Tian", "given": "Geng" },
+      { "family": "Gupta", "given": "Vikrant" },
+      { "family": "Cao", "given": "Renjing" },
+      { "family": "Wan", "given": "Minping" },
+      { "family": "Chen", "given": "Shiyi" }
+    ],
+    "journal": "Applied Energy",
+    "year": 2025,
+    "arxiv": "",
+    "doi": "10.2139/ssrn.4819818 ",
+    "description": "This work develops a multi-scale PINN for reconstructing 3D wind fields from LiDAR measurements. Inspired by multi-scale networks and grounded in the F-Principle, it captures multi-frequency components in complex physical systems.",
+    "supplementary": ""
+  },
+  {
+    "type": "journal",
+    "tags": ["algorithm"],
+    "title": "On understanding and overcoming spectral biases of deep neural network learning methods for solving PDEs",
+    "authors": [
+      { "family": "Xu", "given": "Zhi-Qin John" },
+      { "family": "Zhang", "given": "Lulu" },
+      { "family": "Cai", "given": "wei" }
+    ],
+    "journal": "Journal of Computational Physics",
+    "year": 2025,
+    "arxiv": "2501.09987",
+    "doi": "10.2139/ssrn.4957855",
+    "description": "This work investigates latest approaches and techniques developed to overcome the spectral bias towards low frequency of deep neural network learning methods in learning multiple-frequency solutions of partial differential equations.",
+    "supplementary": ""
+}
+]
