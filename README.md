@@ -3,7 +3,9 @@
 
 # Deep Learning Phenomena
 
-A modern blog and documentation website exploring interesting phenomena in deep learning, built with Next.js and powered by Fumadocs.
+A modern blog and documentation website exploring interesting phenomena in deep learning, built with Next.js and powered by Fumadocs. You can visit the webpage by
+
+https://dlphenoma.netlify.app or https://dlphenomena.vercel.app/
 
 ## 🚀 Features
 
