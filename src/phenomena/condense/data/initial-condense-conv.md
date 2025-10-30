@@ -1,1 +1,0 @@
-This paper extends the analysis to convolutional neural networks, deriving estimates for the onset time of initial condensation with activation functions of multiplicity $p=1$.

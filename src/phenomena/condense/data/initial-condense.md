@@ -1,1 +1,0 @@
-This paper estimates the time of initial condensation in two-layer neural networks with activation functions of multiplicity $p=1$.

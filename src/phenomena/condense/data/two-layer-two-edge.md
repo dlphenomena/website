@@ -1,1 +1,0 @@
-This paper demonstrates a quantitative analysis of the initial condensation of both regression and classification and general datasets in two-layer NNs, and also give an example that the initial condensation will do harm to the final convergence with the initialization that $|a_j | ≥ ||\boldsymbol{w}_j ||$.

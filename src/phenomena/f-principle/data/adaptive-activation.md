@@ -1,1 +1,0 @@
-This work replaces the activation function $\sigma(x)$ by $\sigma(\mu a x)$, where $\mu \geq 1$ is a fixed scale factor and $a$ is a trainable variable shared for all neurons.
