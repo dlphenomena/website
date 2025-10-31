@@ -15,7 +15,7 @@ const headerLinks = [
 
 export default function Header() {
   return (
-    <header className="fixed z-20 w-full border-b border-orange-200 p-2 backdrop-blur-md transition-shadow duration-300 dark:border-zinc-700">
+    <header className="fixed z-20 w-full border-b border-border p-2 backdrop-blur-md transition-shadow duration-300 dark:border-zinc-700">
       <div className="mx-auto max-w-4xl">
         <nav className="flex items-center gap-3">
           <Link href="/" className="group flex flex-auto items-center">

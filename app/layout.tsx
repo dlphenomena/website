@@ -31,7 +31,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${interSans.variable} ${jetbrainsMono.variable} antialiased`}
     >
-      <body className="bg-orange-50 font-sans leading-normal wrap-break-word text-zinc-900 transition-colors duration-500 dark:bg-zinc-900 dark:text-zinc-300">
+      <body className="bg-background font-sans leading-normal wrap-break-word text-zinc-900 dark:bg-zinc-900 dark:text-zinc-300">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
