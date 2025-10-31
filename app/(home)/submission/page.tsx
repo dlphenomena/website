@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function SubmissionPage() {
   return (
@@ -9,16 +10,16 @@ export default function SubmissionPage() {
       </p>
       <div className="not-prose flex justify-center">
         <Button variant="github" className="not-prose flex justify-center">
-          <a href="https://github.com/dlphenomena/website/issues/new/choose">
+          <Link href="https://github.com/dlphenomena/website/issues/new/choose">
             Create a submission
-          </a>
+          </Link>
         </Button>
       </div>
       <p className="text-center text-lg text-gray-600 dark:text-gray-300">
-        You can also submit via email to
-        <a href="mailto:xuzhiqin@sjtu.edu.cn" className="opacity-70">
+        You can also submit via email to{" "}
+        <Link href="mailto:xuzhiqin@sjtu.edu.cn" className="opacity-70">
           xuzhiqin@sjtu.edu.cn.
-        </a>
+        </Link>
       </p>
       <hr className="border-top mb-8 border-zinc-400" />
       <section className="mb-12 text-center">
@@ -31,28 +32,24 @@ export default function SubmissionPage() {
           </h3>
           <p className="mb-4 text-gray-700 dark:text-gray-300">
             Please submit the phenomenon by a Markdown file. The templates can
-            be seen in our
-            <a
+            be seen in our{" "}
+            <Link
               href="https://github.com/dlphenomena/website/tree/main/src/content/blog"
               className="font-medium text-blue-600 hover:underline dark:text-blue-400"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Github Repository
-            </a>
+            </Link>
             .
           </p>
           <p className="text-gray-700 dark:text-gray-300">
             Please also prepare a code to reproduce the phenomenon. A new
-            repository will be created in
-            <a
+            repository will be created in {""}
+            <Link
               href="https://github.com/dlphenomena"
               className="font-medium text-blue-600 hover:underline dark:text-blue-400"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Deep Learning Phenomena
-            </a>{" "}
+            </Link>{" "}
             on GitHub.
           </p>
         </div>
@@ -102,13 +99,13 @@ export default function SubmissionPage() {
                 Examples:
               </h4>
               <p className="text-gray-700 dark:text-gray-300">
-                Examples can be found in
-                <a
-                  href="/blog/f-principle/"
+                Examples can be found in{" "}
+                <Link
+                  href="/phenomena/f-principle/f-principle"
                   className="font-medium text-blue-600 hover:underline dark:text-blue-400"
                 >
                   Frequency-Principle
-                </a>
+                </Link>
                 .
               </p>
             </div>
@@ -126,32 +123,28 @@ export default function SubmissionPage() {
             </h3>
             <ul className="text-gray-700 dark:text-gray-300">
               <li>
-                <a
+                <Link
                   href="https://github.com/dlphenomena/website"
                   className="text-blue-600 dark:text-blue-400"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Website Repository
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="https://github.com/dlphenomena"
                   className="text-blue-600 dark:text-blue-400"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Deep Learning Phenomena Repository
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/blog/f-principle/"
+                <Link
+                  href="/phenomena/f-principle/f-principle"
                   className="text-blue-600 dark:text-blue-400"
                 >
                   Frequency-Principle Example
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
