@@ -6,7 +6,7 @@ export default function SubmissionPage() {
     <div className="pt-12">
       <h1 className="mb-4 text-center text-4xl font-bold">Submission Guide</h1>
       <p className="text-center">
-        You can add a reference to a exist phenomenon or submit a new
+        You can add a reference to an existing phenomenon or submit a new
         phenomenon. Submissions can be made through GitHub issue (with template)
         by clicking
       </p>
