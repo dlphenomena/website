@@ -1,25 +1,19 @@
 {
   "name": "Dlphenomena Website",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "dockerComposeFile": "compose.yaml",
+  "service": "website",
+  "workspaceFolder": "/website",
   "customizations": {
     "vscode": {
       "extensions": [
         "oven.bun-vscode",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "ms-vscode.vscode-typescript-next",
         "unifiedjs.vscode-mdx",
-        "bradlc.vscode-tailwindcss",
-        "redhat.vscode-yaml",
-        "tamasfe.even-better-toml"
+        "bradlc.vscode-tailwindcss"
       ]
     }
   },
-  "mounts": [
-    "type=volume,source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules"
-  ],
   "postCreateCommand": {
     "fix-permissions": "sudo chown bun node_modules",
     "install-dependencies": "bun install"

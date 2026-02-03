@@ -8,11 +8,5 @@
       "source.organizeImports": "explicit"
     }
   },
-  "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode",
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    }
-  },
   "typescript.tsdk": "node_modules/typescript/lib"
 }

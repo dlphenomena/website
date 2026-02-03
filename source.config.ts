@@ -5,6 +5,7 @@ import {
   defineDocs,
   frontmatterSchema,
 } from "fumadocs-mdx/config"
+import lastModified from "fumadocs-mdx/plugins/last-modified"
 import rehypeKatex from "rehype-katex"
 import remarkMath from "remark-math"
 import { z } from "zod"
@@ -18,7 +19,7 @@ export const phenomena = defineDocs({
       tags: z.array(z.string()).optional(),
       relatedWorks: z.string().optional(),
     }),
-    files: ["**/*", "!**/data/*"],
+    files: ["**/*", "!**/data/*", "!**/*.json"],
     postprocess: {
       includeProcessedMarkdown: true,
     },
@@ -34,5 +35,5 @@ export default defineConfig({
     rehypePlugins: (v) => [rehypeKatex, ...v],
     valueToExport: ["readingTime"],
   },
-  lastModifiedTime: "git",
+  plugins: [lastModified()],
 })
