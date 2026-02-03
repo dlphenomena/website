@@ -237,5 +237,24 @@
     "doi": "10.2139/ssrn.4957855",
     "description": "This work investigates latest approaches and techniques developed to overcome the spectral bias towards low frequency of deep neural network learning methods in learning multiple-frequency solutions of partial differential equations.",
     "supplementary": ""
-}
+  },
+  {
+    "type": "conference",
+    "tags": ["theory"],
+    "title": "Why Diffusion Models Don't Memorize: The Role of Implicit Dynamical Regularization in Training",
+    "authors": [
+      { "family": "Bonnaire", "given": "Tony" },
+      { "family": "Urfin", "given": "Raphaël" },
+      { "family": "Biroli", "given": "Giulio" },
+      { "family": "Mézard", "given": "Marc" }
+    ],
+    "journal": "NeurIPS",
+    "year": 2025,
+    "arxiv": "2505.17638",
+    "url": "https://openreview.net/forum?id=BSZqpqgqM0",
+    "pdfLink": "https://openreview.net/pdf?id=BSZqpqgqM0",
+    "doi": "",
+    "description": "Leveraging the frequency-dependent learning bias of neural networks, this study investigates how the training time required to memorize high-frequency, dataset-specific features scales with sample size n in score-based generative models.",
+    "supplementary": ""
+  }
 ]
