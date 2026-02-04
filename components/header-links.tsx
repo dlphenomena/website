@@ -25,6 +25,21 @@ function HeaderLink({
   children: React.ReactNode
 }) {
   const isActive = href === usePathname()
+  const isExternal = href.startsWith("http")
+  
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cn(linkStatus({ active: false }), className)}
+      >
+        {children}
+      </a>
+    )
+  }
+  
   return (
     <Link
       href={href}
@@ -42,6 +57,7 @@ export default function HeaderLinks() {
       <HeaderLink href="/team">Team</HeaderLink>
       <HeaderLink href="/submission">Submission</HeaderLink>
       <HeaderLink href="mailto:xuzhiqin@sjtu.edu.cn">Contact</HeaderLink>
+      <HeaderLink href="https://instituteml.netlify.app/">IML</HeaderLink>
       <HeaderLink
         href="https://github.com/dlphenomena"
         className="flex items-center gap-2"
