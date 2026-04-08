@@ -7,7 +7,7 @@ import Link from "next/link"
 
 const headerLinks = [
   { href: "/about", text: "About" },
-  { href: "/team", text: "Team" },
+  { href: "/team", text: "Maintainers" },
   { href: "/submission", text: "Submission" },
   { href: "mailto:xuzhiqin@sjtu.edu.cn", text: "Contact" },
   { href: "https://github.com/dlphenomena", text: "Repos" },

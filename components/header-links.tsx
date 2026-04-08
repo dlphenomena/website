@@ -26,7 +26,7 @@ function HeaderLink({
 }) {
   const isActive = href === usePathname()
   const isExternal = href.startsWith("http")
-  
+
   if (isExternal) {
     return (
       <a
@@ -39,7 +39,7 @@ function HeaderLink({
       </a>
     )
   }
-  
+
   return (
     <Link
       href={href}
@@ -54,7 +54,7 @@ export default function HeaderLinks() {
   return (
     <>
       <HeaderLink href="/about">About</HeaderLink>
-      <HeaderLink href="/team">Team</HeaderLink>
+      <HeaderLink href="/team">Maintainers</HeaderLink>
       <HeaderLink href="/submission">Submission</HeaderLink>
       <HeaderLink href="mailto:xuzhiqin@sjtu.edu.cn">Contact</HeaderLink>
       <HeaderLink href="https://instituteml.netlify.app/">IML</HeaderLink>
