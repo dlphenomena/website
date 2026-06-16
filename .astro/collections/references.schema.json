@@ -1,0 +1,81 @@
+{
+  "$ref": "#/definitions/references",
+  "definitions": {
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "journal",
+              "conference"
+            ],
+            "default": "journal"
+          },
+          "title": {
+            "type": "string"
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "family": {
+                  "type": "string"
+                },
+                "given": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "family",
+                "given"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "journal": {
+            "type": "string"
+          },
+          "year": {
+            "type": "number"
+          },
+          "description": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "arxiv": {
+            "type": "string"
+          },
+          "doi": {
+            "type": "string"
+          },
+          "supplementary": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "pdfLink": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "authors",
+          "journal",
+          "year"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
