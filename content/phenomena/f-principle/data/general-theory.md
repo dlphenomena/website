@@ -6,4 +6,4 @@ $$
 
 where $W^{[l]} \in \mathbb{R}^{m_{l+1} \times m_l}$, $\odot$ is elementwise product, $K=(a_1,a_1,\dots,a_1,a_2,\dots,a_{N})^T \in \mathbb{R}^{m_1}$, $a_i=i$ or $2^{i-1}$.
 
-![mscalednn](https://ins.sjtu.edu.cn/people/xuzhiqin/pub/mscalednn.png "illustration")
+![mscalednn](https://upload.wikimedia.org/wikipedia/commons/f/ff/MscaleDNN.png "illustration")
